@@ -1,11 +1,22 @@
-import {readFile,stat} from 'node:fs/promises';
+import {readFile,stat,mkdir,writeFile} from 'node:fs/promises';
 import {createReadStream} from 'node:fs';
 import {createInterface} from 'node:readline';
 import {resolve,relative} from 'node:path';
 import {importPath} from './ingestion';
 import {digest} from './catalogue';
 import {plainText} from './arabic';
+import {parseTanzil} from './providers/parsers';
 import type {RemoteBook,BookContent,Page,Section} from './types';
 export async function* jsonLines(path:string){const lines=createInterface({input:createReadStream(path,{encoding:'utf8'}),crlfDelay:Infinity});let line=0;try{for await(const text of lines){line++;if(text.length>2*1024*1024)throw new Error(`JSONL line ${line} exceeds limit`);if(text.trim()){try{yield JSON.parse(text) as Record<string,unknown>;}catch{throw new Error(`Invalid JSON on line ${line}`);}}}}finally{lines.close();}}
+export async function downloadTanzil():Promise<{path:string;sha256:string;bytes:number}>{
+ const url='https://tanzil.net/pub/download/index.php';
+ const form=new URLSearchParams({quranType:'uthmani',outType:'txt-2',marks:'true',sajdah:'true',rub:'true',tatweel:'true',agree:'true'});
+ const response=await fetch(url,{method:'POST',body:form,headers:{'content-type':'application/x-www-form-urlencoded','user-agent':process.env.INGEST_USER_AGENT||'KitabsLibrary/2.0'},signal:AbortSignal.timeout(30000)});
+ if(!response.ok)throw new Error(`Tanzil download failed: HTTP ${response.status}`);
+ const bytes=Buffer.from(await response.arrayBuffer());if(bytes.length>5*1024*1024)throw new Error('Tanzil response exceeded the 5 MB safety limit');
+ const text=new TextDecoder('utf-8',{fatal:true}).decode(bytes);parseTanzil(text);const sha256=digest(text);
+ const dir=resolve(process.cwd(),'imports','tanzil');await mkdir(dir,{recursive:true});const path=resolve(dir,`quran-uthmani-v1.1-${sha256.slice(0,16)}.txt`);await writeFile(path,bytes,{flag:'wx'}).catch(async e=>{if((e as NodeJS.ErrnoException).code!=='EEXIST')throw e;});
+ return {path:relative(resolve(process.cwd(),'imports'),path),sha256,bytes:bytes.length};
+}
 export async function shamelaFolder(folder:string):Promise<RemoteBook>{const dir=importPath(folder);const metadataPath=resolve(dir,'book_metadata.json');const meta=JSON.parse(await readFile(metadataPath,'utf8'));if(meta.is_hidden===true)throw new Error('This Shamela entry is marked hidden/restricted; it is not imported');if(typeof meta.title_ar!=='string')throw new Error('Missing Shamela title_ar');const originals=['book_metadata.json','pages.jsonl','toc.jsonl'];const hashes=[];for(const filename of originals){const data=await readFile(importPath(relative(resolve('imports'),resolve(dir,filename))));hashes.push(digest(data.toString('utf8')));}return {externalId:'shamela-dump:'+String(meta.shamela_id??meta.book_id),title:meta.title_ar,authors:meta.authors?.map((a:{name_ar:string})=>a.name_ar)||[meta.main_author_name_ar].filter(Boolean),categories:[meta.category_name_ar].filter(Boolean),description:meta.betaka_text||'',sourceUrl:'https://huggingface.co/datasets/AuthenticIlm/Shamela4_Full_DB',revision:digest(hashes.join(':')),rightsHint:'Research/personal-use terms; separate editorial rights review required.',files:[],raw:{format:'shamela-folder',path:folder,metadata:meta,originalPaths:originals.map(f=>relative(resolve('imports'),resolve(dir,f)))}};}
 export async function readShamelaFolder(folder:string):Promise<BookContent>{const dir=importPath(folder);const pages:Page[]=[];const map=new Map<number,number>();const max=Number(process.env.MAX_DOWNLOAD_MB||100)*1024*1024;const pagesPath=importPath(relative(resolve('imports'),resolve(dir,'pages.jsonl')));if((await stat(pagesPath)).size>max)throw new Error('Shamela pages exceed download limit');for await(const row of jsonLines(pagesPath)){const seq=Number(row.sequence_num??row.page_id);if(typeof row.body!=='string')throw new Error('Missing page body');map.set(Number(row.page_id),seq);pages.push({seq,body:plainText(row.body),part:String(row.part||''),pageNo:String(row.page_num||''),footnotes:typeof row.footnotes==='string'?plainText(row.footnotes):''});}const sections:Section[]=[];const tocPath=importPath(relative(resolve('imports'),resolve(dir,'toc.jsonl')));for await(const row of jsonLines(tocPath)){const seq=map.get(Number(row.page_id));if(seq)sections.push({seq,title:plainText(String(row.title_text||''))});}return {pages:pages.sort((a,b)=>a.seq-b.seq),sections};}
