@@ -4,6 +4,12 @@ Begin with **25–50 works** from a corpus whose individual text licenses have b
 
 ## Recommended first download
 
+### Quran text from Tanzil (small first import)
+
+On a host with outbound HTTPS access, run `npm run import -- tanzil`. The command downloads the official Uthmani v1.1 text, checks its numbering and 6,236-verse count, preserves the exact upstream file with a SHA-256-based immutable filename, and creates a pending edition. It does not auto-publish. Keep the text verbatim, include Tanzil's attribution and link, and check for upstream updates. See [Tanzil's terms](https://tanzil.net/docs/Text_License).
+
+This import does not fetch translations or a scanned Mushaf PDF. Those have separate sources and rights.
+
 ### OpenITI: modest, curated text collection
 
 OpenITI provides downloadable mARkdown files and structured author/title/version metadata. Its repository gives a specific snapshot and metadata layout. Check the license for the selected text; the corpus has CC BY-NC-SA terms, and individual editorial additions can have separate rights. See the [OpenITI release repository](https://github.com/OpenITI/RELEASE) and [release instructions](https://github.com/OpenITI/RELEASE#readme).
