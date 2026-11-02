@@ -1,0 +1,12 @@
+node_modules
+.next
+.git
+data
+imports
+backups
+.env
+.env.*
+!.env.example
+coverage
+__pycache__
+*.tsbuildinfo

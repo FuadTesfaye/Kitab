@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 Fuad Tesfaye(fuaf)
+Copyright (c) 2026 Kitabs contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+This license covers application code and project documentation only. Imported
+books, scans, translations, editorial material, and external datasets retain
+their own licenses and rights. No content redistribution rights are granted
+by this software license.
