@@ -68,6 +68,16 @@ npm run import -- openiti imports/text.mARkdown 'عنوان الكتاب' 'اس�
 npm run import -- shamela-folder imports/shamela/one-selected-book
 ```
 
+### Tanzil Quran text
+
+On a server with outbound HTTPS access, you can retrieve the official Uthmani text from Tanzil and stage it as one locally managed edition:
+
+```sh
+npm run import -- tanzil
+```
+
+The downloader requests the verbatim numbered Tanzil v1.1 export, validates that all 6,236 verses are present and ordered, saves the untouched source file under ignored `imports/tanzil/`, and records its SHA-256. It does **not** rewrite the Quran text or automatically approve/publicize it. Review the edition in `/admin`, retain Tanzil attribution and the source link, approve its license record, then queue ingestion and publish it. The published reader text remains the exact verse text; its surah/ayah numbers are catalogue navigation metadata. Follow [Tanzil's text license](https://tanzil.net/docs/Text_License) and check for upstream updates.
+
 All these commands create records marked **pending review**. Open `/admin`, inspect the actual edition, document the permission or license, explicitly authorize hosting, enqueue ingestion, and publish only after ingestion succeeds. A newly discovered revision starts a new edition and needs fresh review.
 
 ## Search and storage

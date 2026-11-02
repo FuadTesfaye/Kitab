@@ -8,7 +8,7 @@ import {database,closeDatabase,dataDir} from '../lib/db';
 import {ensureSeed,stageBook,digest,now} from '../lib/catalogue';
 import {createUser} from '../lib/auth';
 import {syncSource,importPath} from '../lib/ingestion';
-import {shamelaFolder,jsonLines} from '../lib/local-import';
+import {shamelaFolder,jsonLines,downloadTanzil} from '../lib/local-import';
 import {enqueue} from '../lib/jobs';
 import type {RemoteBook,SourceId} from '../lib/types';
 const [command,mode,path,...args]=process.argv.slice(2);
@@ -20,8 +20,12 @@ try{
   if(mode==='manifest'){const manifest=JSON.parse(await readFile(resolve(path),'utf8'));const remote=(manifest.book||manifest) as RemoteBook;if(remote.files?.length)throw new Error('Local manifests must not request remote file downloads');console.log(await stageBook('local',remote));}
   else if(mode==='jsonl'){let count=0;for await(const row of jsonLines(resolve(path))){const remote=(row.book||row) as RemoteBook;if(remote.files?.length)throw new Error('Local manifests must not request remote downloads');await stageBook('local',remote);count++;}console.log(`Staged ${count} records for review.`);}
   else if(mode==='shamela-folder'){const folder=relative(resolve('imports'),resolve(path));console.log(await stageBook('local',await shamelaFolder(folder)));}
+  else if(mode==='tanzil'){
+   const fetched=await downloadTanzil();const book:RemoteBook={externalId:'tanzil:quran-uthmani-v1.1',title:'القرآن الكريم — النص العثماني (رواية حفص)',authors:['القرآن الكريم'],categories:['القرآن الكريم','قرآن'],description:'النص العثماني كما نشره مشروع تنزيل Tanzil، دون تعديل. النص الأصلي محفوظ كما تم تنزيله.',sourceUrl:'https://tanzil.net/',revision:fetched.sha256,licenseUrl:'https://tanzil.net/docs/Text_License',rightsHint:'Tanzil permits verbatim redistribution of its unmodified Quran text with attribution and a link to tanzil.net. Verify the original file and keep this notice with the text.',files:[],raw:{path:fetched.path,format:'tanzil',version:'1.1',sha256:fetched.sha256}};
+   const staged=await stageBook('local',book);console.log(`Downloaded and validated 6,236 Tanzil verses (${fetched.bytes} bytes; SHA-256 ${fetched.sha256}). Staged for administrator rights review:`,staged);
+  }
   else if(mode==='openiti'){const file=resolve(path);const title=args[0];const author=args[1];if(!title||!author)throw new Error('Usage: npm run import -- openiti imports/path "Arabic title" "Arabic author"');const relativePath=relative(resolve('imports'),file);const bytes=await readFile(importPath(relativePath));const header=bytes.toString('utf8');if(!header.includes('#META#Header#End#'))throw new Error('Not an OpenITI text');const book:RemoteBook={externalId:relativePath,title,authors:[author],categories:[],sourceUrl:'https://github.com/OpenITI/RELEASE',revision:digest(header),licenseUrl:'https://creativecommons.org/licenses/by-nc-sa/4.0/',rightsHint:'Review the individual text, corpus license, and editorial additions.',files:[],raw:{path:relativePath,format:'openiti'}};console.log(await stageBook('local',book));}
-  else throw new Error('Import mode: manifest | jsonl | shamela-folder | openiti');
+  else throw new Error('Import mode: manifest | jsonl | shamela-folder | openiti | tanzil');
  }
  else if(command==='sync'){if(!mode)throw new Error('Specify a provider ID');console.log(await syncSource(mode as SourceId));}
  else if(command==='reindex'){await ensureSeed();const db=await database();const editions=await db.query<{id:string}>("SELECT id FROM editions WHERE status IN ('ready','published')");for(const e of editions)await enqueue('reindex',{editionId:e.id},`reindex:${e.id}:${randomUUID()}`);console.log(`Queued ${editions.length} editions; run npm run worker.`);}
