@@ -1,0 +1,14 @@
+{
+  "name": "kitabs-library", "version": "2.0.0", "private": true, "type": "module",
+  "engines": {"node": ">=22.13"},
+  "scripts": {
+    "dev": "next dev --webpack", "build": "next build --webpack", "start": "next start",
+    "check": "tsc --noEmit", "test": "node --import tsx --test --experimental-test-isolation=none tests/*.test.ts",
+    "db:migrate": "node --import tsx scripts/manage.ts migrate", "db:seed": "node --import tsx scripts/manage.ts seed",
+    "admin:create": "node --import tsx scripts/manage.ts admin", "worker": "node --import tsx scripts/worker.ts",
+    "import": "node --import tsx scripts/manage.ts import", "sync": "node --import tsx scripts/manage.ts sync",
+    "reindex": "node --import tsx scripts/manage.ts reindex", "backup": "node --import tsx scripts/manage.ts backup"
+  },
+  "dependencies": {"next":"16.3.8","react":"19.2.7","react-dom":"19.2.7","pg":"8.23.1"},
+  "devDependencies": {"typescript":"5.9.3","tsx":"4.23.15","@types/node":"20.19.43","@types/react":"19.3.0","@types/react-dom":"19.3.0","@types/pg":"8.23.1"}
+}

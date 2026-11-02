@@ -1,0 +1,2 @@
+export async function request<T=Record<string,unknown>>(path:string,options:RequestInit={}):Promise<T>{const response=await fetch('/api/'+path,{...options,headers:{'Content-Type':'application/json',...options.headers}});let data;try{data=await response.json();}catch{throw new Error('تعذّر قراءة استجابة الخادم');}if(!response.ok)throw new Error(data.error||'تعذّر إتمام الطلب');return data as T;}
+export const post=<T=Record<string,unknown>>(path:string,body:unknown={})=>request<T>(path,{method:'POST',body:JSON.stringify(body)});
