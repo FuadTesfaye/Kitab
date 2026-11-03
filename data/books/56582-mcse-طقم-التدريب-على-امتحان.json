@@ -1,0 +1,24 @@
+{
+  "id": 56582,
+  "kitab_id": "aljam3-56582",
+  "title": "mcse طقم التدريب على امتحان",
+  "author": "الدار العربيه لبنان",
+  "author_id": 6670,
+  "category": "علوم الحاسب الآلي",
+  "category_id": 86,
+  "library": "مكتبة المسجد النبوي",
+  "library_id": 1,
+  "pages_count": 1047,
+  "volumes": -1,
+  "views_count": 1044,
+  "pdf_url": "https://aljam3.com/56582",
+  "txt_url": "https://aljam3.com/api/v1/books/56582",
+  "docx_url": "https://aljam3.com/api/v1/books/56582?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-56582/download?format=pdf",
+    "txt": "/api/books/aljam3-56582/download?format=txt",
+    "json": "/api/books/aljam3-56582/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:55:01.798Z",
+  "source_website": "https://aljam3.com"
+}

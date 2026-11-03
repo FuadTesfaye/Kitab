@@ -1,0 +1,24 @@
+{
+  "id": 56524,
+  "kitab_id": "aljam3-56524",
+  "title": "MP3 لم أكن أعرف أنك تستطيع ذلك - نايفيس",
+  "author": "غاي هارت - دايفيس",
+  "author_id": 23759,
+  "category": "علوم الحاسب الآلي",
+  "category_id": 86,
+  "library": "مكتبة المسجد النبوي",
+  "library_id": 1,
+  "pages_count": 252,
+  "volumes": -1,
+  "views_count": 1099,
+  "pdf_url": "https://aljam3.com/56524",
+  "txt_url": "https://aljam3.com/api/v1/books/56524",
+  "docx_url": "https://aljam3.com/api/v1/books/56524?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-56524/download?format=pdf",
+    "txt": "/api/books/aljam3-56524/download?format=txt",
+    "json": "/api/books/aljam3-56524/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:55:01.799Z",
+  "source_website": "https://aljam3.com"
+}
