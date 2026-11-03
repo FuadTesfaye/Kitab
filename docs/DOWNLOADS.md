@@ -16,11 +16,24 @@ A pre-packaged collection of **1,500 foundational Islamic works** is indexed in 
 - In-browser reading and volume navigation via `/shamela/[id]`.
 - Direct "PDF 📄" download pills on book cards and detail pages.
 
-### PDF Download Endpoints:
+### Universal Download Endpoints:
+- `/api/books/{id}/download?format=pdf`: Direct PDF download attachment for any book in the catalogue.
+- `/api/books/{id}/download?format=txt`: Complete text download attachment for any book in the catalogue.
+- `/api/books/{id}/download?format=json`: Complete structured JSON export for any book in the catalogue.
 - `/api/aljam3/pdf?id={id}`: Direct PDF download attachment for any book in the 1,500-book catalogue.
 - `/api/shamela/download?id={id}&format=pdf`: Direct PDF download for Shamela works.
 - `/api/shamela/download?id={id}&format=json`: Structured machine-readable JSON format.
 - `/api/shamela/download?id={id}&format=txt`: Plain-text format.
+
+### Bulk Book Downloader:
+Download and archive any book or range of books directly to `data/books/`:
+```sh
+# Download specific books by ID
+npx tsx scripts/download-all-books.ts 3435 11940 17525 3 4
+
+# Bulk download the first N books
+npx tsx scripts/download-all-books.ts --limit=50
+```
 
 To re-fetch or expand the 1,500 books dataset:
 ```sh

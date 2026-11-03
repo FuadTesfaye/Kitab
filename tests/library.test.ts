@@ -171,5 +171,34 @@ test('Homepage catalogue search exposes 1500+ books with categories and PDF down
   assert.ok(apiData.book.editions.length > 0);
 });
 
+test('Universal book downloads for PDF, TXT, and JSON across all library works', async () => {
+  // 1. Aljam3 book - PDF download redirect
+  const pdfRes = await call('books/aljam3-3435/download?format=pdf', 'GET', undefined, '', ['books', 'aljam3-3435', 'download']);
+  assert.equal(pdfRes.status, 302);
+  assert.ok(pdfRes.headers.get('location')?.includes('.pdf'));
+
+  // 2. Aljam3 book - JSON download
+  const jsonRes = await call('books/aljam3-3435/download?format=json', 'GET', undefined, '', ['books', 'aljam3-3435', 'download']);
+  assert.equal(jsonRes.status, 200);
+  assert.ok(jsonRes.headers.get('content-type')?.includes('application/json'));
+  assert.ok(jsonRes.headers.get('content-disposition')?.includes('aljam3-3435.json'));
+
+  // 3. Database book (Arbaeen) - TXT download
+  const txtRes = await call('books/arbaeen/download?format=txt', 'GET', undefined, '', ['books', 'arbaeen', 'download']);
+  assert.equal(txtRes.status, 200);
+  assert.ok(txtRes.headers.get('content-type')?.includes('text/plain'));
+  const txtBody = await txtRes.text();
+  assert.ok(txtBody.includes('الأربعون النووية'));
+
+  // 4. Database sample book (Arbaeen) - JSON download
+  const arbaeenJsonRes = await call('books/arbaeen/download?format=json', 'GET', undefined, '', ['books', 'arbaeen', 'download']);
+  assert.equal(arbaeenJsonRes.status, 200);
+  const arbaeenData = await arbaeenJsonRes.json();
+  assert.equal(arbaeenData.id, 'arbaeen');
+  assert.equal(arbaeenData.title, 'الأربعون النووية');
+  assert.ok(Array.isArray(arbaeenData.pages));
+});
+
+
 
 

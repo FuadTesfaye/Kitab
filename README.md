@@ -50,15 +50,20 @@ Register the first administrator with `npm run admin:create` before accepting st
 - Password-protected student, teacher, and administrator accounts, reading progress, bookmarks, and passage notes.
 - Separate work, author, edition, source, page, file, and edition-specific rights records.
 - Provider adapters for Internet Archive, OpenITI, Turath, the Shamela v4 client, Hadith API (fawazahmed0/hadith-api CDN), Tafsir API (spa5k/tafsir_api CDN), NYU Arabic Collections Online (ACO), and selected Waqfeya / Prophet's Mosque Hugging Face repositories.
-- Dedicated **Al-Maktaba Al-Shamela & Aljam3 (الجامع والشاملة)** catalogue, reader, and PDF downloader (`/shamela` and homepage):
+- Dedicated **Universal Book Downloads (`/api/books/:id/download?format=pdf|txt|json`)**:
+  - Every single book in the catalogue (both 1,500 Aljam3 books and standard/sample database works) is downloadable in **PDF**, **TXT**, and structured **JSON**.
+  - Direct 1-click **PDF 📄** and **تحميل ⤓** download pills on every book card on the homepage.
+  - Complete download group on book detail pages with choices for PDF, TXT, and JSON attachments.
   - Curated **1,500 Classical Islamic Books Catalogue** stored in [`data/shamela/1500-books.json`](data/shamela/1500-books.json) with direct PDF, TXT, and DOCX download URLs from Aljam3 and Hugging Face.
+  - Offline downloaded books stored in [`data/books/`](data/books/) committed directly to the GitHub repository.
+  - Universal bulk downloader CLI utility: `npx tsx scripts/download-all-books.ts [id1 id2 ...] [--limit=N]`.
   - Fully accessible from the main library search at `http://localhost:3000/` across 8 main disciplines: Quran & Tafsir (108), Hadith (142), Fiqh (262), Aqeedah (130), Seerah & History (292), Arabic Language (116), Adab & Tazkiyah (147), and other encyclopedic works (303).
   - In-browser reading with volume navigation, page jumping, and heading/TOC drawer.
   - Typography toolbar with Tashkeel diacritics toggle, Arabic font family chooser (Amiri, Scheherazade, Traditional), font resizing, and 1-click citation copier.
-  - Direct 1-click downloads for original **PDF files**, structured JSON, and plain-text TXT editions (`/api/aljam3/pdf?id={id}`, `/api/shamela/download?id={id}&format=pdf|json|txt`).
+  - Direct 1-click downloads for original **PDF files**, structured JSON, and plain-text TXT editions (`/api/books/{id}/download?format=pdf`, `/api/aljam3/pdf?id={id}`, `/api/shamela/download?id={id}&format=pdf|json|txt`).
   - Integration with **Aljam3 (الجامع — مكتبة المكتبات الإسلامية by ieasybooks)** across 63,427 books spanning Al-Maktaba Al-Shamela Al-Waqfeya (4,646 books), Al-Maktaba Al-Waqfeya (10,090 books), and Prophet's Mosque Library (48,697 books).
   - Offline dataset files located in `data/shamela/` committed directly to the repository under GitHub size limits.
-  - CLI book downloader and sync scripts: `npx tsx scripts/download-shamela.ts` and `npx tsx scripts/fetch-1500-books.ts`.
+  - CLI book downloader and sync scripts: `npx tsx scripts/download-all-books.ts`, `npx tsx scripts/download-shamela.ts`, and `npx tsx scripts/fetch-1500-books.ts`.
 - Interactive Arabic reader: diacritics toggle (إظهار / إخفاء التشكيل), Arabic font family switcher (Amiri, Scheherazade, Traditional), Surah and Ayah navigation for Quran, instant Tafsir drawer (Ibn Kathir, Al-Sa'di, Al-Muyassar, Al-Tabari, Al-Qurtubi), verse audio recitation, Hadith grading indicators, and copy with citation reference.
 - Arabic-normalized full-text search, original-text exact search, PostgreSQL/SQLite fallback, and optional OpenSearch.
 - Durable background jobs, revision-aware metadata discovery, per-book ingestion, checksums, S3/MinIO object storage, an administrator review queue, publication and withdrawal controls, and audit log.
