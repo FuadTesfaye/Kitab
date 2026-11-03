@@ -1,0 +1,24 @@
+{
+  "id": 878,
+  "kitab_id": "aljam3-878",
+  "title": "أثر الوقف الإسلامي في الحياة العلمية بالمدينة المنورة - الصديقي - ط بحوث ودراسات المدينة",
+  "author": "سحر بنت عبد الرحمن مفتي الصديقي",
+  "author_id": 14244,
+  "category": "التاريخ",
+  "category_id": 15,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 547,
+  "volumes": 1,
+  "views_count": 1465,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE/%D8%A3%D8%AB%D8%B1%20%D8%A7%D9%84%D9%88%D9%82%D9%81%20%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85%D9%8A%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A%D8%A9%20%D8%A8%D8%A7%D9%84%D9%85%D8%AF%D9%8A%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D9%86%D9%88%D8%B1%D8%A9%20-%20%D8%A7%D9%84%D8%B5%D8%AF%D9%8A%D9%82%D9%8A%20-%20%D8%B7%20%D8%A8%D8%AD%D9%88%D8%AB%20%D9%88%D8%AF%D8%B1%D8%A7%D8%B3%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%AF%D9%8A%D9%86%D8%A9/0_63477p.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE/%D8%A3%D8%AB%D8%B1%20%D8%A7%D9%84%D9%88%D9%82%D9%81%20%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85%D9%8A%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A%D8%A9%20%D8%A8%D8%A7%D9%84%D9%85%D8%AF%D9%8A%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D9%86%D9%88%D8%B1%D8%A9%20-%20%D8%A7%D9%84%D8%B5%D8%AF%D9%8A%D9%82%D9%8A%20-%20%D8%B7%20%D8%A8%D8%AD%D9%88%D8%AB%20%D9%88%D8%AF%D8%B1%D8%A7%D8%B3%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%AF%D9%8A%D9%86%D8%A9/0_63477p.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE/%D8%A3%D8%AB%D8%B1%20%D8%A7%D9%84%D9%88%D9%82%D9%81%20%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85%D9%8A%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A%D8%A9%20%D8%A8%D8%A7%D9%84%D9%85%D8%AF%D9%8A%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D9%86%D9%88%D8%B1%D8%A9%20-%20%D8%A7%D9%84%D8%B5%D8%AF%D9%8A%D9%82%D9%8A%20-%20%D8%B7%20%D8%A8%D8%AD%D9%88%D8%AB%20%D9%88%D8%AF%D8%B1%D8%A7%D8%B3%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%AF%D9%8A%D9%86%D8%A9/0_63477p.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-878/download?format=pdf",
+    "txt": "/api/books/aljam3-878/download?format=txt",
+    "json": "/api/books/aljam3-878/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:25:51.043Z",
+  "source_website": "https://aljam3.com"
+}
