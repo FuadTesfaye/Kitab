@@ -86,9 +86,13 @@ export async function api(req:Request,path:string[]):Promise<Response>{try{if(![
              });
            }
          }
-         const {getBooksDataset}=await import('./providers/aljam3');
+         const {getBooksDataset, getShamelaCorpus}=await import('./providers/aljam3');
          const all=await getBooksDataset();
-         const b=all.find(x=>x.id===numId);
+         let b=all.find(x=>x.id===numId);
+         if(!b){
+           const shamela=await getShamelaCorpus();
+           b=shamela.find(x=>x.id===numId);
+         }
          if(b?.txt_url){
            try{
              const upstream=await fetch(b.txt_url,{headers:{'User-Agent':'Kitab/2.0'},redirect:'follow'});

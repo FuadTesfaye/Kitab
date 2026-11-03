@@ -48,10 +48,17 @@ export async function works(): Promise<Work[]>{
 
     let extraWorks: Work[] = [];
     try {
-      const {getBooksDataset} = await import('./providers/aljam3');
+      const {getBooksDataset, getShamelaCorpus} = await import('./providers/aljam3');
       const aljam3Books = await getBooksDataset();
+      const shamelaBooks = await getShamelaCorpus();
+      const bookMap = new Map<number, any>();
+      for (const b of aljam3Books) bookMap.set(b.id, b);
+      for (const b of shamelaBooks) {
+        if (!bookMap.has(b.id)) bookMap.set(b.id, b);
+      }
+      const combined = Array.from(bookMap.values());
       const colors = ['forest','sand','burgundy','blue','olive','terracotta','navy','plum'];
-      extraWorks = aljam3Books.map((b, idx) => {
+      extraWorks = combined.map((b, idx) => {
         const cat = mapAljam3Category(b.category?.name);
         const source_id: SourceId = (b.library?.name?.includes('النبوي') ? 'prophet-mosque' : (b.library?.name?.includes('الوقفية') ? 'waqfeya' : 'shamela'));
         const edition: Edition = {
@@ -100,9 +107,13 @@ export async function getWork(id:string){
   if (id.startsWith('aljam3-')) {
     const numId = Number(id.replace('aljam3-', ''));
     try {
-      const {getBooksDataset} = await import('./providers/aljam3');
+      const {getBooksDataset, getShamelaCorpus} = await import('./providers/aljam3');
       const all = await getBooksDataset();
-      const b = all.find(x => x.id === numId);
+      let b = all.find(x => x.id === numId);
+      if (!b) {
+        const shamela = await getShamelaCorpus();
+        b = shamela.find(x => x.id === numId);
+      }
       if (b) {
         const cat = mapAljam3Category(b.category?.name);
         const source_id: SourceId = (b.library?.name?.includes('النبوي') ? 'prophet-mosque' : (b.library?.name?.includes('الوقفية') ? 'waqfeya' : 'shamela'));

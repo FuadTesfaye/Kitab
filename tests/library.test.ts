@@ -152,6 +152,7 @@ test('Homepage catalogue search exposes 1500+ books with categories and PDF down
   const {works, getWork, accessibleEdition} = await import('../lib/catalogue');
   const allWorks = await works();
   assert.ok(allWorks.length >= 1500, `Expected at least 1500 works, got ${allWorks.length}`);
+  assert.ok(allWorks.length >= 4645, `Expected full Shamela corpus, got ${allWorks.length}`);
 
   // Test single work lookup for aljam3 book
   const single = await getWork('aljam3-3435');
@@ -160,6 +161,12 @@ test('Homepage catalogue search exposes 1500+ books with categories and PDF down
   assert.ok(single.title.length > 0);
   assert.ok(single.editions && single.editions.length > 0);
   assert.equal(single.editions[0].id, 'aljam3-3435');
+
+  // Test lookup for expanded Shamela work (Al-Maqrizi)
+  const maqrizi = await getWork('aljam3-2040');
+  assert.ok(maqrizi);
+  assert.equal(maqrizi.id, 'aljam3-2040');
+  assert.ok(maqrizi.title.includes('المقريزي'));
 
   // Test accessible edition
   const ed = await accessibleEdition('aljam3-3435');
