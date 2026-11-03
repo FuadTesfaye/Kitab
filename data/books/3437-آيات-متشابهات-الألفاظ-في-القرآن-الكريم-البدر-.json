@@ -1,0 +1,28 @@
+{
+  "id": 3437,
+  "kitab_id": "aljam3-3437",
+  "title": "آيات متشابهات الألفاظ في القرآن الكريم - البدر - ط الفضيلة",
+  "author": "عبد المحسن بن حمد العباد البدر",
+  "author_id": 19203,
+  "category": "علوم القرآن",
+  "category_id": 88,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 142,
+  "volumes": 1,
+  "views_count": 828,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86/%D8%A2%D9%8A%D8%A7%D8%AA%20%D9%85%D8%AA%D8%B4%D8%A7%D8%A8%D9%87%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D9%84%D9%81%D8%A7%D8%B8%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20-%20%D8%A7%D9%84%D8%A8%D8%AF%D8%B1%20-%20%D8%B7%20%D8%A7%D9%84%D9%81%D8%B6%D9%8A%D9%84%D8%A9/57299.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86/%D8%A2%D9%8A%D8%A7%D8%AA%20%D9%85%D8%AA%D8%B4%D8%A7%D8%A8%D9%87%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D9%84%D9%81%D8%A7%D8%B8%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20-%20%D8%A7%D9%84%D8%A8%D8%AF%D8%B1%20-%20%D8%B7%20%D8%A7%D9%84%D9%81%D8%B6%D9%8A%D9%84%D8%A9/57299.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86/%D8%A2%D9%8A%D8%A7%D8%AA%20%D9%85%D8%AA%D8%B4%D8%A7%D8%A8%D9%87%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D9%84%D9%81%D8%A7%D8%B8%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20-%20%D8%A7%D9%84%D8%A8%D8%AF%D8%B1%20-%20%D8%B7%20%D8%A7%D9%84%D9%81%D8%B6%D9%8A%D9%84%D8%A9/57299.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-3437/download?format=pdf",
+    "txt": "/api/books/aljam3-3437/download?format=txt",
+    "json": "/api/books/aljam3-3437/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:22:28.229Z",
+  "local_files": {
+    "json": "3437-آيات-متشابهات-الألفاظ-في-القرآن-الكريم-البدر-.json",
+    "pdf": null,
+    "txt": null
+  }
+}

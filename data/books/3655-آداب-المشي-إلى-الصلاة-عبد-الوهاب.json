@@ -1,0 +1,28 @@
+{
+  "id": 3655,
+  "kitab_id": "aljam3-3655",
+  "title": "آداب المشي إلى الصلاة - عبد الوهاب",
+  "author": "محمد بن عبد الوهاب",
+  "author_id": 27847,
+  "category": "الفقه الحنبلي",
+  "category_id": 55,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 58,
+  "volumes": 1,
+  "views_count": 1158,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D9%81%D9%82%D9%87%20%D8%AD%D9%86%D8%A8%D9%84%D9%8A/%D8%A2%D8%AF%D8%A7%D8%A8%20%D8%A7%D9%84%D9%85%D8%B4%D9%8A%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D8%B5%D9%84%D8%A7%D8%A9%20-%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D9%88%D9%87%D8%A7%D8%A8/03-5_50043.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D9%81%D9%82%D9%87%20%D8%AD%D9%86%D8%A8%D9%84%D9%8A/%D8%A2%D8%AF%D8%A7%D8%A8%20%D8%A7%D9%84%D9%85%D8%B4%D9%8A%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D8%B5%D9%84%D8%A7%D8%A9%20-%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D9%88%D9%87%D8%A7%D8%A8/03-5_50043.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D9%81%D9%82%D9%87%20%D8%AD%D9%86%D8%A8%D9%84%D9%8A/%D8%A2%D8%AF%D8%A7%D8%A8%20%D8%A7%D9%84%D9%85%D8%B4%D9%8A%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D8%B5%D9%84%D8%A7%D8%A9%20-%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D9%88%D9%87%D8%A7%D8%A8/03-5_50043.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-3655/download?format=pdf",
+    "txt": "/api/books/aljam3-3655/download?format=txt",
+    "json": "/api/books/aljam3-3655/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:22:28.195Z",
+  "local_files": {
+    "json": "3655-آداب-المشي-إلى-الصلاة-عبد-الوهاب.json",
+    "pdf": null,
+    "txt": null
+  }
+}
