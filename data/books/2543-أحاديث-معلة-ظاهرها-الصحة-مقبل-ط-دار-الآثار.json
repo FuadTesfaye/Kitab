@@ -1,0 +1,24 @@
+{
+  "id": 2543,
+  "kitab_id": "aljam3-2543",
+  "title": "أحاديث معلة ظاهرها الصحة - مقبل - ط دار الآثار",
+  "author": "مقبل بن هادي الوادعي أبو عبد الرحمن",
+  "author_id": 31942,
+  "category": "العلل والسؤالات",
+  "category_id": 47,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 528,
+  "volumes": 1,
+  "views_count": 823,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D8%A7%D9%84%D8%B9%D9%84%D9%84%20%D9%88%D8%A7%D9%84%D8%B3%D8%A4%D8%A7%D9%84%D8%A7%D8%AA/%D8%A3%D8%AD%D8%A7%D8%AF%D9%8A%D8%AB%20%D9%85%D8%B9%D9%84%D8%A9%20%D8%B8%D8%A7%D9%87%D8%B1%D9%87%D8%A7%20%D8%A7%D9%84%D8%B5%D8%AD%D8%A9%20-%20%D9%85%D9%82%D8%A8%D9%84%20-%20%D8%B7%20%D8%AF%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A2%D8%AB%D8%A7%D8%B1/61594.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D8%A7%D9%84%D8%B9%D9%84%D9%84%20%D9%88%D8%A7%D9%84%D8%B3%D8%A4%D8%A7%D9%84%D8%A7%D8%AA/%D8%A3%D8%AD%D8%A7%D8%AF%D9%8A%D8%AB%20%D9%85%D8%B9%D9%84%D8%A9%20%D8%B8%D8%A7%D9%87%D8%B1%D9%87%D8%A7%20%D8%A7%D9%84%D8%B5%D8%AD%D8%A9%20-%20%D9%85%D9%82%D8%A8%D9%84%20-%20%D8%B7%20%D8%AF%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A2%D8%AB%D8%A7%D8%B1/61594.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D8%A7%D9%84%D8%B9%D9%84%D9%84%20%D9%88%D8%A7%D9%84%D8%B3%D8%A4%D8%A7%D9%84%D8%A7%D8%AA/%D8%A3%D8%AD%D8%A7%D8%AF%D9%8A%D8%AB%20%D9%85%D8%B9%D9%84%D8%A9%20%D8%B8%D8%A7%D9%87%D8%B1%D9%87%D8%A7%20%D8%A7%D9%84%D8%B5%D8%AD%D8%A9%20-%20%D9%85%D9%82%D8%A8%D9%84%20-%20%D8%B7%20%D8%AF%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A2%D8%AB%D8%A7%D8%B1/61594.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-2543/download?format=pdf",
+    "txt": "/api/books/aljam3-2543/download?format=txt",
+    "json": "/api/books/aljam3-2543/download?format=json"
+  },
+  "imported_at": "2026-11-03T20:13:43.902Z",
+  "source_website": "https://aljam3.com"
+}

@@ -1,0 +1,24 @@
+{
+  "id": 4259,
+  "kitab_id": "aljam3-4259",
+  "title": "أحاديث ومرويات في الميزان حديث قلب يس وجملة مما روي في فضلها - عبد اللطيف",
+  "author": "محمد عمرو بن عبد اللطيف",
+  "author_id": 30069,
+  "category": "كتب التخريج والزوائد",
+  "category_id": 100,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 265,
+  "volumes": 1,
+  "views_count": 759,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%AA%D8%AE%D8%B1%D9%8A%D8%AC%20%D9%88%D8%A7%D9%84%D8%B2%D9%88%D8%A7%D8%A6%D8%AF/%D8%A3%D8%AD%D8%A7%D8%AF%D9%8A%D8%AB%20%D9%88%D9%85%D8%B1%D9%88%D9%8A%D8%A7%D8%AA%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%85%D9%8A%D8%B2%D8%A7%D9%86%20%D8%AD%D8%AF%D9%8A%D8%AB%20%D9%82%D9%84%D8%A8%20%D9%8A%D8%B3%20%D9%88%D8%AC%D9%85%D9%84%D8%A9%20%D9%85%D9%85%D8%A7%20%D8%B1%D9%88%D9%8A%20%D9%81%D9%8A%20%D9%81%D8%B6%D9%84%D9%87%D8%A7%20-%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D9%84%D8%B7%D9%8A%D9%81/01_68089.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%AA%D8%AE%D8%B1%D9%8A%D8%AC%20%D9%88%D8%A7%D9%84%D8%B2%D9%88%D8%A7%D8%A6%D8%AF/%D8%A3%D8%AD%D8%A7%D8%AF%D9%8A%D8%AB%20%D9%88%D9%85%D8%B1%D9%88%D9%8A%D8%A7%D8%AA%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%85%D9%8A%D8%B2%D8%A7%D9%86%20%D8%AD%D8%AF%D9%8A%D8%AB%20%D9%82%D9%84%D8%A8%20%D9%8A%D8%B3%20%D9%88%D8%AC%D9%85%D9%84%D8%A9%20%D9%85%D9%85%D8%A7%20%D8%B1%D9%88%D9%8A%20%D9%81%D9%8A%20%D9%81%D8%B6%D9%84%D9%87%D8%A7%20-%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D9%84%D8%B7%D9%8A%D9%81/01_68089.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%AA%D8%AE%D8%B1%D9%8A%D8%AC%20%D9%88%D8%A7%D9%84%D8%B2%D9%88%D8%A7%D8%A6%D8%AF/%D8%A3%D8%AD%D8%A7%D8%AF%D9%8A%D8%AB%20%D9%88%D9%85%D8%B1%D9%88%D9%8A%D8%A7%D8%AA%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%85%D9%8A%D8%B2%D8%A7%D9%86%20%D8%AD%D8%AF%D9%8A%D8%AB%20%D9%82%D9%84%D8%A8%20%D9%8A%D8%B3%20%D9%88%D8%AC%D9%85%D9%84%D8%A9%20%D9%85%D9%85%D8%A7%20%D8%B1%D9%88%D9%8A%20%D9%81%D9%8A%20%D9%81%D8%B6%D9%84%D9%87%D8%A7%20-%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D9%84%D8%B7%D9%8A%D9%81/01_68089.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-4259/download?format=pdf",
+    "txt": "/api/books/aljam3-4259/download?format=txt",
+    "json": "/api/books/aljam3-4259/download?format=json"
+  },
+  "imported_at": "2026-11-03T20:13:43.903Z",
+  "source_website": "https://aljam3.com"
+}
