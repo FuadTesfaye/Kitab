@@ -1,0 +1,24 @@
+{
+  "id": 36256,
+  "kitab_id": "aljam3-36256",
+  "title": "40وسيلة لاستغلال الاجازة الصيفية - الدويش",
+  "author": "إبراهيم بن عبد الله الدويش",
+  "author_id": 3198,
+  "category": "الرقاق والآداب والأذكار",
+  "category_id": 41,
+  "library": "مكتبة المسجد النبوي",
+  "library_id": 1,
+  "pages_count": 48,
+  "volumes": -1,
+  "views_count": 1275,
+  "pdf_url": "https://aljam3.com/36256",
+  "txt_url": "https://aljam3.com/api/v1/books/36256",
+  "docx_url": "https://aljam3.com/api/v1/books/36256?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-36256/download?format=pdf",
+    "txt": "/api/books/aljam3-36256/download?format=txt",
+    "json": "/api/books/aljam3-36256/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:54:55.706Z",
+  "source_website": "https://aljam3.com"
+}

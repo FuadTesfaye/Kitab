@@ -1,0 +1,24 @@
+{
+  "id": 52892,
+  "kitab_id": "aljam3-52892",
+  "title": "40وسيلة لاستغلال الاجازة الصيفية",
+  "author": "ابراهيم بن عبدالله الدويش",
+  "author_id": 3779,
+  "category": "الثقافة الإسلامية العامة",
+  "category_id": 25,
+  "library": "مكتبة المسجد النبوي",
+  "library_id": 1,
+  "pages_count": 48,
+  "volumes": -1,
+  "views_count": 1382,
+  "pdf_url": "https://aljam3.com/52892",
+  "txt_url": "https://aljam3.com/api/v1/books/52892",
+  "docx_url": "https://aljam3.com/api/v1/books/52892?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-52892/download?format=pdf",
+    "txt": "/api/books/aljam3-52892/download?format=txt",
+    "json": "/api/books/aljam3-52892/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:54:55.706Z",
+  "source_website": "https://aljam3.com"
+}
