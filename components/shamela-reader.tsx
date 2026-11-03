@@ -149,10 +149,10 @@ export function ShamelaBrowser({bookId, initialPage = 1}: {bookId?: string; init
   return (
     <div className="shamela-container">
       <section className="shamela-hero">
-        <div className="shamela-badge">المكتبة الرقمية الشاملة · ٥٠٠+ مصنف إسلامي متاح للتحميل والقراءة</div>
+        <div className="shamela-badge">المكتبة الرقمية الشاملة · ١٥٠٠+ مصنف إسلامي متاح للتحميل والقراءة</div>
         <h1>مكتبة أمهات الكتب والمصنفات الإسلامية</h1>
         <p className="lead">
-          مستودع متكامل يضم أكثر من ٥٠٠ كتاب معتمد في التفسير والحديث والفقه والعقيدة والسيرة، مع إتاحة التحميل المباشر لملفات PDF الأصلية ونصوص TXT و JSON وقراءة الصفحات مجاناً.
+          مستودع متكامل يضم أكثر من ١٥٠٠ كتاب معتمد في التفسير والحديث والفقه والعقيدة والسيرة، مع إتاحة التحميل المباشر لملفات PDF الأصلية ونصوص TXT و JSON وقراءة الصفحات مجاناً.
         </p>
 
         {/* Collection Tabs */}
@@ -164,7 +164,7 @@ export function ShamelaBrowser({bookId, initialPage = 1}: {bookId?: string; init
               setAljam3Page(1);
             }}
           >
-            📚 مكتبة الـ ٥٠٠ كتاب الإسلامي المعتمدة (تحميل PDF)
+            📚 مكتبة الـ ١٥٠٠ كتاب الإسلامي المعتمدة (تحميل PDF)
           </button>
           <button
             className={`tab-btn ${activeTab === 'shamela' ? 'active' : ''}`}
@@ -180,7 +180,7 @@ export function ShamelaBrowser({bookId, initialPage = 1}: {bookId?: string; init
             type="search"
             placeholder={
               activeTab === '500books'
-                ? 'ابحث في الـ ٥٠٠ كتاب حسب العنوان، اسم العالم، أو الفن...'
+                ? 'ابحث في الـ ١٥٠٠ كتاب حسب العنوان، اسم العالم، أو الفن...'
                 : 'ابحث في كتب الشاملة...'
             }
             value={searchQuery}
@@ -192,7 +192,7 @@ export function ShamelaBrowser({bookId, initialPage = 1}: {bookId?: string; init
           />
         </div>
 
-        {/* Library Filters for 500 Books Tab */}
+        {/* Library Filters for 1500 Books Tab */}
         {activeTab === '500books' ? (
           <div className="library-filters">
             <span className="filter-label">المكتبة المصدر:</span>
@@ -222,6 +222,15 @@ export function ShamelaBrowser({bookId, initialPage = 1}: {bookId?: string; init
               }}
             >
               المكتبة الوقفية
+            </button>
+            <button
+              className={`lib-pill ${selectedLibrary === '1' ? 'active' : ''}`}
+              onClick={() => {
+                setSelectedLibrary('1');
+                setAljam3Page(1);
+              }}
+            >
+              مكتبة المسجد النبوي
             </button>
           </div>
         ) : (

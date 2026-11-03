@@ -89,10 +89,10 @@ export async function api(req:Request,path:string[]):Promise<Response>{try{if(![
    }
  }
  if(path[0]==='aljam3'){
-   const {get500Books,getAljam3Book,getBookPdfUrl}=await import('./providers/aljam3');
+   const {getBooksDataset,getAljam3Book,getBookPdfUrl}=await import('./providers/aljam3');
    const isRead=['GET','HEAD'].includes(method);
    if(path[1]==='books'&&isRead){
-     const all=await get500Books();
+     const all=await getBooksDataset();
      const q=(url.searchParams.get('q')||'').trim();
      const library=url.searchParams.get('library');
      const page=Math.max(1,Number(url.searchParams.get('page')||1));
