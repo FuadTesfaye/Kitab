@@ -1,0 +1,28 @@
+{
+  "id": 1760,
+  "kitab_id": "aljam3-1760",
+  "title": "آداب المواكلة - الغزي - ت الباشا - ط ابن كثير",
+  "author": "محمد بن محمد بن محمد الغزي العامري الدمشقي أبي البركات",
+  "author_id": 28410,
+  "category": "الرقاق والآداب والأذكار",
+  "category_id": 41,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 64,
+  "volumes": 1,
+  "views_count": 115,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D8%A7%D9%84%D8%B1%D9%82%D8%A7%D9%82%20%D9%88%D8%A7%D9%84%D8%A2%D8%AF%D8%A7%D8%A8%20%D9%88%D8%A7%D9%84%D8%A3%D8%B0%D9%83%D8%A7%D8%B1/%D8%A2%D8%AF%D8%A7%D8%A8%20%D8%A7%D9%84%D9%85%D9%88%D8%A7%D9%83%D9%84%D8%A9%20-%20%D8%A7%D9%84%D8%BA%D8%B2%D9%8A%20-%20%D8%AA%20%D8%A7%D9%84%D8%A8%D8%A7%D8%B4%D8%A7%20-%20%D8%B7%20%D8%A7%D8%A8%D9%86%20%D9%83%D8%AB%D9%8A%D8%B1/8554.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D8%A7%D9%84%D8%B1%D9%82%D8%A7%D9%82%20%D9%88%D8%A7%D9%84%D8%A2%D8%AF%D8%A7%D8%A8%20%D9%88%D8%A7%D9%84%D8%A3%D8%B0%D9%83%D8%A7%D8%B1/%D8%A2%D8%AF%D8%A7%D8%A8%20%D8%A7%D9%84%D9%85%D9%88%D8%A7%D9%83%D9%84%D8%A9%20-%20%D8%A7%D9%84%D8%BA%D8%B2%D9%8A%20-%20%D8%AA%20%D8%A7%D9%84%D8%A8%D8%A7%D8%B4%D8%A7%20-%20%D8%B7%20%D8%A7%D8%A8%D9%86%20%D9%83%D8%AB%D9%8A%D8%B1/8554.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D8%A7%D9%84%D8%B1%D9%82%D8%A7%D9%82%20%D9%88%D8%A7%D9%84%D8%A2%D8%AF%D8%A7%D8%A8%20%D9%88%D8%A7%D9%84%D8%A3%D8%B0%D9%83%D8%A7%D8%B1/%D8%A2%D8%AF%D8%A7%D8%A8%20%D8%A7%D9%84%D9%85%D9%88%D8%A7%D9%83%D9%84%D8%A9%20-%20%D8%A7%D9%84%D8%BA%D8%B2%D9%8A%20-%20%D8%AA%20%D8%A7%D9%84%D8%A8%D8%A7%D8%B4%D8%A7%20-%20%D8%B7%20%D8%A7%D8%A8%D9%86%20%D9%83%D8%AB%D9%8A%D8%B1/8554.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-1760/download?format=pdf",
+    "txt": "/api/books/aljam3-1760/download?format=txt",
+    "json": "/api/books/aljam3-1760/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:28:04.553Z",
+  "local_files": {
+    "json": "1760-آداب-المواكلة-الغزي-ت-الباشا-ط-ابن-كثير.json",
+    "pdf": null,
+    "txt": null
+  }
+}

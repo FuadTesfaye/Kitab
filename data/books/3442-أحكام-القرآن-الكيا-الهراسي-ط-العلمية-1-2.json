@@ -1,0 +1,28 @@
+{
+  "id": 3442,
+  "kitab_id": "aljam3-3442",
+  "title": "أحكام القرآن - الكيا الهراسي - ط العلمية 1-2",
+  "author": "عماد الدين بن محمد الطبري الكيا الهراسي",
+  "author_id": 23197,
+  "category": "علوم القرآن",
+  "category_id": 88,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 1084,
+  "volumes": 2,
+  "views_count": 696,
+  "pdf_url": "https://aljam3.com/3442",
+  "txt_url": "https://aljam3.com/api/v1/books/3442",
+  "docx_url": "https://aljam3.com/api/v1/books/3442?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-3442/download?format=pdf",
+    "txt": "/api/books/aljam3-3442/download?format=txt",
+    "json": "/api/books/aljam3-3442/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:28:04.593Z",
+  "local_files": {
+    "json": "3442-أحكام-القرآن-الكيا-الهراسي-ط-العلمية-1-2.json",
+    "pdf": null,
+    "txt": null
+  }
+}

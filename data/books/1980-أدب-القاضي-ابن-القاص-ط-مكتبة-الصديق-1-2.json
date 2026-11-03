@@ -1,0 +1,28 @@
+{
+  "id": 1980,
+  "kitab_id": "aljam3-1980",
+  "title": "أدب القاضي - ابن القاص - ط مكتبة الصديق 1-2",
+  "author": "أحمد بن أبي أحمد الطبري",
+  "author_id": 1288,
+  "category": "السياسة الشرعية والقضاء",
+  "category_id": 43,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 584,
+  "volumes": 2,
+  "views_count": 146,
+  "pdf_url": "https://aljam3.com/1980",
+  "txt_url": "https://aljam3.com/api/v1/books/1980",
+  "docx_url": "https://aljam3.com/api/v1/books/1980?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-1980/download?format=pdf",
+    "txt": "/api/books/aljam3-1980/download?format=txt",
+    "json": "/api/books/aljam3-1980/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:28:04.655Z",
+  "local_files": {
+    "json": "1980-أدب-القاضي-ابن-القاص-ط-مكتبة-الصديق-1-2.json",
+    "pdf": null,
+    "txt": null
+  }
+}
