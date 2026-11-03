@@ -10,9 +10,11 @@ The library includes an integrated client for [Aljam3 (الجامع — ieasyboo
 - **مكتبة المسجد النبوي** (Prophet's Mosque Library - 500 books indexed)
 
 A pre-packaged collection of **1,500 foundational Islamic works** is indexed in `data/shamela/1500-books.json` (with backward compatibility fallback to `data/shamela/500-books.json`). Every book features:
+- **Homepage Search (`http://localhost:3000/`)**: Full real-time search across all 1,517 titles, authors, and topics with instant typing filters and Arabic numeral shelf counts.
 - Direct 1-click **PDF downloads** streamed or redirected from Hugging Face / CDN without polluting git repository storage limits.
 - Extracted **TXT** and **DOCX** files.
 - In-browser reading and volume navigation via `/shamela/[id]`.
+- Direct "PDF 📄" download pills on book cards and detail pages.
 
 ### PDF Download Endpoints:
 - `/api/aljam3/pdf?id={id}`: Direct PDF download attachment for any book in the 1,500-book catalogue.

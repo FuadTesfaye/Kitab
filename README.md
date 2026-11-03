@@ -45,12 +45,14 @@ Register the first administrator with `npm run admin:create` before accepting st
 
 ## What works
 
-- Responsive right-to-left Arabic catalogue, search, category and author browsing, detail pages, saved works, and teacher-curated reading lists.
+- Responsive right-to-left Arabic catalogue, live search across **1,517+ books** at `http://localhost:3000/`, dynamic Arabic category shelf counters, author browsing, detail pages, saved works, and teacher-curated reading lists.
+- Instant search bar on `http://localhost:3000/` filtering titles, authors, and topics in real-time, with direct **PDF 📄** download pills and **قراءة 📖** links on every book card.
 - Password-protected student, teacher, and administrator accounts, reading progress, bookmarks, and passage notes.
 - Separate work, author, edition, source, page, file, and edition-specific rights records.
 - Provider adapters for Internet Archive, OpenITI, Turath, the Shamela v4 client, Hadith API (fawazahmed0/hadith-api CDN), Tafsir API (spa5k/tafsir_api CDN), NYU Arabic Collections Online (ACO), and selected Waqfeya / Prophet's Mosque Hugging Face repositories.
-- Dedicated **Al-Maktaba Al-Shamela & Aljam3 (الجامع والشاملة)** catalogue, reader, and PDF downloader (`/shamela`):
+- Dedicated **Al-Maktaba Al-Shamela & Aljam3 (الجامع والشاملة)** catalogue, reader, and PDF downloader (`/shamela` and homepage):
   - Curated **1,500 Classical Islamic Books Catalogue** stored in [`data/shamela/1500-books.json`](data/shamela/1500-books.json) with direct PDF, TXT, and DOCX download URLs from Aljam3 and Hugging Face.
+  - Fully accessible from the main library search at `http://localhost:3000/` across 8 main disciplines: Quran & Tafsir (108), Hadith (142), Fiqh (262), Aqeedah (130), Seerah & History (292), Arabic Language (116), Adab & Tazkiyah (147), and other encyclopedic works (303).
   - In-browser reading with volume navigation, page jumping, and heading/TOC drawer.
   - Typography toolbar with Tashkeel diacritics toggle, Arabic font family chooser (Amiri, Scheherazade, Traditional), font resizing, and 1-click citation copier.
   - Direct 1-click downloads for original **PDF files**, structured JSON, and plain-text TXT editions (`/api/aljam3/pdf?id={id}`, `/api/shamela/download?id={id}&format=pdf|json|txt`).

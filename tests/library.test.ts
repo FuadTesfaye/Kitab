@@ -144,4 +144,32 @@ test('Aljam3 provider and 1500 books catalogue with direct PDF downloads', async
   assert.ok(pdfRes.headers.get('location')?.includes('.pdf'));
 });
 
+test('Homepage catalogue search exposes 1500+ books with categories and PDF downloads', async () => {
+  const {works, getWork, accessibleEdition} = await import('../lib/catalogue');
+  const allWorks = await works();
+  assert.ok(allWorks.length >= 1500, `Expected at least 1500 works, got ${allWorks.length}`);
+
+  // Test single work lookup for aljam3 book
+  const single = await getWork('aljam3-3435');
+  assert.ok(single);
+  assert.equal(single.id, 'aljam3-3435');
+  assert.ok(single.title.length > 0);
+  assert.ok(single.editions && single.editions.length > 0);
+  assert.equal(single.editions[0].id, 'aljam3-3435');
+
+  // Test accessible edition
+  const ed = await accessibleEdition('aljam3-3435');
+  assert.ok(ed);
+  assert.equal(ed.id, 'aljam3-3435');
+  assert.ok(ed.source_url.includes('pdf'));
+
+  // Test API endpoint for single book
+  const apiRes = await call('books/aljam3-3435', 'GET', undefined, '', ['books', 'aljam3-3435']);
+  assert.equal(apiRes.status, 200);
+  const apiData = await apiRes.json();
+  assert.equal(apiData.book.id, 'aljam3-3435');
+  assert.ok(apiData.book.editions.length > 0);
+});
+
+
 
