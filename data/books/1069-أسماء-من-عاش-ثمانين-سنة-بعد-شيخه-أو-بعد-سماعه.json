@@ -1,0 +1,28 @@
+{
+  "id": 1069,
+  "kitab_id": "aljam3-1069",
+  "title": "أسماء من عاش ثمانين سنة بعد شيخه أو بعد سماعه-الذهبي-ت الخلف-ط الريان",
+  "author": "محمد بن أحمد بن عثمان بن قايماز الذهبي شمس الدين أبو عبد الله",
+  "author_id": 26721,
+  "category": "التراجم والأعلام والطبقات",
+  "category_id": 18,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 162,
+  "volumes": 1,
+  "views_count": 688,
+  "pdf_url": "https://aljam3.com/1069",
+  "txt_url": "https://aljam3.com/api/v1/books/1069",
+  "docx_url": "https://aljam3.com/api/v1/books/1069?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-1069/download?format=pdf",
+    "txt": "/api/books/aljam3-1069/download?format=txt",
+    "json": "/api/books/aljam3-1069/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:26:47.929Z",
+  "local_files": {
+    "json": "1069-أسماء-من-عاش-ثمانين-سنة-بعد-شيخه-أو-بعد-سماعه.json",
+    "pdf": null,
+    "txt": null
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": 3263,
+  "kitab_id": "aljam3-3263",
+  "title": "ألفية السيوطي في علم الحديث - ت شاكر - ط المكتبة العلمية",
+  "author": "السيوطي",
+  "author_id": 6990,
+  "category": "علوم الحديث",
+  "category_id": 87,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 152,
+  "volumes": 1,
+  "views_count": 789,
+  "pdf_url": "https://aljam3.com/3263",
+  "txt_url": "https://aljam3.com/api/v1/books/3263",
+  "docx_url": "https://aljam3.com/api/v1/books/3263?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-3263/download?format=pdf",
+    "txt": "/api/books/aljam3-3263/download?format=txt",
+    "json": "/api/books/aljam3-3263/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:26:47.978Z",
+  "local_files": {
+    "json": "3263-ألفية-السيوطي-في-علم-الحديث-ت-شاكر-ط-المكتبة-.json",
+    "pdf": null,
+    "txt": null
+  }
+}
