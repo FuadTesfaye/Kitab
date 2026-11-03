@@ -5,7 +5,7 @@ import {fetchShamelaInfo, fetchShamelaPage, exportShamelaText} from '../lib/prov
 
 const BOOKS_DIR = path.resolve(process.cwd(), 'data/books');
 
-export async function downloadBook(id: number | string, outDir = BOOKS_DIR) {
+export async function downloadBook(id: number | string, outDir = BOOKS_DIR, withPdf = false) {
   if (!fs.existsSync(outDir)) {
     fs.mkdirSync(outDir, {recursive: true});
   }
@@ -55,20 +55,46 @@ export async function downloadBook(id: number | string, outDir = BOOKS_DIR) {
   }
 
   const safeTitle = (bookData.title as string || 'book').replace(/[\\/:*?"<>| ]+/g, '-').slice(0, 40);
-  const filename = `${numId}-${safeTitle}.json`;
-  const filePath = path.join(outDir, filename);
+  const jsonFilename = `${numId}-${safeTitle}.json`;
+  const jsonFilePath = path.join(outDir, jsonFilename);
 
-  fs.writeFileSync(filePath, JSON.stringify(bookData, null, 2), 'utf8');
-  console.log(`[Downloaded] Book #${numId} -> ${filePath}`);
-  return filePath;
+  fs.writeFileSync(jsonFilePath, JSON.stringify(bookData, null, 2), 'utf8');
+  console.log(`[Downloaded JSON] Book #${numId} -> ${jsonFilePath}`);
+
+  if (withPdf && bookData.pdf_url) {
+    const pdfUrl = String(bookData.pdf_url);
+    if (pdfUrl.includes('.pdf')) {
+      console.log(`[Fetching PDF] Book #${numId} from ${pdfUrl}...`);
+      try {
+        const res = await fetch(pdfUrl, {
+          headers: {'User-Agent': 'Kitab-Digital-Library/2.0'},
+          redirect: 'follow'
+        });
+        if (res.ok) {
+          const arrayBuffer = await res.arrayBuffer();
+          const buffer = Buffer.from(arrayBuffer);
+          const pdfFilename = `${numId}-${safeTitle}.pdf`;
+          const pdfFilePath = path.join(outDir, pdfFilename);
+          fs.writeFileSync(pdfFilePath, buffer);
+          console.log(`[Downloaded PDF] Book #${numId} -> ${pdfFilePath} (${(buffer.length / 1024 / 1024).toFixed(2)} MB)`);
+        } else {
+          console.warn(`Upstream returned status ${res.status} for PDF of book #${numId}`);
+        }
+      } catch (e) {
+        console.error(`Failed to download PDF for book #${numId}:`, e);
+      }
+    }
+  }
+
+  return jsonFilePath;
 }
 
-export async function downloadBulk(ids: number[], outDir = BOOKS_DIR) {
-  console.log(`Starting bulk download for ${ids.length} books...`);
+export async function downloadBulk(ids: number[], outDir = BOOKS_DIR, withPdf = false) {
+  console.log(`Starting bulk download for ${ids.length} books (withPdf=${withPdf})...`);
   const downloaded: string[] = [];
   for (const id of ids) {
     try {
-      const file = await downloadBook(id, outDir);
+      const file = await downloadBook(id, outDir, withPdf);
       downloaded.push(file);
     } catch (err) {
       console.error(`Failed to download book #${id}:`, err);
@@ -81,17 +107,18 @@ export async function downloadBulk(ids: number[], outDir = BOOKS_DIR) {
 // CLI invocation
 if (process.argv[1]?.endsWith('download-all-books.ts')) {
   const args = process.argv.slice(2);
+  const withPdf = args.includes('--pdf');
   const ids = args.filter(a => !a.startsWith('--')).map(Number).filter(n => Number.isSafeInteger(n) && n > 0);
   const limitArg = args.find(a => a.startsWith('--limit='));
   const limit = limitArg ? Number(limitArg.split('=')[1]) : 10;
 
   (async () => {
     if (ids.length > 0) {
-      await downloadBulk(ids);
+      await downloadBulk(ids, BOOKS_DIR, withPdf);
     } else {
       const all = await getBooksDataset();
       const targetIds = all.slice(0, limit).map(b => b.id);
-      await downloadBulk(targetIds);
+      await downloadBulk(targetIds, BOOKS_DIR, withPdf);
     }
   })().catch(console.error);
 }

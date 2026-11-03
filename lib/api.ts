@@ -28,10 +28,44 @@ export async function api(req:Request,path:string[]):Promise<Response>{try{if(![
      const numId=isAljam3?Number(id.replace('aljam3-','')):null;
      if(isAljam3&&numId){
        if(format==='pdf'){
+         const fs=await import('node:fs');
+         const pathMod=await import('node:path');
+         const booksDir=pathMod.resolve(process.cwd(),'data/books');
+         if(fs.existsSync(booksDir)){
+           const match=fs.readdirSync(booksDir).find(f=>f.startsWith(`${numId}-`)&&f.endsWith('.pdf'));
+           if(match){
+             const buffer=fs.readFileSync(pathMod.join(booksDir,match));
+             return new Response(method==='HEAD'?null:buffer,{
+               status:200,
+               headers:{
+                 'Content-Type':'application/pdf',
+                 'Content-Disposition':`attachment; filename="${encodeURIComponent(book.title)}.pdf"; filename*=UTF-8''${encodeURIComponent(book.title)}.pdf`,
+                 'Content-Length':String(buffer.length),
+                 'Cache-Control':'public, max-age=86400'
+               }
+             });
+           }
+         }
          const {getBookPdfUrl}=await import('./providers/aljam3');
          const pdfUrl=await getBookPdfUrl(numId);
-         if(pdfUrl)return Response.redirect(pdfUrl,302);
-         throw new HttpError(404,'ملف الـ PDF غير متوفر');
+         if(!pdfUrl)throw new HttpError(404,'ملف الـ PDF غير متوفر');
+         if(pdfUrl.includes('.pdf')){
+           try{
+             const upstream=await fetch(pdfUrl,{headers:{'User-Agent':'Kitab/2.0'},redirect:'follow'});
+             if(upstream.ok&&upstream.body){
+               return new Response(method==='HEAD'?null:upstream.body,{
+                 status:200,
+                 headers:{
+                   'Content-Type':'application/pdf',
+                   'Content-Disposition':`attachment; filename="${encodeURIComponent(book.title)}.pdf"; filename*=UTF-8''${encodeURIComponent(book.title)}.pdf`,
+                   'Content-Length':upstream.headers.get('content-length')||'',
+                   'Cache-Control':'public, max-age=86400'
+                 }
+               });
+             }
+           }catch(e){}
+         }
+         return Response.redirect(pdfUrl,302);
        }
        if(format==='txt'){
          const {getBooksDataset}=await import('./providers/aljam3');
@@ -185,9 +219,43 @@ export async function api(req:Request,path:string[]):Promise<Response>{try{if(![
    if((path[1]==='pdf'||path[1]==='download')&&isRead){
      const id=Number(url.searchParams.get('id'));
      if(!Number.isSafeInteger(id)||id<1)throw new HttpError(400,'رقم الكتاب غير صالح');
+     const fs=await import('node:fs');
+     const pathMod=await import('node:path');
+     const booksDir=pathMod.resolve(process.cwd(),'data/books');
+     if(fs.existsSync(booksDir)){
+       const match=fs.readdirSync(booksDir).find(f=>f.startsWith(`${id}-`)&&f.endsWith('.pdf'));
+       if(match){
+         const buffer=fs.readFileSync(pathMod.join(booksDir,match));
+         return new Response(method==='HEAD'?null:buffer,{
+           status:200,
+           headers:{
+             'Content-Type':'application/pdf',
+             'Content-Disposition':`attachment; filename="${encodeURIComponent(match)}"`,
+             'Content-Length':String(buffer.length),
+             'Cache-Control':'public, max-age=86400'
+           }
+         });
+       }
+     }
      const pdfUrl=await getBookPdfUrl(id);
-     if(pdfUrl)return Response.redirect(pdfUrl,302);
-     throw new HttpError(404,'ملف الـ PDF غير متوفر');
+     if(!pdfUrl)throw new HttpError(404,'ملف الـ PDF غير متوفر');
+     if(pdfUrl.includes('.pdf')){
+       try{
+         const upstream=await fetch(pdfUrl,{headers:{'User-Agent':'Kitab/2.0'},redirect:'follow'});
+         if(upstream.ok&&upstream.body){
+           return new Response(method==='HEAD'?null:upstream.body,{
+             status:200,
+             headers:{
+               'Content-Type':'application/pdf',
+               'Content-Disposition':`attachment; filename="book-${id}.pdf"`,
+               'Content-Length':upstream.headers.get('content-length')||'',
+               'Cache-Control':'public, max-age=86400'
+             }
+           });
+         }
+       }catch(e){}
+     }
+     return Response.redirect(pdfUrl,302);
    }
  }
  if(key==='search'&&method==='GET')return json(await searchPages((url.searchParams.get('q')||'').slice(0,300),url.searchParams.get('exact')==='1',url.searchParams.get('edition')||undefined));

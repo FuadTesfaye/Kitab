@@ -285,6 +285,7 @@ export function ShamelaBrowser({bookId, initialPage = 1}: {bookId?: string; init
                       href={`/api/aljam3/pdf?id=${b.id}`}
                       target="_blank"
                       rel="noopener noreferrer"
+                      download
                       className="action-pill pdf-pill"
                       title="تحميل ملف الـ PDF الأصلي بجودة عالية"
                     >
