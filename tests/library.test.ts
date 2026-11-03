@@ -210,24 +210,25 @@ test('Universal book downloads for PDF, TXT, and JSON across all library works',
   assert.ok(Array.isArray(arbaeenData.pages));
 });
 
-test('Maktabatu Shamela 500 books corpus and batch downloads API', async () => {
-  // Test Shamela 500 books all endpoint
+test('Maktabatu Shamela 4645 books corpus and batch downloads API', async () => {
+  // Test Shamela 4645 books all endpoint
   const shamelaAllRes = await call('shamela/books/all', 'GET', undefined, '', ['shamela', 'books', 'all']);
   assert.equal(shamelaAllRes.status, 200);
   const shamelaData = await shamelaAllRes.json();
-  assert.ok(shamelaData.books.length >= 500);
-  assert.equal(shamelaData.total, shamelaData.books.length);
+  assert.ok(shamelaData.books.length >= 4645, `Expected 4645 books, got ${shamelaData.books.length}`);
+  assert.equal(shamelaData.total, 4645);
 
-  // Test downloaded Shamela book 1578
-  const b1578Json = await call('books/aljam3-1578/download?format=json', 'GET', undefined, '', ['books', 'aljam3-1578', 'download']);
-  assert.equal(b1578Json.status, 200);
-  assert.ok(b1578Json.headers.get('content-type')?.includes('application/json'));
-  assert.ok(b1578Json.headers.get('content-disposition')?.includes('aljam3-1578.json'));
+  // Test downloaded Shamela book 2040 (Al-Maqrizi)
+  const b2040Json = await call('books/aljam3-2040/download?format=json', 'GET', undefined, '', ['books', 'aljam3-2040', 'download']);
+  assert.equal(b2040Json.status, 200);
+  assert.ok(b2040Json.headers.get('content-type')?.includes('application/json'));
+  assert.ok(b2040Json.headers.get('content-disposition')?.includes('aljam3-2040.json'));
 
-  // Test downloaded Shamela book 835
-  const b835Json = await call('books/aljam3-835/download?format=json', 'GET', undefined, '', ['books', 'aljam3-835', 'download']);
-  assert.equal(b835Json.status, 200);
-  assert.ok(b835Json.headers.get('content-disposition')?.includes('aljam3-835.json'));
+  // Test downloaded Shamela book 4266 (Ibn Hajar)
+  const b4266Json = await call('books/aljam3-4266/download?format=json', 'GET', undefined, '', ['books', 'aljam3-4266', 'download']);
+  assert.equal(b4266Json.status, 200);
+  assert.ok(b4266Json.headers.get('content-type')?.includes('application/json'));
+  assert.ok(b4266Json.headers.get('content-disposition')?.includes('aljam3-4266.json'));
 });
 
 

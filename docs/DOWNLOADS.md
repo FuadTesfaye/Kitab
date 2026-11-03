@@ -24,13 +24,16 @@ A pre-packaged collection of **1,500 foundational Islamic works** is indexed in 
 - `/api/shamela/download?id={id}&format=pdf`: Direct PDF download for Shamela works.
 - `/api/shamela/download?id={id}&format=json`: Structured machine-readable JSON format.
 - `/api/shamela/download?id={id}&format=txt`: Plain-text format.
-- `/api/shamela/books/all`: Complete dataset dump for all 500 Maktabatu Shamela books in JSON format.
+- `/api/shamela/books/all`: Complete dataset dump for all 4,645 Maktabatu Shamela books in JSON format.
 
-### Maktabatu Shamela Batch Downloader:
+### Maktabatu Shamela Batch Downloader & Full Synchronizer:
 Download and archive Shamela books into `data/books/`:
 ```sh
-# Download specific Shamela books
-npx tsx scripts/download-shamela-batch.ts --ids=1578,835,3945
+# Fetch and synchronize the full 4,645 Shamela catalogue
+npx tsx scripts/fetch-all-shamela.ts
+
+# Download specific Shamela books into repository
+npx tsx scripts/download-shamela-batch.ts --ids=2040,1446,1444,4266,4263,4425
 
 # Download first N Shamela books with optional PDF/TXT fetching
 npx tsx scripts/download-shamela-batch.ts --limit=10 --txt

@@ -55,10 +55,11 @@ Register the first administrator with `npm run admin:create` before accepting st
   - Direct 1-click **PDF 📄** and **تحميل ⤓** download pills on every book card on the homepage.
   - Complete download group on book detail pages with choices for PDF, TXT, and JSON attachments.
   - Curated **1,500 Classical Islamic Books Catalogue** stored in [`data/shamela/1500-books.json`](data/shamela/1500-books.json) with direct PDF, TXT, and DOCX download URLs from Aljam3 and Hugging Face.
-  - Dedicated **المكتبة الشاملة (Maktabatu Shamela 500 Books Corpus)** indexed in [`data/shamela/shamela-all-books.json`](data/shamela/shamela-all-books.json) with verified metadata, volume counts, and direct download routes.
-  - Instant one-click **🏛 المكتبة الشاملة** filter button on the homepage (`http://localhost:3000/`) and Shamela Reader (`/shamela`).
+  - Dedicated **المكتبة الشاملة (Complete Maktabatu Shamela 4,645 Books Corpus)** indexed in [`data/shamela/shamela-all-books.json`](data/shamela/shamela-all-books.json) with verified metadata, volume counts, and direct download routes.
+  - Full Shamela synchronizer script: `npx tsx scripts/fetch-all-shamela.ts` to pull and refresh all 4,645 books from Library 3.
+  - Instant one-click **🏛 المكتبة الشاملة الكاملة (٤,٦٤٥ مصنفاً)** tab and filter button on homepage (`http://localhost:3000/`) and Shamela Reader (`/shamela`).
   - Offline downloaded books stored in [`data/books/`](data/books/) committed directly to the GitHub repository in structured 3-file batches.
-  - Maktabatu Shamela batch downloader CLI: `npx tsx scripts/download-shamela-batch.ts [--ids=1578,835,...] [--limit=N] [--pdf] [--txt]`.
+  - Maktabatu Shamela batch downloader CLI: `npx tsx scripts/download-shamela-batch.ts [--ids=2040,1446,...] [--limit=N] [--pdf] [--txt]`.
   - Universal bulk downloader CLI utility: `npx tsx scripts/download-all-books.ts [id1 id2 ...] [--limit=N]`.
   - Fully accessible from the main library search at `http://localhost:3000/` across 8 main disciplines: Quran & Tafsir (108), Hadith (142), Fiqh (262), Aqeedah (130), Seerah & History (292), Arabic Language (116), Adab & Tazkiyah (147), and other encyclopedic works (303).
   - In-browser reading with volume navigation, page jumping, and heading/TOC drawer.
