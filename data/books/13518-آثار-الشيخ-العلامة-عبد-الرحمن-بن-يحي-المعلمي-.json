@@ -1,0 +1,24 @@
+{
+  "id": 13518,
+  "kitab_id": "aljam3-13518",
+  "title": "آثار الشيخ العلامة عبد الرحمن بن يحي المعلمي (ط. مجمع الفقه)",
+  "author": "عبد الرحمن بن يحيى بن علي بن محمد المعلمي العتمي اليماني",
+  "author_id": 17456,
+  "category": "المجاميع",
+  "category_id": 65,
+  "library": "المكتبة الوقفية",
+  "library_id": 2,
+  "pages_count": 12480,
+  "volumes": 25,
+  "views_count": 19543,
+  "pdf_url": "https://aljam3.com/13518",
+  "txt_url": "https://aljam3.com/api/v1/books/13518",
+  "docx_url": "https://aljam3.com/api/v1/books/13518?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-13518/download?format=pdf",
+    "txt": "/api/books/aljam3-13518/download?format=txt",
+    "json": "/api/books/aljam3-13518/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:53:57.377Z",
+  "source_website": "https://aljam3.com"
+}

@@ -1,0 +1,24 @@
+{
+  "id": 9799,
+  "kitab_id": "aljam3-9799",
+  "title": "آثار الخوف في الأحكام الفقهية",
+  "author": "إبراهيم بن يحيى بن محمد عطيف",
+  "author_id": 3297,
+  "category": "الفقه العام",
+  "category_id": 58,
+  "library": "المكتبة الوقفية",
+  "library_id": 2,
+  "pages_count": 818,
+  "volumes": 2,
+  "views_count": 846,
+  "pdf_url": "https://aljam3.com/9799",
+  "txt_url": "https://aljam3.com/api/v1/books/9799",
+  "docx_url": "https://aljam3.com/api/v1/books/9799?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-9799/download?format=pdf",
+    "txt": "/api/books/aljam3-9799/download?format=txt",
+    "json": "/api/books/aljam3-9799/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:53:57.377Z",
+  "source_website": "https://aljam3.com"
+}
