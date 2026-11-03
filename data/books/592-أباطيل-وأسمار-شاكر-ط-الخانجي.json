@@ -1,0 +1,18 @@
+{
+  "id": 592,
+  "kitab_id": "aljam3-592",
+  "title": "أباطيل وأسمار-شاكر-ط الخانجي",
+  "author": "محمود محمد شاكر",
+  "category": "الأدب والبلاغة",
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 523,
+  "volumes": 1,
+  "download_routes": {
+    "pdf": "/api/books/aljam3-592/download?format=pdf",
+    "txt": "/api/books/aljam3-592/download?format=txt",
+    "json": "/api/books/aljam3-592/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:01:11.384Z",
+  "source_website": "https://aljam3.com"
+}

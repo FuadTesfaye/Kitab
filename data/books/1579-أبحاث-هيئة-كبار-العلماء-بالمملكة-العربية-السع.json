@@ -1,0 +1,18 @@
+{
+  "id": 1579,
+  "kitab_id": "aljam3-1579",
+  "title": "أبحاث هيئة كبار العلماء بالمملكة العربية السعودية - هيئة كبار العلماء 01-07",
+  "author": "هيئة كبار العلماء بالمملكة العربية السعودية",
+  "category": "الجوامع والمجلات ونحوها",
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 4013,
+  "volumes": 7,
+  "download_routes": {
+    "pdf": "/api/books/aljam3-1579/download?format=pdf",
+    "txt": "/api/books/aljam3-1579/download?format=txt",
+    "json": "/api/books/aljam3-1579/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:01:11.384Z",
+  "source_website": "https://aljam3.com"
+}

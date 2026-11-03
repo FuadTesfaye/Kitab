@@ -1,0 +1,18 @@
+{
+  "id": 1052,
+  "kitab_id": "aljam3-1052",
+  "title": "أبراج الزجاج في سيرة الحجاج - القحطاني",
+  "author": "عبد الرحمن بن سعيد بن علي بن وهف القحطاني",
+  "category": "التراجم والأعلام والطبقات",
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 141,
+  "volumes": 1,
+  "download_routes": {
+    "pdf": "/api/books/aljam3-1052/download?format=pdf",
+    "txt": "/api/books/aljam3-1052/download?format=txt",
+    "json": "/api/books/aljam3-1052/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:01:11.384Z",
+  "source_website": "https://aljam3.com"
+}
