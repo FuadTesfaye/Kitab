@@ -1,0 +1,28 @@
+{
+  "id": 1614,
+  "kitab_id": "aljam3-1614",
+  "title": "آداب الحوار من خلال سيرة مصعب بن عمير رضي الله عنه - الجابري",
+  "author": "عدنان بن سليمان بن مسعد الجابري",
+  "author_id": 21800,
+  "category": "الدعوة وأحوال المسلمين",
+  "category_id": 29,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 29,
+  "volumes": 1,
+  "views_count": 813,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D8%A7%D9%84%D8%AF%D8%B9%D9%88%D8%A9%20%D9%88%D8%A3%D8%AD%D9%88%D8%A7%D9%84%20%D8%A7%D9%84%D9%85%D8%B3%D9%84%D9%85%D9%8A%D9%86/%D8%A2%D8%AF%D8%A7%D8%A8%20%D8%A7%D9%84%D8%AD%D9%88%D8%A7%D8%B1%20%D9%85%D9%86%20%D8%AE%D9%84%D8%A7%D9%84%20%D8%B3%D9%8A%D8%B1%D8%A9%20%D9%85%D8%B5%D8%B9%D8%A8%20%D8%A8%D9%86%20%D8%B9%D9%85%D9%8A%D8%B1%20%D8%B1%D8%B6%D9%8A%20%D8%A7%D9%84%D9%84%D9%87%20%D8%B9%D9%86%D9%87%20-%20%D8%A7%D9%84%D8%AC%D8%A7%D8%A8%D8%B1%D9%8A/ahwms.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D8%A7%D9%84%D8%AF%D8%B9%D9%88%D8%A9%20%D9%88%D8%A3%D8%AD%D9%88%D8%A7%D9%84%20%D8%A7%D9%84%D9%85%D8%B3%D9%84%D9%85%D9%8A%D9%86/%D8%A2%D8%AF%D8%A7%D8%A8%20%D8%A7%D9%84%D8%AD%D9%88%D8%A7%D8%B1%20%D9%85%D9%86%20%D8%AE%D9%84%D8%A7%D9%84%20%D8%B3%D9%8A%D8%B1%D8%A9%20%D9%85%D8%B5%D8%B9%D8%A8%20%D8%A8%D9%86%20%D8%B9%D9%85%D9%8A%D8%B1%20%D8%B1%D8%B6%D9%8A%20%D8%A7%D9%84%D9%84%D9%87%20%D8%B9%D9%86%D9%87%20-%20%D8%A7%D9%84%D8%AC%D8%A7%D8%A8%D8%B1%D9%8A/ahwms.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D8%A7%D9%84%D8%AF%D8%B9%D9%88%D8%A9%20%D9%88%D8%A3%D8%AD%D9%88%D8%A7%D9%84%20%D8%A7%D9%84%D9%85%D8%B3%D9%84%D9%85%D9%8A%D9%86/%D8%A2%D8%AF%D8%A7%D8%A8%20%D8%A7%D9%84%D8%AD%D9%88%D8%A7%D8%B1%20%D9%85%D9%86%20%D8%AE%D9%84%D8%A7%D9%84%20%D8%B3%D9%8A%D8%B1%D8%A9%20%D9%85%D8%B5%D8%B9%D8%A8%20%D8%A8%D9%86%20%D8%B9%D9%85%D9%8A%D8%B1%20%D8%B1%D8%B6%D9%8A%20%D8%A7%D9%84%D9%84%D9%87%20%D8%B9%D9%86%D9%87%20-%20%D8%A7%D9%84%D8%AC%D8%A7%D8%A8%D8%B1%D9%8A/ahwms.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-1614/download?format=pdf",
+    "txt": "/api/books/aljam3-1614/download?format=txt",
+    "json": "/api/books/aljam3-1614/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:39:26.200Z",
+  "local_files": {
+    "json": "1614-آداب-الحوار-من-خلال-سيرة-مصعب-بن-عمير-رضي-الل.json",
+    "pdf": null,
+    "txt": null
+  }
+}
