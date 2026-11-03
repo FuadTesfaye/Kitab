@@ -1,0 +1,24 @@
+{
+  "id": 2805,
+  "kitab_id": "aljam3-2805",
+  "title": "أبو العلاء وما إليه ويليه رسالة الملائكة - الميمني والمعري - ط العلمية",
+  "author": "عبد العزيز الميمني الراجلوتي الاثري الهندي - أبو العلاء المعري",
+  "author_id": 17765,
+  "category": "النحو والصرف",
+  "category_id": 73,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 286,
+  "volumes": 1,
+  "views_count": 773,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D8%A7%D9%84%D9%86%D8%AD%D9%88%20%D9%88%D8%A7%D9%84%D8%B5%D8%B1%D9%81/%D8%A3%D8%A8%D9%88%20%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D8%A1%20%D9%88%D9%85%D8%A7%20%D8%A5%D9%84%D9%8A%D9%87%20%D9%88%D9%8A%D9%84%D9%8A%D9%87%20%D8%B1%D8%B3%D8%A7%D9%84%D8%A9%20%D8%A7%D9%84%D9%85%D9%84%D8%A7%D8%A6%D9%83%D8%A9%20-%20%D8%A7%D9%84%D9%85%D9%8A%D9%85%D9%86%D9%8A%20%D9%88%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%8A%20-%20%D8%B7%20%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A%D8%A9/79717.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D8%A7%D9%84%D9%86%D8%AD%D9%88%20%D9%88%D8%A7%D9%84%D8%B5%D8%B1%D9%81/%D8%A3%D8%A8%D9%88%20%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D8%A1%20%D9%88%D9%85%D8%A7%20%D8%A5%D9%84%D9%8A%D9%87%20%D9%88%D9%8A%D9%84%D9%8A%D9%87%20%D8%B1%D8%B3%D8%A7%D9%84%D8%A9%20%D8%A7%D9%84%D9%85%D9%84%D8%A7%D8%A6%D9%83%D8%A9%20-%20%D8%A7%D9%84%D9%85%D9%8A%D9%85%D9%86%D9%8A%20%D9%88%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%8A%20-%20%D8%B7%20%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A%D8%A9/79717.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D8%A7%D9%84%D9%86%D8%AD%D9%88%20%D9%88%D8%A7%D9%84%D8%B5%D8%B1%D9%81/%D8%A3%D8%A8%D9%88%20%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D8%A1%20%D9%88%D9%85%D8%A7%20%D8%A5%D9%84%D9%8A%D9%87%20%D9%88%D9%8A%D9%84%D9%8A%D9%87%20%D8%B1%D8%B3%D8%A7%D9%84%D8%A9%20%D8%A7%D9%84%D9%85%D9%84%D8%A7%D8%A6%D9%83%D8%A9%20-%20%D8%A7%D9%84%D9%85%D9%8A%D9%85%D9%86%D9%8A%20%D9%88%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%8A%20-%20%D8%B7%20%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A%D8%A9/79717.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-2805/download?format=pdf",
+    "txt": "/api/books/aljam3-2805/download?format=txt",
+    "json": "/api/books/aljam3-2805/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:25:41.428Z",
+  "source_website": "https://aljam3.com"
+}

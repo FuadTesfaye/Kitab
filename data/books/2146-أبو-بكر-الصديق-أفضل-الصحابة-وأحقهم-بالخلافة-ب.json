@@ -1,0 +1,24 @@
+{
+  "id": 2146,
+  "kitab_id": "aljam3-2146",
+  "title": "أبو بكر الصديق أفضل الصحابة وأحقهم بالخلافة - بن قاسم",
+  "author": "محمد بن عبد الرحمن بن محمد بن قاسم",
+  "author_id": 27624,
+  "category": "التوحيد والعقيدة",
+  "category_id": 24,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 144,
+  "volumes": 1,
+  "views_count": 159,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D8%A7%D9%84%D8%B9%D9%82%D9%8A%D8%AF%D8%A9/%D8%A3%D8%A8%D9%88%20%D8%A8%D9%83%D8%B1%20%D8%A7%D9%84%D8%B5%D8%AF%D9%8A%D9%82%20%D8%A3%D9%81%D8%B6%D9%84%20%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D8%A8%D8%A9%20%D9%88%D8%A3%D8%AD%D9%82%D9%87%D9%85%20%D8%A8%D8%A7%D9%84%D8%AE%D9%84%D8%A7%D9%81%D8%A9%20-%20%D8%A8%D9%86%20%D9%82%D8%A7%D8%B3%D9%85/94634.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D8%A7%D9%84%D8%B9%D9%82%D9%8A%D8%AF%D8%A9/%D8%A3%D8%A8%D9%88%20%D8%A8%D9%83%D8%B1%20%D8%A7%D9%84%D8%B5%D8%AF%D9%8A%D9%82%20%D8%A3%D9%81%D8%B6%D9%84%20%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D8%A8%D8%A9%20%D9%88%D8%A3%D8%AD%D9%82%D9%87%D9%85%20%D8%A8%D8%A7%D9%84%D8%AE%D9%84%D8%A7%D9%81%D8%A9%20-%20%D8%A8%D9%86%20%D9%82%D8%A7%D8%B3%D9%85/94634.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D8%A7%D9%84%D8%B9%D9%82%D9%8A%D8%AF%D8%A9/%D8%A3%D8%A8%D9%88%20%D8%A8%D9%83%D8%B1%20%D8%A7%D9%84%D8%B5%D8%AF%D9%8A%D9%82%20%D8%A3%D9%81%D8%B6%D9%84%20%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D8%A8%D8%A9%20%D9%88%D8%A3%D8%AD%D9%82%D9%87%D9%85%20%D8%A8%D8%A7%D9%84%D8%AE%D9%84%D8%A7%D9%81%D8%A9%20-%20%D8%A8%D9%86%20%D9%82%D8%A7%D8%B3%D9%85/94634.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-2146/download?format=pdf",
+    "txt": "/api/books/aljam3-2146/download?format=txt",
+    "json": "/api/books/aljam3-2146/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:25:41.429Z",
+  "source_website": "https://aljam3.com"
+}

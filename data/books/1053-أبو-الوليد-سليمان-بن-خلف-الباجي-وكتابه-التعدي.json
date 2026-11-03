@@ -1,0 +1,24 @@
+{
+  "id": 1053,
+  "kitab_id": "aljam3-1053",
+  "title": "أبو الوليد سليمان بن خلف الباجي وكتابه التعديل والتجريح - حسين-ط اللواء 1-3",
+  "author": "أبو لبابة حسين",
+  "author_id": 682,
+  "category": "التراجم والأعلام والطبقات",
+  "category_id": 18,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 1439,
+  "volumes": 3,
+  "views_count": 706,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D8%A7%D9%84%D8%AA%D8%B1%D8%A7%D8%AC%D9%85%20%D9%88%D8%A7%D9%84%D8%B7%D8%A8%D9%82%D8%A7%D8%AA/%D8%A3%D8%A8%D9%88%20%D8%A7%D9%84%D9%88%D9%84%D9%8A%D8%AF%20%D8%B3%D9%84%D9%8A%D9%85%D8%A7%D9%86%20%D8%A8%D9%86%20%D8%AE%D9%84%D9%81%20%D8%A7%D9%84%D8%A8%D8%A7%D8%AC%D9%8A%20%D9%88%D9%83%D8%AA%D8%A7%D8%A8%D9%87%20%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%84%20%D9%88%D8%A7%D9%84%D8%AA%D8%AC%D8%B1%D9%8A%D8%AD%20-%20%D8%AD%D8%B3%D9%8A%D9%86-%D8%B7%20%D8%A7%D9%84%D9%84%D9%88%D8%A7%D8%A1%201-3/19291.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D8%A7%D9%84%D8%AA%D8%B1%D8%A7%D8%AC%D9%85%20%D9%88%D8%A7%D9%84%D8%B7%D8%A8%D9%82%D8%A7%D8%AA/%D8%A3%D8%A8%D9%88%20%D8%A7%D9%84%D9%88%D9%84%D9%8A%D8%AF%20%D8%B3%D9%84%D9%8A%D9%85%D8%A7%D9%86%20%D8%A8%D9%86%20%D8%AE%D9%84%D9%81%20%D8%A7%D9%84%D8%A8%D8%A7%D8%AC%D9%8A%20%D9%88%D9%83%D8%AA%D8%A7%D8%A8%D9%87%20%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%84%20%D9%88%D8%A7%D9%84%D8%AA%D8%AC%D8%B1%D9%8A%D8%AD%20-%20%D8%AD%D8%B3%D9%8A%D9%86-%D8%B7%20%D8%A7%D9%84%D9%84%D9%88%D8%A7%D8%A1%201-3/19291.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D8%A7%D9%84%D8%AA%D8%B1%D8%A7%D8%AC%D9%85%20%D9%88%D8%A7%D9%84%D8%B7%D8%A8%D9%82%D8%A7%D8%AA/%D8%A3%D8%A8%D9%88%20%D8%A7%D9%84%D9%88%D9%84%D9%8A%D8%AF%20%D8%B3%D9%84%D9%8A%D9%85%D8%A7%D9%86%20%D8%A8%D9%86%20%D8%AE%D9%84%D9%81%20%D8%A7%D9%84%D8%A8%D8%A7%D8%AC%D9%8A%20%D9%88%D9%83%D8%AA%D8%A7%D8%A8%D9%87%20%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%84%20%D9%88%D8%A7%D9%84%D8%AA%D8%AC%D8%B1%D9%8A%D8%AD%20-%20%D8%AD%D8%B3%D9%8A%D9%86-%D8%B7%20%D8%A7%D9%84%D9%84%D9%88%D8%A7%D8%A1%201-3/19291.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-1053/download?format=pdf",
+    "txt": "/api/books/aljam3-1053/download?format=txt",
+    "json": "/api/books/aljam3-1053/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:25:41.428Z",
+  "source_website": "https://aljam3.com"
+}
