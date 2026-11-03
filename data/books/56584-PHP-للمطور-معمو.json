@@ -1,0 +1,24 @@
+{
+  "id": 56584,
+  "kitab_id": "aljam3-56584",
+  "title": "PHP للمطور - معمو",
+  "author": "محمد شيخو معمو",
+  "author_id": 29246,
+  "category": "علوم الحاسب الآلي",
+  "category_id": 86,
+  "library": "مكتبة المسجد النبوي",
+  "library_id": 1,
+  "pages_count": 1176,
+  "volumes": -1,
+  "views_count": 1175,
+  "pdf_url": "https://aljam3.com/56584",
+  "txt_url": "https://aljam3.com/api/v1/books/56584",
+  "docx_url": "https://aljam3.com/api/v1/books/56584?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-56584/download?format=pdf",
+    "txt": "/api/books/aljam3-56584/download?format=txt",
+    "json": "/api/books/aljam3-56584/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:55:04.938Z",
+  "source_website": "https://aljam3.com"
+}

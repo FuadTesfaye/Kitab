@@ -1,0 +1,24 @@
+{
+  "id": 62364,
+  "kitab_id": "aljam3-62364",
+  "title": "PLC اساسيات التحكم المنطقي القابل للبرمجة",
+  "author": "أحمد فؤاد علوان",
+  "author_id": 2546,
+  "category": "التكنولوجيا والعلوم التطبيقية",
+  "category_id": 23,
+  "library": "مكتبة المسجد النبوي",
+  "library_id": 1,
+  "pages_count": 400,
+  "volumes": -1,
+  "views_count": 1261,
+  "pdf_url": "https://aljam3.com/62364",
+  "txt_url": "https://aljam3.com/api/v1/books/62364",
+  "docx_url": "https://aljam3.com/api/v1/books/62364?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-62364/download?format=pdf",
+    "txt": "/api/books/aljam3-62364/download?format=txt",
+    "json": "/api/books/aljam3-62364/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:55:04.938Z",
+  "source_website": "https://aljam3.com"
+}
