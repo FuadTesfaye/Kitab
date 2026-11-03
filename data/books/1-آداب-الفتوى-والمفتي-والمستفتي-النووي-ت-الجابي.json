@@ -1,0 +1,28 @@
+{
+  "id": 1,
+  "kitab_id": "aljam3-1",
+  "title": "آداب الفتوى والمفتي والمستفتي - النووي - ت الجابي - ط الفكر",
+  "author": "يحي بن شرف النووي الدمشقي أبو زكريا",
+  "author_id": 33715,
+  "category": "أصول الفقه والقواعد الفقهية",
+  "category_id": 2,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 96,
+  "volumes": 1,
+  "views_count": 123849,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D8%A3%D8%B5%D9%88%D9%84%20%D8%A7%D9%84%D9%81%D9%82%D9%87%20%D9%88%D8%A7%D9%84%D9%82%D9%88%D8%A7%D8%B9%D8%AF%20%D8%A7%D9%84%D9%81%D9%82%D9%87%D9%8A%D8%A9/%D8%A2%D8%AF%D8%A7%D8%A8%20%D8%A7%D9%84%D9%81%D8%AA%D9%88%D9%89%20%D9%88%D8%A7%D9%84%D9%85%D9%81%D8%AA%D9%8A%20%D9%88%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D9%81%D8%AA%D9%8A%20-%20%D8%A7%D9%84%D9%86%D9%88%D9%88%D9%8A%20-%20%D8%AA%20%D8%A7%D9%84%D8%AC%D8%A7%D8%A8%D9%8A%20-%20%D8%B7%20%D8%A7%D9%84%D9%81%D9%83%D8%B1/102835.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D8%A3%D8%B5%D9%88%D9%84%20%D8%A7%D9%84%D9%81%D9%82%D9%87%20%D9%88%D8%A7%D9%84%D9%82%D9%88%D8%A7%D8%B9%D8%AF%20%D8%A7%D9%84%D9%81%D9%82%D9%87%D9%8A%D8%A9/%D8%A2%D8%AF%D8%A7%D8%A8%20%D8%A7%D9%84%D9%81%D8%AA%D9%88%D9%89%20%D9%88%D8%A7%D9%84%D9%85%D9%81%D8%AA%D9%8A%20%D9%88%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D9%81%D8%AA%D9%8A%20-%20%D8%A7%D9%84%D9%86%D9%88%D9%88%D9%8A%20-%20%D8%AA%20%D8%A7%D9%84%D8%AC%D8%A7%D8%A8%D9%8A%20-%20%D8%B7%20%D8%A7%D9%84%D9%81%D9%83%D8%B1/102835.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D8%A3%D8%B5%D9%88%D9%84%20%D8%A7%D9%84%D9%81%D9%82%D9%87%20%D9%88%D8%A7%D9%84%D9%82%D9%88%D8%A7%D8%B9%D8%AF%20%D8%A7%D9%84%D9%81%D9%82%D9%87%D9%8A%D8%A9/%D8%A2%D8%AF%D8%A7%D8%A8%20%D8%A7%D9%84%D9%81%D8%AA%D9%88%D9%89%20%D9%88%D8%A7%D9%84%D9%85%D9%81%D8%AA%D9%8A%20%D9%88%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D9%81%D8%AA%D9%8A%20-%20%D8%A7%D9%84%D9%86%D9%88%D9%88%D9%8A%20-%20%D8%AA%20%D8%A7%D9%84%D8%AC%D8%A7%D8%A8%D9%8A%20-%20%D8%B7%20%D8%A7%D9%84%D9%81%D9%83%D8%B1/102835.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-1/download?format=pdf",
+    "txt": "/api/books/aljam3-1/download?format=txt",
+    "json": "/api/books/aljam3-1/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:12:33.691Z",
+  "local_files": {
+    "json": "1-آداب-الفتوى-والمفتي-والمستفتي-النووي-ت-الجابي.json",
+    "pdf": null,
+    "txt": null
+  }
+}

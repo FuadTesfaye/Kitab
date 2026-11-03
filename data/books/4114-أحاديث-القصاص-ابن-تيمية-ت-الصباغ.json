@@ -1,0 +1,28 @@
+{
+  "id": 4114,
+  "kitab_id": "aljam3-4114",
+  "title": "أحاديث القصاص - ابن تيمية - ت الصباغ",
+  "author": "أحمد بن عبد الحليم ابن تيمية تقي الدين",
+  "author_id": 1579,
+  "category": "كتب ابن تيمية",
+  "category_id": 98,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 128,
+  "volumes": 1,
+  "views_count": 968,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D9%83%D8%AA%D8%A8%20%D8%A7%D8%A8%D9%86%20%D8%AA%D9%8A%D9%85%D9%8A%D8%A9/%D8%A3%D8%AD%D8%A7%D8%AF%D9%8A%D8%AB%20%D8%A7%D9%84%D9%82%D8%B5%D8%A7%D8%B5%20-%20%D8%A7%D8%A8%D9%86%20%D8%AA%D9%8A%D9%85%D9%8A%D8%A9%20-%20%D8%AA%20%D8%A7%D9%84%D8%B5%D8%A8%D8%A7%D8%BA/21060.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D9%83%D8%AA%D8%A8%20%D8%A7%D8%A8%D9%86%20%D8%AA%D9%8A%D9%85%D9%8A%D8%A9/%D8%A3%D8%AD%D8%A7%D8%AF%D9%8A%D8%AB%20%D8%A7%D9%84%D9%82%D8%B5%D8%A7%D8%B5%20-%20%D8%A7%D8%A8%D9%86%20%D8%AA%D9%8A%D9%85%D9%8A%D8%A9%20-%20%D8%AA%20%D8%A7%D9%84%D8%B5%D8%A8%D8%A7%D8%BA/21060.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D9%83%D8%AA%D8%A8%20%D8%A7%D8%A8%D9%86%20%D8%AA%D9%8A%D9%85%D9%8A%D8%A9/%D8%A3%D8%AD%D8%A7%D8%AF%D9%8A%D8%AB%20%D8%A7%D9%84%D9%82%D8%B5%D8%A7%D8%B5%20-%20%D8%A7%D8%A8%D9%86%20%D8%AA%D9%8A%D9%85%D9%8A%D8%A9%20-%20%D8%AA%20%D8%A7%D9%84%D8%B5%D8%A8%D8%A7%D8%BA/21060.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-4114/download?format=pdf",
+    "txt": "/api/books/aljam3-4114/download?format=txt",
+    "json": "/api/books/aljam3-4114/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:12:33.616Z",
+  "local_files": {
+    "json": "4114-أحاديث-القصاص-ابن-تيمية-ت-الصباغ.json",
+    "pdf": null,
+    "txt": null
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": 4069,
+  "kitab_id": "aljam3-4069",
+  "title": "أحكام أهل الذمة - ابن القيم - ط رمادي 1-3",
+  "author": "محمد بن أبي بكر بن قيم الجوزية",
+  "author_id": 26517,
+  "category": "كتب ابن القيم",
+  "category_id": 97,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 1748,
+  "volumes": 3,
+  "views_count": 895,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D9%83%D8%AA%D8%A8%20%D8%A7%D8%A8%D9%86%20%D8%A7%D9%84%D9%82%D9%8A%D9%85/%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A3%D9%87%D9%84%20%D8%A7%D9%84%D8%B0%D9%85%D8%A9%20-%20%D8%A7%D8%A8%D9%86%20%D8%A7%D9%84%D9%82%D9%8A%D9%85%20%20-%20%D8%B7%20%D8%B1%D9%85%D8%A7%D8%AF%D9%8A%201-3/35763.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D9%83%D8%AA%D8%A8%20%D8%A7%D8%A8%D9%86%20%D8%A7%D9%84%D9%82%D9%8A%D9%85/%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A3%D9%87%D9%84%20%D8%A7%D9%84%D8%B0%D9%85%D8%A9%20-%20%D8%A7%D8%A8%D9%86%20%D8%A7%D9%84%D9%82%D9%8A%D9%85%20%20-%20%D8%B7%20%D8%B1%D9%85%D8%A7%D8%AF%D9%8A%201-3/35763.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D9%83%D8%AA%D8%A8%20%D8%A7%D8%A8%D9%86%20%D8%A7%D9%84%D9%82%D9%8A%D9%85/%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A3%D9%87%D9%84%20%D8%A7%D9%84%D8%B0%D9%85%D8%A9%20-%20%D8%A7%D8%A8%D9%86%20%D8%A7%D9%84%D9%82%D9%8A%D9%85%20%20-%20%D8%B7%20%D8%B1%D9%85%D8%A7%D8%AF%D9%8A%201-3/35763.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-4069/download?format=pdf",
+    "txt": "/api/books/aljam3-4069/download?format=txt",
+    "json": "/api/books/aljam3-4069/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:12:33.652Z",
+  "local_files": {
+    "json": "4069-أحكام-أهل-الذمة-ابن-القيم-ط-رمادي-1-3.json",
+    "pdf": null,
+    "txt": null
+  }
+}
