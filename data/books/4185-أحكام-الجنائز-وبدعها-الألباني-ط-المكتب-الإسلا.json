@@ -1,0 +1,28 @@
+{
+  "id": 4185,
+  "kitab_id": "aljam3-4185",
+  "title": "أحكام الجنائز وبدعها - الألباني - ط المكتب الإسلامي ط4",
+  "author": "محمد ناصر الدين الألباني",
+  "author_id": 30563,
+  "category": "كتب الألباني",
+  "category_id": 99,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 287,
+  "volumes": 1,
+  "views_count": 1340,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A3%D9%84%D8%A8%D8%A7%D9%86%D9%8A/%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D8%AC%D9%86%D8%A7%D8%A6%D8%B2%20%D9%88%D8%A8%D8%AF%D8%B9%D9%87%D8%A7%20-%20%D8%A7%D9%84%D8%A3%D9%84%D8%A8%D8%A7%D9%86%D9%8A%20-%20%D8%B7%20%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85%D9%8A%20%D8%B74/93870.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A3%D9%84%D8%A8%D8%A7%D9%86%D9%8A/%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D8%AC%D9%86%D8%A7%D8%A6%D8%B2%20%D9%88%D8%A8%D8%AF%D8%B9%D9%87%D8%A7%20-%20%D8%A7%D9%84%D8%A3%D9%84%D8%A8%D8%A7%D9%86%D9%8A%20-%20%D8%B7%20%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85%D9%8A%20%D8%B74/93870.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A3%D9%84%D8%A8%D8%A7%D9%86%D9%8A/%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D8%AC%D9%86%D8%A7%D8%A6%D8%B2%20%D9%88%D8%A8%D8%AF%D8%B9%D9%87%D8%A7%20-%20%D8%A7%D9%84%D8%A3%D9%84%D8%A8%D8%A7%D9%86%D9%8A%20-%20%D8%B7%20%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85%D9%8A%20%D8%B74/93870.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-4185/download?format=pdf",
+    "txt": "/api/books/aljam3-4185/download?format=txt",
+    "json": "/api/books/aljam3-4185/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:13:35.259Z",
+  "local_files": {
+    "json": "4185-أحكام-الجنائز-وبدعها-الألباني-ط-المكتب-الإسلا.json",
+    "pdf": null,
+    "txt": null
+  }
+}

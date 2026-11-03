@@ -1,0 +1,28 @@
+{
+  "id": 4184,
+  "kitab_id": "aljam3-4184",
+  "title": "آداب الزفاف في السنة المطهرة - الألباني - ط المكتبة الإسلامية",
+  "author": "محمد ناصر الدين الألباني",
+  "author_id": 30563,
+  "category": "كتب الألباني",
+  "category_id": 99,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 367,
+  "volumes": 1,
+  "views_count": 1108,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A3%D9%84%D8%A8%D8%A7%D9%86%D9%8A/%D8%A2%D8%AF%D8%A7%D8%A8%20%D8%A7%D9%84%D8%B2%D9%81%D8%A7%D9%81%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D8%B7%D9%87%D8%B1%D8%A9%20-%20%D8%A7%D9%84%D8%A3%D9%84%D8%A8%D8%A7%D9%86%D9%8A%20-%20%D8%B7%20%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8%D8%A9%20%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85%D9%8A%D8%A9/aazsm.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A3%D9%84%D8%A8%D8%A7%D9%86%D9%8A/%D8%A2%D8%AF%D8%A7%D8%A8%20%D8%A7%D9%84%D8%B2%D9%81%D8%A7%D9%81%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D8%B7%D9%87%D8%B1%D8%A9%20-%20%D8%A7%D9%84%D8%A3%D9%84%D8%A8%D8%A7%D9%86%D9%8A%20-%20%D8%B7%20%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8%D8%A9%20%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85%D9%8A%D8%A9/aazsm.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A3%D9%84%D8%A8%D8%A7%D9%86%D9%8A/%D8%A2%D8%AF%D8%A7%D8%A8%20%D8%A7%D9%84%D8%B2%D9%81%D8%A7%D9%81%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D8%B7%D9%87%D8%B1%D8%A9%20-%20%D8%A7%D9%84%D8%A3%D9%84%D8%A8%D8%A7%D9%86%D9%8A%20-%20%D8%B7%20%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8%D8%A9%20%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85%D9%8A%D8%A9/aazsm.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-4184/download?format=pdf",
+    "txt": "/api/books/aljam3-4184/download?format=txt",
+    "json": "/api/books/aljam3-4184/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:13:35.224Z",
+  "local_files": {
+    "json": "4184-آداب-الزفاف-في-السنة-المطهرة-الألباني-ط-المكت.json",
+    "pdf": null,
+    "txt": null
+  }
+}

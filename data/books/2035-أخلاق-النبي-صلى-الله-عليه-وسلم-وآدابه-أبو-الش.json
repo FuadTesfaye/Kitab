@@ -1,0 +1,28 @@
+{
+  "id": 2035,
+  "kitab_id": "aljam3-2035",
+  "title": "أخلاق النبي صلى الله عليه وسلم وآدابه - أبو الشيخ - ت الونيان - ط المسلم 1-4",
+  "author": "عبدالله محمد جعفر حيان الأصبهاني أبو الشيخ",
+  "author_id": 21251,
+  "category": "السيرة النبوية",
+  "category_id": 44,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 1998,
+  "volumes": 4,
+  "views_count": 2227,
+  "pdf_url": "https://aljam3.com/2035",
+  "txt_url": "https://aljam3.com/api/v1/books/2035",
+  "docx_url": "https://aljam3.com/api/v1/books/2035?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-2035/download?format=pdf",
+    "txt": "/api/books/aljam3-2035/download?format=txt",
+    "json": "/api/books/aljam3-2035/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:13:35.300Z",
+  "local_files": {
+    "json": "2035-أخلاق-النبي-صلى-الله-عليه-وسلم-وآدابه-أبو-الش.json",
+    "pdf": null,
+    "txt": null
+  }
+}
