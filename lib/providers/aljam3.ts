@@ -99,18 +99,25 @@ export async function getAljam3Book(id: number): Promise<Aljam3BookDetail> {
   return res.json() as Promise<Aljam3BookDetail>;
 }
 
-export async function get500Books(): Promise<Aljam3Book[]> {
-  const localPath = resolve('data/shamela/500-books.json');
-  if (existsSync(localPath)) {
-    const text = await readFile(localPath, 'utf8');
+export async function getBooksDataset(): Promise<Aljam3Book[]> {
+  const path1500 = resolve('data/shamela/1500-books.json');
+  if (existsSync(path1500)) {
+    const text = await readFile(path1500, 'utf8');
+    return JSON.parse(text) as Aljam3Book[];
+  }
+  const path500 = resolve('data/shamela/500-books.json');
+  if (existsSync(path500)) {
+    const text = await readFile(path500, 'utf8');
     return JSON.parse(text) as Aljam3Book[];
   }
   return [];
 }
 
+export const get500Books = getBooksDataset;
+
 export async function getBookPdfUrl(id: number): Promise<string | null> {
-  // Check 500 books cache first
-  const books = await get500Books();
+  // Check local dataset first
+  const books = await getBooksDataset();
   const found = books.find(b => b.id === id);
   if (found?.pdf_url) return found.pdf_url;
 
