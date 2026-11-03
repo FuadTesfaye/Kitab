@@ -1,0 +1,28 @@
+{
+  "id": 1762,
+  "kitab_id": "aljam3-1762",
+  "title": "أثر العبادات في حياة المسلم - العباد - ط المغني",
+  "author": "عبد المحسن بن حمد العباد البدر",
+  "author_id": 19203,
+  "category": "الرقاق والآداب والأذكار",
+  "category_id": 41,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 31,
+  "volumes": 1,
+  "views_count": 647,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D8%A7%D9%84%D8%B1%D9%82%D8%A7%D9%82%20%D9%88%D8%A7%D9%84%D8%A2%D8%AF%D8%A7%D8%A8%20%D9%88%D8%A7%D9%84%D8%A3%D8%B0%D9%83%D8%A7%D8%B1/%D8%A3%D8%AB%D8%B1%20%D8%A7%D9%84%D8%B9%D8%A8%D8%A7%D8%AF%D8%A7%D8%AA%20%D9%81%D9%8A%20%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A7%D9%84%D9%85%D8%B3%D9%84%D9%85%20-%20%D8%A7%D9%84%D8%B9%D8%A8%D8%A7%D8%AF%20-%20%D8%B7%20%D8%A7%D9%84%D9%85%D8%BA%D9%86%D9%8A/aehm.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D8%A7%D9%84%D8%B1%D9%82%D8%A7%D9%82%20%D9%88%D8%A7%D9%84%D8%A2%D8%AF%D8%A7%D8%A8%20%D9%88%D8%A7%D9%84%D8%A3%D8%B0%D9%83%D8%A7%D8%B1/%D8%A3%D8%AB%D8%B1%20%D8%A7%D9%84%D8%B9%D8%A8%D8%A7%D8%AF%D8%A7%D8%AA%20%D9%81%D9%8A%20%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A7%D9%84%D9%85%D8%B3%D9%84%D9%85%20-%20%D8%A7%D9%84%D8%B9%D8%A8%D8%A7%D8%AF%20-%20%D8%B7%20%D8%A7%D9%84%D9%85%D8%BA%D9%86%D9%8A/aehm.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D8%A7%D9%84%D8%B1%D9%82%D8%A7%D9%82%20%D9%88%D8%A7%D9%84%D8%A2%D8%AF%D8%A7%D8%A8%20%D9%88%D8%A7%D9%84%D8%A3%D8%B0%D9%83%D8%A7%D8%B1/%D8%A3%D8%AB%D8%B1%20%D8%A7%D9%84%D8%B9%D8%A8%D8%A7%D8%AF%D8%A7%D8%AA%20%D9%81%D9%8A%20%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A7%D9%84%D9%85%D8%B3%D9%84%D9%85%20-%20%D8%A7%D9%84%D8%B9%D8%A8%D8%A7%D8%AF%20-%20%D8%B7%20%D8%A7%D9%84%D9%85%D8%BA%D9%86%D9%8A/aehm.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-1762/download?format=pdf",
+    "txt": "/api/books/aljam3-1762/download?format=txt",
+    "json": "/api/books/aljam3-1762/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:14:42.744Z",
+  "local_files": {
+    "json": "1762-أثر-العبادات-في-حياة-المسلم-العباد-ط-المغني.json",
+    "pdf": null,
+    "txt": null
+  }
+}

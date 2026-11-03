@@ -1,0 +1,28 @@
+{
+  "id": 207,
+  "kitab_id": "aljam3-207",
+  "title": "أربعون حديثا لشيخ الإسلام ابن تيمية - ت الحاج - ط الريان",
+  "author": "ابن تيمية",
+  "author_id": 4173,
+  "category": "الأجزاء الحديثية",
+  "category_id": 3,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 160,
+  "volumes": 1,
+  "views_count": 827,
+  "pdf_url": "https://aljam3.com/207",
+  "txt_url": "https://aljam3.com/api/v1/books/207",
+  "docx_url": "https://aljam3.com/api/v1/books/207?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-207/download?format=pdf",
+    "txt": "/api/books/aljam3-207/download?format=txt",
+    "json": "/api/books/aljam3-207/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:14:42.670Z",
+  "local_files": {
+    "json": "207-أربعون-حديثا-لشيخ-الإسلام-ابن-تيمية-ت-الحاج-ط.json",
+    "pdf": null,
+    "txt": null
+  }
+}

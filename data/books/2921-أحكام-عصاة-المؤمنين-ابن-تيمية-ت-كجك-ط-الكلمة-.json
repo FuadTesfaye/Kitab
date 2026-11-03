@@ -1,0 +1,28 @@
+{
+  "id": 2921,
+  "kitab_id": "aljam3-2921",
+  "title": "أحكام عصاة المؤمنين - ابن تيمية - ت كجك - ط الكلمة الطيبة",
+  "author": "ابن تيمية",
+  "author_id": 4173,
+  "category": "بحوث ومسائل",
+  "category_id": 75,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 120,
+  "volumes": 1,
+  "views_count": 736,
+  "pdf_url": "https://aljam3.com/2921",
+  "txt_url": "https://aljam3.com/api/v1/books/2921",
+  "docx_url": "https://aljam3.com/api/v1/books/2921?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-2921/download?format=pdf",
+    "txt": "/api/books/aljam3-2921/download?format=txt",
+    "json": "/api/books/aljam3-2921/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:14:42.703Z",
+  "local_files": {
+    "json": "2921-أحكام-عصاة-المؤمنين-ابن-تيمية-ت-كجك-ط-الكلمة-.json",
+    "pdf": null,
+    "txt": null
+  }
+}
