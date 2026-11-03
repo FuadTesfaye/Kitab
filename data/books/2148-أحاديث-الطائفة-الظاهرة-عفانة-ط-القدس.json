@@ -1,0 +1,24 @@
+{
+  "id": 2148,
+  "kitab_id": "aljam3-2148",
+  "title": "أحاديث الطائفة الظاهرة - عفانة - ط القدس",
+  "author": "حسام الدين بن موسى عفانه",
+  "author_id": 9807,
+  "category": "التوحيد والعقيدة",
+  "category_id": 24,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 67,
+  "volumes": 1,
+  "views_count": 628,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D8%A7%D9%84%D8%B9%D9%82%D9%8A%D8%AF%D8%A9/%D8%A3%D8%AD%D8%A7%D8%AF%D9%8A%D8%AB%20%D8%A7%D9%84%D8%B7%D8%A7%D8%A6%D9%81%D8%A9%20%D8%A7%D9%84%D8%B8%D8%A7%D9%87%D8%B1%D8%A9%20-%20%D8%B9%D9%81%D8%A7%D9%86%D8%A9%20-%20%D8%B7%20%D8%A7%D9%84%D9%82%D8%AF%D8%B3/100745.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D8%A7%D9%84%D8%B9%D9%82%D9%8A%D8%AF%D8%A9/%D8%A3%D8%AD%D8%A7%D8%AF%D9%8A%D8%AB%20%D8%A7%D9%84%D8%B7%D8%A7%D8%A6%D9%81%D8%A9%20%D8%A7%D9%84%D8%B8%D8%A7%D9%87%D8%B1%D8%A9%20-%20%D8%B9%D9%81%D8%A7%D9%86%D8%A9%20-%20%D8%B7%20%D8%A7%D9%84%D9%82%D8%AF%D8%B3/100745.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D8%A7%D9%84%D8%B9%D9%82%D9%8A%D8%AF%D8%A9/%D8%A3%D8%AD%D8%A7%D8%AF%D9%8A%D8%AB%20%D8%A7%D9%84%D8%B7%D8%A7%D8%A6%D9%81%D8%A9%20%D8%A7%D9%84%D8%B8%D8%A7%D9%87%D8%B1%D8%A9%20-%20%D8%B9%D9%81%D8%A7%D9%86%D8%A9%20-%20%D8%B7%20%D8%A7%D9%84%D9%82%D8%AF%D8%B3/100745.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-2148/download?format=pdf",
+    "txt": "/api/books/aljam3-2148/download?format=txt",
+    "json": "/api/books/aljam3-2148/download?format=json"
+  },
+  "imported_at": "2026-11-03T20:13:34.775Z",
+  "source_website": "https://aljam3.com"
+}
