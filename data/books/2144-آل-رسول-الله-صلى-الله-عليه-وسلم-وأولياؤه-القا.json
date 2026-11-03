@@ -1,0 +1,28 @@
+{
+  "id": 2144,
+  "kitab_id": "aljam3-2144",
+  "title": "آل رسول الله صلى الله عليه وسلم وأولياؤه - القاسم - ط دار اليقين",
+  "author": "محمد عبد الرحمن محمد قاسم",
+  "author_id": 29476,
+  "category": "التوحيد والعقيدة",
+  "category_id": 24,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 208,
+  "volumes": 1,
+  "views_count": 801,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D8%A7%D9%84%D8%B9%D9%82%D9%8A%D8%AF%D8%A9/%D8%A2%D9%84%20%D8%B1%D8%B3%D9%88%D9%84%20%D8%A7%D9%84%D9%84%D9%87%20%D8%B5%D9%84%D9%89%20%D8%A7%D9%84%D9%84%D9%87%20%D8%B9%D9%84%D9%8A%D9%87%20%D9%88%D8%B3%D9%84%D9%85%20%D9%88%D8%A3%D9%88%D9%84%D9%8A%D8%A7%D8%A4%D9%87%20-%20%D8%A7%D9%84%D9%82%D8%A7%D8%B3%D9%85%20-%20%D8%B7%20%D8%AF%D8%A7%D8%B1%20%D8%A7%D9%84%D9%8A%D9%82%D9%8A%D9%86/62523.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D8%A7%D9%84%D8%B9%D9%82%D9%8A%D8%AF%D8%A9/%D8%A2%D9%84%20%D8%B1%D8%B3%D9%88%D9%84%20%D8%A7%D9%84%D9%84%D9%87%20%D8%B5%D9%84%D9%89%20%D8%A7%D9%84%D9%84%D9%87%20%D8%B9%D9%84%D9%8A%D9%87%20%D9%88%D8%B3%D9%84%D9%85%20%D9%88%D8%A3%D9%88%D9%84%D9%8A%D8%A7%D8%A4%D9%87%20-%20%D8%A7%D9%84%D9%82%D8%A7%D8%B3%D9%85%20-%20%D8%B7%20%D8%AF%D8%A7%D8%B1%20%D8%A7%D9%84%D9%8A%D9%82%D9%8A%D9%86/62523.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D8%A7%D9%84%D8%B9%D9%82%D9%8A%D8%AF%D8%A9/%D8%A2%D9%84%20%D8%B1%D8%B3%D9%88%D9%84%20%D8%A7%D9%84%D9%84%D9%87%20%D8%B5%D9%84%D9%89%20%D8%A7%D9%84%D9%84%D9%87%20%D8%B9%D9%84%D9%8A%D9%87%20%D9%88%D8%B3%D9%84%D9%85%20%D9%88%D8%A3%D9%88%D9%84%D9%8A%D8%A7%D8%A4%D9%87%20-%20%D8%A7%D9%84%D9%82%D8%A7%D8%B3%D9%85%20-%20%D8%B7%20%D8%AF%D8%A7%D8%B1%20%D8%A7%D9%84%D9%8A%D9%82%D9%8A%D9%86/62523.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-2144/download?format=pdf",
+    "txt": "/api/books/aljam3-2144/download?format=txt",
+    "json": "/api/books/aljam3-2144/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:49:58.834Z",
+  "local_files": {
+    "json": "2144-آل-رسول-الله-صلى-الله-عليه-وسلم-وأولياؤه-القا.json",
+    "pdf": null,
+    "txt": null
+  }
+}
