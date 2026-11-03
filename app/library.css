@@ -23,4 +23,75 @@
 .tafsir-header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:12px}
 .tafsir-header select{border:1px solid var(--line);background:var(--paper);padding:6px;border-radius:3px;font-size:11px;margin-top:6px}
 .tafsir-body{font-size:15px;line-height:2.3;color:#495843;max-height:400px;overflow-y:auto;white-space:pre-wrap;padding:5px}
+/* Shamela Reader & Catalogue Styles */
+.shamela-container{padding:30px 0 60px}
+.shamela-hero{background:#f4f6ef;border:1px solid #d5decb;border-radius:6px;padding:36px;margin-bottom:30px;position:relative}
+.shamela-badge{display:inline-block;background:#2b5443;color:#f0eee5;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:bold;margin-bottom:12px}
+.shamela-hero h1{font:32px/1.4 var(--serif);color:#24362b;margin:6px 0 10px}
+.shamela-hero .lead{color:#667a5c;font-size:13px;max-width:700px;line-height:1.9}
+.shamela-search-bar{margin:20px 0 15px}
+.shamela-categories{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.category-pill{background:#e7ecdf;border:1px solid #c8d4bf;padding:6px 14px;border-radius:20px;font-size:11px;color:#40523a;cursor:pointer;transition:all .15s}
+.category-pill:hover,.category-pill.active{background:#2b5443;color:#fff;border-color:#2b5443}
+.shamela-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+.shamela-card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;transition:box-shadow .2s}
+.shamela-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.06);border-color:#bdcbb0}
+.shamela-card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.shamela-tag{font-size:10px;background:#eef1e6;color:#5a6d50;padding:2px 8px;border-radius:3px}
+.shamela-vol-tag{font-size:10px;background:#dfe7d8;color:#35513a;padding:2px 8px;border-radius:3px;font-weight:bold}
+.shamela-card h3{font:21px/1.4 var(--serif);margin:4px 0 8px}
+.shamela-card h3 a{color:var(--ink);text-decoration:none}
+.shamela-card h3 a:hover{color:#2b5443}
+.shamela-author{font-size:11px;color:#718266;margin-bottom:8px}
+.death-badge{color:#989775;font-size:10px}
+.shamela-desc{font-size:11px;color:#808f76;line-height:1.7;margin-bottom:12px}
+.shamela-stats{display:flex;justify-content:space-between;align-items:center;font-size:10px;color:#919d85;border-top:1px dashed var(--line);padding-top:10px;margin-bottom:15px}
+.source-tag{background:#f1eee4;color:#7a7258;padding:2px 6px;border-radius:2px}
+.shamela-actions{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.read-action{font-size:11px;padding:7px 14px;border-radius:3px;text-decoration:none}
+.shamela-downloads{display:flex;gap:6px}
+.action-pill{font-size:10px;padding:4px 9px;border:1px solid #c9d5bf;border-radius:3px;background:#f3f6f0;color:#3f583a;text-decoration:none;cursor:pointer}
+.action-pill:hover{background:#2b5443;color:#fff;border-color:#2b5443}
+.primary-pill{background:#2b5443;color:#fff;border-color:#2b5443}
+
+/* Shamela Reader View */
+.shamela-reader-wrapper{padding:15px 0 50px}
+.shamela-reader-bar{background:#f3f6ef;border:1px solid #d5decb;border-radius:6px;padding:15px 22px;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;margin-bottom:20px}
+.reader-bar-start{display:flex;align-items:center;gap:15px}
+.back-link{font-size:11px;color:#2b5443;font-weight:bold;text-decoration:none;padding:5px 8px;border-radius:3px;background:#e5edd9}
+.back-link:hover{background:#2b5443;color:#fff}
+.reader-titles h2{font:20px/1.3 var(--serif);color:#24362b;margin:0}
+.reader-titles small{font-size:11px;color:#748669}
+.reader-bar-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.typography-toolbar{display:flex;align-items:center;gap:6px;background:#e8ece1;padding:4px 8px;border-radius:4px}
+.tool-btn{background:#fff;border:1px solid #cad6bf;padding:4px 10px;border-radius:3px;font-size:10px;cursor:pointer;color:#3c5035}
+.tool-btn.active{background:#2b5443;color:#fff;border-color:#2b5443}
+.font-select{background:#fff;border:1px solid #cad6bf;padding:4px 8px;border-radius:3px;font-size:10px;color:#3c5035}
+.reader-download-pills{display:flex;align-items:center;gap:6px}
+
+.shamela-reader-layout{display:grid;grid-template-columns:1fr;gap:20px}
+.shamela-toc-sidebar{background:#f9faf7;border:1px solid #d8dfcd;border-radius:5px;padding:16px;max-height:450px;overflow-y:auto;margin-bottom:20px}
+.toc-header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e1e7d8;padding-bottom:8px;margin-bottom:10px}
+.toc-header h3{font:16px var(--serif);margin:0;color:#2e4436}
+.toc-header button{background:none;border:none;font-size:16px;cursor:pointer;color:#6b7f61}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{margin:3px 0}
+.toc-list button{width:100%;text-align:right;background:none;border:none;padding:6px 8px;font-size:11px;color:#506246;display:flex;justify-content:space-between;border-radius:3px;cursor:pointer}
+.toc-list button:hover,.toc-list button.active{background:#e4ecd8;color:#1e3527;font-weight:bold}
+.toc-page{color:#8b9982;font-size:10px}
+
+.shamela-page-surface{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:35px 45px;min-height:450px;box-shadow:0 1px 4px rgba(0,0,0,0.03)}
+.page-info-header{display:flex;justify-content:space-between;font-size:10px;color:#92a088;border-bottom:1px solid #e8ede0;padding-bottom:10px;margin-bottom:18px}
+.page-headings{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:15px}
+.shamela-heading-badge{font:bold 15px var(--serif);background:#f2f5ed;color:#2f483a;border-right:3px solid var(--gold);padding:4px 10px;margin:0}
+.reading-body{line-height:2.4;white-space:pre-wrap;font-size:inherit;color:#243022}
+.page-spinner{padding:60px 20px;text-align:center;color:#788b6f;font-size:12px}
+
+.shamela-pagination{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:25px;border-top:1px solid var(--line);padding-top:20px;flex-wrap:wrap}
+.page-nav-btn{background:#e7ecdf;border:1px solid #c7d4bd;color:#314833;padding:7px 14px;border-radius:3px;font-size:11px;cursor:pointer}
+.page-nav-btn:hover:not(:disabled){background:#2b5443;color:#fff}
+.page-nav-btn:disabled{opacity:0.4;cursor:not-allowed}
+.page-jump{display:flex;align-items:center;gap:8px;font-size:11px;color:#6b7e5f}
+.page-jump input{width:60px;text-align:center;border:1px solid #c7d4bd;background:#fff;padding:5px;border-radius:3px;font-size:11px}
+
 @media(max-width:1000px){.header-actions{gap:18px}.header nav{gap:19px}.header-actions{gap:12px}.admin-stats{gap:12px}.admin-stats>div{padding:15px;gap:10px}.reader-layout{grid-template-columns:180px minmax(0,1fr);gap:20px}.reading-text{padding:25px}.author-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.reader-top>span{display:none}}@media(max-width:760px){.header-inner{flex-wrap:wrap}.header nav{order:3;width:100%;justify-content:space-between;gap:12px;padding-top:10px}.header nav>a.active:after{bottom:-15px}.header-actions{margin-right:auto}.reader-layout{grid-template-columns:1fr}.reader-sidebar{border-left:none;border-bottom:1px solid var(--line);padding:0 0 15px;max-height:220px}.reader-toolbar{flex-wrap:wrap}.reading-text{padding:20px}.reader-top{font-size:10px}.reader-pagination .secondary{padding:7px 12px}.reader-pagination input{width:50px}.reader-pagination form{gap:5px}.page-reference{font-size:9px}.reader-sidebar h2{font-size:22px}.admin-stats{grid-template-columns:1fr 1fr}.admin-tabs{gap:4px}.admin-tabs button{font-size:11px;padding:8px 12px}.edition-row{flex-direction:column}.collection-list,.download-grid,.source-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.page-section>h1,.admin h1{font-size:34px}.panel{padding:20px}.edition-admin summary strong{font-size:21px}.edition-admin dl{gap:20px}.hero .search-options input{width:14px;padding:0}.search-options{font-size:9px;gap:12px}.downloads .lead{font-size:14px}}@media(max-width:480px){.author-grid{grid-template-columns:1fr}.book-picker{grid-template-columns:1fr}.reader-pagination .secondary{font-size:10px;padding:7px}.account-panel{margin:35px 0}.page-section{padding-top:28px}.admin-stats strong{font-size:31px}.admin-stats span{font-size:10px}.reader-toolbar .secondary{padding:6px 12px}.header nav{font-size:11px}.search-options{gap:8px}.panel pre{padding:12px;font-size:10px}.edition-admin summary{align-items:start}.page-reference{flex-wrap:wrap}.reader-content>label select{max-width:75%}}

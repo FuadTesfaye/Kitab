@@ -15,7 +15,7 @@ const temp=await mkdtemp(resolve(tmpdir(),'kitabs-test-'));process.env.DATA_DIR=
 after(async()=>{await closeDatabase();await rm(temp,{recursive:true,force:true});});
 const book:RemoteBook={externalId:'test-book',title:'كتاب اختبار أصلي',authors:['مؤلف الاختبار'],categories:['اللغة العربية'],sourceUrl:'https://example.org/test',revision:'1',files:[],raw:{pages:[{seq:1,body:'الْقُرْآنُ عِلْمٌ ونور',pageNo:'٣'},{seq:2,body:'صفحة ثانية للتجربة'}],sections:[{title:'البداية',seq:1}]}};
 let editionId='',workId='',adminId='',cookie='';
-async function call(path:string,method='GET',payload?:unknown,auth=''){return api(new Request('http://localhost:3000/api/'+path,{method,headers:{origin:'http://localhost:3000',...(auth?{cookie:auth}:{}),'Content-Type':'application/json'},body:payload===undefined?undefined:JSON.stringify(payload)}),path.split('/'));}
+async function call(path:string,method='GET',payload?:unknown,auth='',segments?:string[]){return api(new Request('http://localhost:3000/api/'+path,{method,headers:{origin:'http://localhost:3000',...(auth?{cookie:auth}:{}),'Content-Type':'application/json'},body:payload===undefined?undefined:JSON.stringify(payload)}),segments||path.split('/'));}
 test('Arabic normalization retains original display text and improves search recall',()=>{assert.equal(normalizeArabic('الْقُرْآنُ'),'القران');assert.equal(normalizeArabic('مُـوسَى'),'موسي');assert.notEqual(normalizeArabic('رحمة'),normalizeArabic('رحمه'));});
 test('TSV quoted tabs and Python-style path lists are parsed without evaluation',()=>{const rows=parseTSV('title\tauthor\n"عنوان\tكتاب"\t"مؤلف"\n');assert.equal(rows[0].title,'عنوان\tكتاب');assert.deepEqual(parsePaths("['./pdf/كتاب.pdf', './pdf/جزء 2.pdf']"),['./pdf/كتاب.pdf','./pdf/جزء 2.pdf']);assert.throws(()=>parseTSV('title\n"oops'));});
 test('OpenITI pages preserve printed pagination and heading sequence',()=>{const content=parseOpenITI('######OpenITI#\n#META#Header#End#\n### | مقدمة\n# النص\nPageV01P003\n# تتمة\nPageV01P004');assert.equal(content.pages.length,2);assert.equal(content.pages[0].pageNo,'003');assert.equal(content.sections[0].seq,1);assert.throws(()=>parseOpenITI('invalid'));});
@@ -67,4 +67,50 @@ test('Hadith and Tafsir open providers discovery', async () => {
   assert.ok(tafsirDisc.books.length >= 6);
   assert.ok(tafsirDisc.books.some(b => b.externalId === 'ar-tafsir-ibn-kathir'));
 });
+
+test('Shamela direct provider and API endpoints for reading and downloadable files', async () => {
+  const {listShamelaIndex, getShamelaLocalBook, fetchShamelaInfo, fetchShamelaPage, exportShamelaText} = await import('../lib/providers/shamela-direct');
+  const index = await listShamelaIndex();
+  assert.ok(index.length >= 10);
+  assert.equal(index[0].id, 1);
+  assert.equal(index[0].author, 'حمد بن ناصر آل معمر');
+
+  const local = await getShamelaLocalBook(1);
+  assert.ok(local);
+  assert.equal(local.shamela_id, 1);
+  assert.ok(local.pages.length > 0);
+
+  const info = await fetchShamelaInfo(1);
+  assert.equal(info.id, 1);
+  assert.ok(info.title.includes('الفواكه العذاب'));
+
+  const page = await fetchShamelaPage(1, 1);
+  assert.equal(page.page_num, 1);
+  assert.ok(normalizeArabic(page.body).includes('الحمد لله'));
+
+  const exported = await exportShamelaText(1);
+  assert.ok(exported.includes('الفواكه العذاب'));
+  assert.ok(exported.includes('الجزء 1'));
+
+  // Test API endpoints
+  const booksRes = await call('shamela/books', 'GET', undefined, '', ['shamela', 'books']);
+  assert.equal(booksRes.status, 200);
+  const booksData = await booksRes.json();
+  assert.ok(booksData.books.length >= 10);
+
+  const bookRes = await call('shamela/book?id=1', 'GET', undefined, '', ['shamela', 'book']);
+  assert.equal(bookRes.status, 200);
+
+  const pageRes = await call('shamela/page?id=1&page=1', 'GET', undefined, '', ['shamela', 'page']);
+  assert.equal(pageRes.status, 200);
+
+  const dlRes = await call('shamela/download?id=1&format=json', 'GET', undefined, '', ['shamela', 'download']);
+  assert.equal(dlRes.status, 200);
+  assert.equal(dlRes.headers.get('content-disposition'), 'attachment; filename="shamela-1.json"');
+
+  const dlTxt = await call('shamela/download?id=1&format=txt', 'GET', undefined, '', ['shamela', 'download']);
+  assert.equal(dlTxt.status, 200);
+  assert.equal(dlTxt.headers.get('content-disposition'), 'attachment; filename="shamela-1.txt"');
+});
+
 
