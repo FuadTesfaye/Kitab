@@ -138,10 +138,14 @@ test('Aljam3 provider and 1500 books catalogue with direct PDF downloads', async
   assert.equal(libData.books.length, 5);
   assert.equal(libData.total, 500);
 
-  // Test PDF download redirect
+  // Test PDF download (serves 200 when exact PDF is cached on disk, or 302 redirect)
   const pdfRes = await call('aljam3/pdf?id=3435', 'GET', undefined, '', ['aljam3', 'pdf']);
-  assert.equal(pdfRes.status, 302);
-  assert.ok(pdfRes.headers.get('location')?.includes('.pdf'));
+  assert.ok(pdfRes.status === 200 || pdfRes.status === 302);
+  if (pdfRes.status === 200) {
+    assert.ok(pdfRes.headers.get('content-type')?.includes('application/pdf'));
+  } else {
+    assert.ok(pdfRes.headers.get('location')?.includes('.pdf'));
+  }
 });
 
 test('Homepage catalogue search exposes 1500+ books with categories and PDF downloads', async () => {
@@ -172,10 +176,17 @@ test('Homepage catalogue search exposes 1500+ books with categories and PDF down
 });
 
 test('Universal book downloads for PDF, TXT, and JSON across all library works', async () => {
-  // 1. Aljam3 book - PDF download redirect
+  // 1. Aljam3 book - Exact PDF download
   const pdfRes = await call('books/aljam3-3435/download?format=pdf', 'GET', undefined, '', ['books', 'aljam3-3435', 'download']);
-  assert.equal(pdfRes.status, 302);
-  assert.ok(pdfRes.headers.get('location')?.includes('.pdf'));
+  assert.ok(pdfRes.status === 200 || pdfRes.status === 302);
+  if (pdfRes.status === 200) {
+    assert.ok(pdfRes.headers.get('content-type')?.includes('application/pdf'));
+    assert.ok(pdfRes.headers.get('content-disposition')?.includes('.pdf'));
+    const bytes = Buffer.from(await pdfRes.arrayBuffer());
+    assert.ok(bytes.subarray(0, 4).toString().startsWith('%PDF'));
+  } else {
+    assert.ok(pdfRes.headers.get('location')?.includes('.pdf'));
+  }
 
   // 2. Aljam3 book - JSON download
   const jsonRes = await call('books/aljam3-3435/download?format=json', 'GET', undefined, '', ['books', 'aljam3-3435', 'download']);
