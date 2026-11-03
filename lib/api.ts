@@ -7,12 +7,15 @@ import {enqueue} from './jobs';
 import {reviewRights,publishEdition} from './ingestion';
 import {searchPages} from './search';
 import {getObject} from './storage';
+import surahsData from '@/data/seeds/surahs.json';
 import type {SourceId,RightsStatus,RemoteBook,Work} from './types';
 const json=(data:unknown,status=200,headers:Record<string,string>={})=>Response.json(data,{status,headers:{'Cache-Control':'no-store',...headers}});
 const text=(b:Record<string,unknown>,key:string,max=1000)=>{const v=b[key];if(typeof v!=='string'||v.length>max)throw new HttpError(400,`Invalid ${key}`);return v;};
 async function body(req:Request){const reader=req.body?.getReader();if(!reader)throw new HttpError(400,'Missing body');const chunks:Uint8Array[]=[];let n=0;while(true){const {done,value}=await reader.read();if(done)break;n+=value.length;if(n>5*1024*1024){await reader.cancel();throw new HttpError(413,'Payload is too large');}chunks.push(value);}try{const b=JSON.parse(Buffer.concat(chunks).toString('utf8'));if(!b||Array.isArray(b)||typeof b!=='object')throw Error();return b as Record<string,unknown>;}catch{throw new HttpError(400,'Invalid JSON body');}}
-export async function api(req:Request,path:string[]):Promise<Response>{try{if(!['GET','HEAD'].includes(req.method))checkOrigin(req);await ensureSeed();const db=await database();const key=path.join('/');const method=req.method;const url=new URL(req.url);
- if(key==='health'&&method==='GET'){await db.query('SELECT 1 as ok');return json({ok:true,database:db.dialect,search:process.env.OPENSEARCH_URL?'opensearch':'database',storage:process.env.S3_ENDPOINT?'s3':'local'});}
+export async function api(req:Request,path:string[]):Promise<Response>{try{if(!['GET','HEAD'].includes(req.method))checkOrigin(req);const key=path.join('/');const method=req.method;const url=new URL(req.url);
+ if(key==='health'&&method==='GET'){try{await ensureSeed();const db=await database();await db.query('SELECT 1 as ok');return json({ok:true,database:db.dialect,search:process.env.OPENSEARCH_URL?'opensearch':'database',storage:process.env.S3_ENDPOINT?'s3':'local'});}catch(err){return json({ok:false,error:err instanceof Error?err.message:String(err),database:process.env.DATABASE_URL?'postgres':'sqlite'},500);}}
+ if(key==='surahs'&&method==='GET'){return json({surahs:surahsData});}
+ await ensureSeed();const db=await database();
  if(key==='books'&&method==='GET')return json({books:await works()});
  if(path[0]==='books'&&path.length===2&&method==='GET'){const book=await getWork(path[1]);if(!book)throw new HttpError(404,'الكتاب غير موجود');return json({book});}
  if(key==='authors'&&method==='GET')return json({authors:await db.query('SELECT id,name_ar,death_hijri,biography FROM authors ORDER BY name_ar')});
@@ -23,16 +26,6 @@ export async function api(req:Request,path:string[]):Promise<Response>{try{if(![
    const {fetchTafsirAyah}=await import('./providers/tafsir');
    const text=await fetchTafsirAyah(author,surah,ayah);
    return json({surah,ayah,author,text});
- }
- if(key==='surahs'&&method==='GET'){
-   const {readFile}=await import('node:fs/promises');
-   const {resolve}=await import('node:path');
-   try{
-     const data=JSON.parse(await readFile(resolve('data/seeds/surahs.json'),'utf8'));
-     return json({surahs:data});
-   }catch{
-     return json({surahs:[]});
-   }
  }
  if(path[0]==='shamela'){
    const {listShamelaIndex,fetchShamelaInfo,fetchShamelaPage,exportShamelaText,getShamelaLocalBook}=await import('./providers/shamela-direct');
@@ -114,4 +107,4 @@ export async function api(req:Request,path:string[]):Promise<Response>{try{if(![
  if(path[1]==='works'&&path.length===3&&method==='PUT'){const b=await body(req);const work=await getWork(path[2]);if(!work)throw new HttpError(404,'Work not found');const updated:Work={...work,title:text(b,'title',1000),description:text(b,'description',10000),category:text(b,'category',100),editions:undefined};await db.query('UPDATE works SET title_ar=$1,title_normalized=$2,category=$3,metadata_json=$4 WHERE id=$5',[updated.title,(await import('./arabic')).normalizeArabic(updated.title),updated.category,JSON.stringify(updated),work.id]);await audit(user.id,'work.update',work.id,{});return json({ok:true});}
  }
  throw new HttpError(404,'المسار غير موجود');
- }catch(e){if(e instanceof HttpError)return json({error:e.message},e.status);console.error('API request failed',e instanceof Error?e.message:'Unknown error');return json({error:'تعذّر إتمام الطلب. تحقّق من الإعدادات أو سجل الخادم.'},500);}}
+ }catch(e){if(e instanceof HttpError)return json({error:e.message},e.status);console.error('API request failed',e instanceof Error?e.stack||e.message:'Unknown error');return json({error:'تعذّر إتمام الطلب. تحقّق من الإعدادات أو سجل الخادم.',detail:e instanceof Error?e.message:'Unknown error'},500);}}

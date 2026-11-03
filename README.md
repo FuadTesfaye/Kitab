@@ -49,6 +49,12 @@ Register the first administrator with `npm run admin:create` before accepting st
 - Password-protected student, teacher, and administrator accounts, reading progress, bookmarks, and passage notes.
 - Separate work, author, edition, source, page, file, and edition-specific rights records.
 - Provider adapters for Internet Archive, OpenITI, Turath, the Shamela v4 client, Hadith API (fawazahmed0/hadith-api CDN), Tafsir API (spa5k/tafsir_api CDN), NYU Arabic Collections Online (ACO), and selected Waqfeya / Prophet's Mosque Hugging Face repositories.
+- Dedicated **Al-Maktaba Al-Shamela (المكتبة الشاملة)** catalogue, reader, and downloader (`/shamela`):
+  - In-browser reading with volume navigation, page jumping, and heading/TOC drawer.
+  - Typography toolbar with Tashkeel diacritics toggle, Arabic font family chooser (Amiri, Scheherazade, Traditional), font resizing, and 1-click citation copier.
+  - Direct 1-click downloads for full structured JSON and plain-text TXT editions (`/api/shamela/download?id={id}&format=json|txt`).
+  - Offline dataset files located in `data/shamela/` committed directly to the repository under GitHub size limits.
+  - CLI book downloader: `npx tsx scripts/download-shamela.ts [id1] [id2] ...` to fetch and archive any Shamela book into the repository.
 - Interactive Arabic reader: diacritics toggle (إظهار / إخفاء التشكيل), Arabic font family switcher (Amiri, Scheherazade, Traditional), Surah and Ayah navigation for Quran, instant Tafsir drawer (Ibn Kathir, Al-Sa'di, Al-Muyassar, Al-Tabari, Al-Qurtubi), verse audio recitation, Hadith grading indicators, and copy with citation reference.
 - Arabic-normalized full-text search, original-text exact search, PostgreSQL/SQLite fallback, and optional OpenSearch.
 - Durable background jobs, revision-aware metadata discovery, per-book ingestion, checksums, S3/MinIO object storage, an administrator review queue, publication and withdrawal controls, and audit log.
