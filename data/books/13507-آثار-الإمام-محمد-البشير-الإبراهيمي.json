@@ -1,0 +1,24 @@
+{
+  "id": 13507,
+  "kitab_id": "aljam3-13507",
+  "title": "آثار الإمام محمد البشير الإبراهيمي",
+  "author": "أحمد طالب الإبراهيمي",
+  "author_id": 2391,
+  "category": "المجاميع",
+  "category_id": 65,
+  "library": "المكتبة الوقفية",
+  "library_id": 2,
+  "pages_count": 2353,
+  "volumes": 5,
+  "views_count": 3298,
+  "pdf_url": "https://aljam3.com/13507",
+  "txt_url": "https://aljam3.com/api/v1/books/13507",
+  "docx_url": "https://aljam3.com/api/v1/books/13507?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-13507/download?format=pdf",
+    "txt": "/api/books/aljam3-13507/download?format=txt",
+    "json": "/api/books/aljam3-13507/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:53:54.103Z",
+  "source_website": "https://aljam3.com"
+}

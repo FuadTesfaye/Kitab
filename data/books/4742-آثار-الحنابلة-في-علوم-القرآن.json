@@ -1,0 +1,24 @@
+{
+  "id": 4742,
+  "kitab_id": "aljam3-4742",
+  "title": "آثار الحنابلة في علوم القرآن",
+  "author": "سعود بن عبد الله الغنيسان",
+  "author_id": 14484,
+  "category": "علوم القرآن",
+  "category_id": 88,
+  "library": "المكتبة الوقفية",
+  "library_id": 2,
+  "pages_count": 234,
+  "volumes": 1,
+  "views_count": 926,
+  "pdf_url": "https://aljam3.com/4742",
+  "txt_url": "https://aljam3.com/api/v1/books/4742",
+  "docx_url": "https://aljam3.com/api/v1/books/4742?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-4742/download?format=pdf",
+    "txt": "/api/books/aljam3-4742/download?format=txt",
+    "json": "/api/books/aljam3-4742/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:53:54.104Z",
+  "source_website": "https://aljam3.com"
+}
