@@ -50,6 +50,12 @@ export async function api(req:Request,path:string[]):Promise<Response>{try{if(![
      const id=Number(url.searchParams.get('id'));
      const format=url.searchParams.get('format')||'json';
      if(!Number.isSafeInteger(id)||id<1)throw new HttpError(400,'رقم الكتاب غير صالح');
+     if(format==='pdf'){
+       const {getBookPdfUrl}=await import('./providers/aljam3');
+       const pdfUrl=await getBookPdfUrl(id);
+       if(pdfUrl)return Response.redirect(pdfUrl,302);
+       throw new HttpError(404,'ملف الـ PDF غير متوفر لهذا الكتاب حالياً');
+     }
      if(format==='txt'){
        const textData=await exportShamelaText(id);
        return new Response(method==='HEAD'?null:textData,{
@@ -80,6 +86,40 @@ export async function api(req:Request,path:string[]):Promise<Response>{try{if(![
          'Cache-Control':'public, max-age=86400'
        }
      });
+   }
+ }
+ if(path[0]==='aljam3'){
+   const {get500Books,getAljam3Book,getBookPdfUrl}=await import('./providers/aljam3');
+   const isRead=['GET','HEAD'].includes(method);
+   if(path[1]==='books'&&isRead){
+     const all=await get500Books();
+     const q=(url.searchParams.get('q')||'').trim();
+     const library=url.searchParams.get('library');
+     const page=Math.max(1,Number(url.searchParams.get('page')||1));
+     const limit=Math.min(100,Math.max(1,Number(url.searchParams.get('limit')||20)));
+     let filtered=all;
+     if(library)filtered=filtered.filter(b=>String(b.library?.id)===library||b.library?.name?.includes(library));
+     if(q){
+       const {normalizeArabic}=await import('./arabic');
+       const nq=normalizeArabic(q);
+       filtered=filtered.filter(b=>normalizeArabic(`${b.title} ${b.author?.name} ${b.category?.name}`).includes(nq));
+     }
+     const total=filtered.length;
+     const start=(page-1)*limit;
+     const paginated=filtered.slice(start,start+limit);
+     return json({books:paginated,total,page,limit,pages:Math.ceil(total/limit)});
+   }
+   if(path[1]==='book'&&isRead){
+     const id=Number(url.searchParams.get('id')||path[2]);
+     if(!Number.isSafeInteger(id)||id<1)throw new HttpError(400,'رقم الكتاب غير صالح');
+     return json({book:await getAljam3Book(id)});
+   }
+   if((path[1]==='pdf'||path[1]==='download')&&isRead){
+     const id=Number(url.searchParams.get('id'));
+     if(!Number.isSafeInteger(id)||id<1)throw new HttpError(400,'رقم الكتاب غير صالح');
+     const pdfUrl=await getBookPdfUrl(id);
+     if(pdfUrl)return Response.redirect(pdfUrl,302);
+     throw new HttpError(404,'ملف الـ PDF غير متوفر');
    }
  }
  if(key==='search'&&method==='GET')return json(await searchPages((url.searchParams.get('q')||'').slice(0,300),url.searchParams.get('exact')==='1',url.searchParams.get('edition')||undefined));
