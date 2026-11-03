@@ -45,7 +45,7 @@ Register the first administrator with `npm run admin:create` before accepting st
 
 ## What works
 
-- Responsive right-to-left Arabic catalogue, live search across **1,517+ books** at `http://localhost:3000/`, dynamic Arabic category shelf counters, author browsing, detail pages, saved works, and teacher-curated reading lists.
+- Responsive right-to-left Arabic catalogue, live search across **5,662+ books** at `http://localhost:3000/`, dynamic Arabic category shelf counters, author browsing, detail pages, saved works, and teacher-curated reading lists.
 - Instant search bar on `http://localhost:3000/` filtering titles, authors, and topics in real-time, with direct **PDF 📄** download pills and **قراءة 📖** links on every book card.
 - Password-protected student, teacher, and administrator accounts, reading progress, bookmarks, and passage notes.
 - Separate work, author, edition, source, page, file, and edition-specific rights records.

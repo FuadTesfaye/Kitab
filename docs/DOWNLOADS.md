@@ -2,19 +2,19 @@
 
 Begin with **25–50 works** from a corpus whose individual text licenses have been checked. Store imported files under `imports/`, outside Git. Keep database records and extracted pages in PostgreSQL; the original bytes go to MinIO or `data/objects/`. Use the application's administrator to review rights before ingesting or publishing a book.
 
-## Aljam3 & Shamela: 1,500 Books Digital Catalogue & PDF Downloads
+## Aljam3 & Shamela: 4,645+ Books Digital Catalogue & PDF Downloads
 
-The library includes an integrated client for [Aljam3 (الجامع — ieasybooks/aljam3-web-app)](https://github.com/ieasybooks/aljam3-web-app), providing direct access to 63,427 digitized Islamic works across:
-- **المكتبة الشاملة الوقفية** (Shamela Waqfeya - 500 books indexed)
-- **المكتبة الوقفية** (Al-Waqfeya - 500 books indexed)
-- **مكتبة المسجد النبوي** (Prophet's Mosque Library - 500 books indexed)
+The library includes an integrated client for [Aljam3 (الجامع — ieasybooks/aljam3-web-app)](https://github.com/ieasybooks/aljam3-web-app), providing direct access to 63,427 digitized Islamic works:
+- **المكتبة الشاملة الوقفية** (Complete Shamela Waqfeya - **4,645 books** indexed in `data/shamela/shamela-all-books.json`)
+- **المكتبة الوقفية** (Al-Waqfeya - 500 foundational works)
+- **مكتبة المسجد النبوي** (Prophet's Mosque Library - 500 foundational works)
 
-A pre-packaged collection of **1,500 foundational Islamic works** is indexed in `data/shamela/1500-books.json` (with backward compatibility fallback to `data/shamela/500-books.json`). Every book features:
-- **Homepage Search (`http://localhost:3000/`)**: Full real-time search across all 1,517 titles, authors, and topics with instant typing filters and Arabic numeral shelf counts.
+A pre-packaged collection of **5,645+ classical Islamic works** is indexed across `data/shamela/shamela-all-books.json` and `data/shamela/1500-books.json`. Every book features:
+- **Homepage Search (`http://localhost:3000/`)**: Full real-time search across all 5,662+ titles, authors, and topics with instant typing filters and Arabic numeral shelf counts.
 - Direct 1-click **PDF downloads** streamed or redirected from Hugging Face / CDN without polluting git repository storage limits.
 - Extracted **TXT** and **DOCX** files.
 - In-browser reading and volume navigation via `/shamela/[id]`.
-- Direct "PDF 📄" download pills on book cards and detail pages.
+- Direct "PDF 📄", "TXT 📝", and "تحميل ⤓" download pills on book cards and detail pages.
 
 ### Universal Download Endpoints:
 - `/api/books/{id}/download?format=pdf`: Direct PDF download attachment for any book in the catalogue.

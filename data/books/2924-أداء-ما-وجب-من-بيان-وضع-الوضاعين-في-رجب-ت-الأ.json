@@ -1,0 +1,28 @@
+{
+  "id": 2924,
+  "kitab_id": "aljam3-2924",
+  "title": "أداء ما وجب من بيان وضع الوضاعين في رجب - ت الألباني - ط المكتب الإسلامي ط1",
+  "author": "عمر بن حسن بن دحية أبو الخطاب",
+  "author_id": 23335,
+  "category": "بحوث ومسائل",
+  "category_id": 75,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 184,
+  "volumes": 1,
+  "views_count": 658,
+  "pdf_url": "https://aljam3.com/2924",
+  "txt_url": "https://aljam3.com/api/v1/books/2924",
+  "docx_url": "https://aljam3.com/api/v1/books/2924?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-2924/download?format=pdf",
+    "txt": "/api/books/aljam3-2924/download?format=txt",
+    "json": "/api/books/aljam3-2924/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:17:10.075Z",
+  "local_files": {
+    "json": "2924-أداء-ما-وجب-من-بيان-وضع-الوضاعين-في-رجب-ت-الأ.json",
+    "pdf": null,
+    "txt": null
+  }
+}
