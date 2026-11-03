@@ -1,0 +1,28 @@
+{
+  "id": 2040,
+  "kitab_id": "aljam3-2040",
+  "title": "إمتاع الأسماع - المقريزي - ت النميسي - ط العلمية 1-15",
+  "author": "أحمد بن علي بن عبد القادر بن محمد المقريزي تقي الدين",
+  "author_id": 1826,
+  "category": "السيرة النبوية",
+  "category_id": 44,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 6311,
+  "volumes": 15,
+  "views_count": 1737,
+  "pdf_url": "https://aljam3.com/2040",
+  "txt_url": "https://aljam3.com/api/v1/books/2040",
+  "docx_url": "https://aljam3.com/api/v1/books/2040?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-2040/download?format=pdf",
+    "txt": "/api/books/aljam3-2040/download?format=txt",
+    "json": "/api/books/aljam3-2040/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T14:54:43.301Z",
+  "local_files": {
+    "json": "2040-إمتاع-الأسماع-المقريزي-ت-النميسي-ط-العلمية-1-.json",
+    "pdf": null,
+    "txt": null
+  }
+}

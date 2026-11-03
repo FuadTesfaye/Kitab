@@ -1,0 +1,28 @@
+{
+  "id": 1444,
+  "kitab_id": "aljam3-1444",
+  "title": "إعراب القرآن الكريم وبيانه - الدرويش - ط اليمامة - ط4 1-10",
+  "author": "محي الدين الدرويش",
+  "author_id": 31160,
+  "category": "التفاسير",
+  "category_id": 20,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 5849,
+  "volumes": 10,
+  "views_count": 5682,
+  "pdf_url": "https://aljam3.com/1444",
+  "txt_url": "https://aljam3.com/api/v1/books/1444",
+  "docx_url": "https://aljam3.com/api/v1/books/1444?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-1444/download?format=pdf",
+    "txt": "/api/books/aljam3-1444/download?format=txt",
+    "json": "/api/books/aljam3-1444/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T14:54:43.444Z",
+  "local_files": {
+    "json": "1444-إعراب-القرآن-الكريم-وبيانه-الدرويش-ط-اليمامة-.json",
+    "pdf": null,
+    "txt": null
+  }
+}
