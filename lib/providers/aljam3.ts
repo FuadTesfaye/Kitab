@@ -99,6 +99,15 @@ export async function getAljam3Book(id: number): Promise<Aljam3BookDetail> {
   return res.json() as Promise<Aljam3BookDetail>;
 }
 
+export async function getShamelaCorpus(): Promise<Aljam3Book[]> {
+  const shamelaAllPath = resolve('data/shamela/shamela-all-books.json');
+  if (existsSync(shamelaAllPath)) {
+    const text = await readFile(shamelaAllPath, 'utf8');
+    return JSON.parse(text) as Aljam3Book[];
+  }
+  return [];
+}
+
 export async function getBooksDataset(): Promise<Aljam3Book[]> {
   const path1500 = resolve('data/shamela/1500-books.json');
   if (existsSync(path1500)) {
@@ -119,7 +128,12 @@ export async function getBookPdfUrl(id: number): Promise<string | null> {
   // Check local dataset first
   const books = await getBooksDataset();
   const found = books.find(b => b.id === id);
-  if (found?.pdf_url) return found.pdf_url;
+  if (found?.pdf_url && found.pdf_url.startsWith('https://huggingface')) return found.pdf_url;
+
+  // Check 4645 Shamela dataset
+  const shamela = await getShamelaCorpus();
+  const foundShamela = shamela.find(b => b.id === id);
+  if (foundShamela?.pdf_url && foundShamela.pdf_url.startsWith('https://huggingface')) return foundShamela.pdf_url;
 
   // Otherwise query live Aljam3 API
   try {
