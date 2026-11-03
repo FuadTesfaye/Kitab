@@ -1,0 +1,24 @@
+{
+  "id": 13394,
+  "kitab_id": "aljam3-13394",
+  "title": "آثار المدينة المنورة",
+  "author": "عبد القدوس الأنصاري",
+  "author_id": 18198,
+  "category": "تاريخ المدينة المنورة",
+  "category_id": 78,
+  "library": "المكتبة الوقفية",
+  "library_id": 2,
+  "pages_count": 329,
+  "volumes": 1,
+  "views_count": 835,
+  "pdf_url": "https://aljam3.com/13394",
+  "txt_url": "https://aljam3.com/api/v1/books/13394",
+  "docx_url": "https://aljam3.com/api/v1/books/13394?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-13394/download?format=pdf",
+    "txt": "/api/books/aljam3-13394/download?format=txt",
+    "json": "/api/books/aljam3-13394/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:54:00.649Z",
+  "source_website": "https://aljam3.com"
+}

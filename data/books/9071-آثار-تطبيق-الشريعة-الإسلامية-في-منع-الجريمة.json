@@ -1,0 +1,24 @@
+{
+  "id": 9071,
+  "kitab_id": "aljam3-9071",
+  "title": "آثار تطبيق الشريعة الإسلامية في منع الجريمة",
+  "author": "محمد بن عبد الله الزاحم",
+  "author_id": 27715,
+  "category": "السياسة الشرعية والقضاء",
+  "category_id": 43,
+  "library": "المكتبة الوقفية",
+  "library_id": 2,
+  "pages_count": 216,
+  "volumes": 1,
+  "views_count": 802,
+  "pdf_url": "https://aljam3.com/9071",
+  "txt_url": "https://aljam3.com/api/v1/books/9071",
+  "docx_url": "https://aljam3.com/api/v1/books/9071?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-9071/download?format=pdf",
+    "txt": "/api/books/aljam3-9071/download?format=txt",
+    "json": "/api/books/aljam3-9071/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:54:00.649Z",
+  "source_website": "https://aljam3.com"
+}

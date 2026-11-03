@@ -1,0 +1,24 @@
+{
+  "id": 13580,
+  "kitab_id": "aljam3-13580",
+  "title": "آثار الشيخ محمد عبد الوهاب سجل ببليوجرافي لما نشر من مؤلفاته",
+  "author": "أحمد محمد الضبيب",
+  "author_id": 2608,
+  "category": "الأدلة والفهارس",
+  "category_id": 6,
+  "library": "المكتبة الوقفية",
+  "library_id": 2,
+  "pages_count": 200,
+  "volumes": 1,
+  "views_count": 810,
+  "pdf_url": "https://aljam3.com/13580",
+  "txt_url": "https://aljam3.com/api/v1/books/13580",
+  "docx_url": "https://aljam3.com/api/v1/books/13580?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-13580/download?format=pdf",
+    "txt": "/api/books/aljam3-13580/download?format=txt",
+    "json": "/api/books/aljam3-13580/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:54:00.648Z",
+  "source_website": "https://aljam3.com"
+}
