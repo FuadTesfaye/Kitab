@@ -1,0 +1,28 @@
+{
+  "id": 4263,
+  "kitab_id": "aljam3-4263",
+  "title": "أنيس الساري في تخريج وتحقيق الأحاديث التي ذكرها الحافظ ابن حجر العسقلاني في فتح الباري - البصارة 1-11",
+  "author": "نبيل بن منصور بن يعقوب البصارة",
+  "author_id": 32667,
+  "category": "كتب التخريج والزوائد",
+  "category_id": 100,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 8641,
+  "volumes": 11,
+  "views_count": 1748,
+  "pdf_url": "https://aljam3.com/4263",
+  "txt_url": "https://aljam3.com/api/v1/books/4263",
+  "docx_url": "https://aljam3.com/api/v1/books/4263?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-4263/download?format=pdf",
+    "txt": "/api/books/aljam3-4263/download?format=txt",
+    "json": "/api/books/aljam3-4263/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T14:56:43.949Z",
+  "local_files": {
+    "json": "4263-أنيس-الساري-في-تخريج-وتحقيق-الأحاديث-التي-ذكر.json",
+    "pdf": null,
+    "txt": null
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": 4425,
+  "kitab_id": "aljam3-4425",
+  "title": "الأحاديث المختارة - المقدسي - ت بن دهيش - ط خضر ط4 1- 13",
+  "author": "ضياء الدين أبو عبد الله محمد بن عبد الواحد بن أحمد بن عبد الرحمن الحنبلي المقدسي",
+  "author_id": 16302,
+  "category": "متون الحديث",
+  "category_id": 102,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 5842,
+  "volumes": 13,
+  "views_count": 7203,
+  "pdf_url": "https://aljam3.com/4425",
+  "txt_url": "https://aljam3.com/api/v1/books/4425",
+  "docx_url": "https://aljam3.com/api/v1/books/4425?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-4425/download?format=pdf",
+    "txt": "/api/books/aljam3-4425/download?format=txt",
+    "json": "/api/books/aljam3-4425/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T14:56:43.988Z",
+  "local_files": {
+    "json": "4425-الأحاديث-المختارة-المقدسي-ت-بن-دهيش-ط-خضر-ط4-.json",
+    "pdf": null,
+    "txt": null
+  }
+}

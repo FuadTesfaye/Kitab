@@ -1,0 +1,28 @@
+{
+  "id": 4266,
+  "kitab_id": "aljam3-4266",
+  "title": "إتحاف المهرة بالفوائد المبتكرة من أطراف العشرة - ابن حجر - ط الجامعة الإسلامية - ت الناصر 1 -19",
+  "author": "أحمد بن علي بن محمد بن حجر العسقلاني",
+  "author_id": 1836,
+  "category": "كتب التخريج والزوائد",
+  "category_id": 100,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 14187,
+  "volumes": 19,
+  "views_count": 9690,
+  "pdf_url": "https://aljam3.com/4266",
+  "txt_url": "https://aljam3.com/api/v1/books/4266",
+  "docx_url": "https://aljam3.com/api/v1/books/4266?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-4266/download?format=pdf",
+    "txt": "/api/books/aljam3-4266/download?format=txt",
+    "json": "/api/books/aljam3-4266/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T14:56:43.914Z",
+  "local_files": {
+    "json": "4266-إتحاف-المهرة-بالفوائد-المبتكرة-من-أطراف-العشر.json",
+    "pdf": null,
+    "txt": null
+  }
+}
