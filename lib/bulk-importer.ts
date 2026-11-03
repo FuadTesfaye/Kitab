@@ -7,6 +7,7 @@ export interface BulkImportOptions {
   source?: 'shamela' | 'waqfeya' | 'prophet-mosque' | 'all';
   limit?: number;
   offset?: number;
+  outDir?: string;
   withTxt?: boolean;
   withPdf?: boolean;
   commitToGit?: boolean;
@@ -81,6 +82,7 @@ export async function startBulkImport(options: BulkImportOptions = {}): Promise<
     source = 'shamela',
     limit = 6,
     offset = 0,
+    outDir = BOOKS_DIR,
     withTxt = false,
     withPdf = false,
     commitToGit = true,
@@ -100,8 +102,8 @@ export async function startBulkImport(options: BulkImportOptions = {}): Promise<
   state.error = undefined;
   abortRequested = false;
 
-  if (!fs.existsSync(BOOKS_DIR)) {
-    fs.mkdirSync(BOOKS_DIR, {recursive: true});
+  if (!fs.existsSync(outDir)) {
+    fs.mkdirSync(outDir, {recursive: true});
   }
 
   // Run in background / async
@@ -129,7 +131,7 @@ export async function startBulkImport(options: BulkImportOptions = {}): Promise<
       }
 
       // Check existing files on disk
-      const existingFiles = new Set(fs.readdirSync(BOOKS_DIR));
+      const existingFiles = new Set(fs.readdirSync(outDir));
       const existingIds = new Set<number>();
       for (const file of existingFiles) {
         const idNum = parseInt(file.split('-')[0], 10);
@@ -157,7 +159,7 @@ export async function startBulkImport(options: BulkImportOptions = {}): Promise<
         try {
           const safeTitle = sanitizeTitle(book.title);
           const jsonFilename = `${book.id}-${safeTitle}.json`;
-          const jsonPath = path.join(BOOKS_DIR, jsonFilename);
+          const jsonPath = path.join(outDir, jsonFilename);
 
           const bookData = {
             id: book.id,

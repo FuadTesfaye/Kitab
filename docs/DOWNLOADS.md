@@ -26,6 +26,21 @@ A pre-packaged collection of **5,645+ classical Islamic works** is indexed acros
 - `/api/shamela/download?id={id}&format=txt`: Plain-text format.
 - `/api/shamela/books/all`: Complete dataset dump for all 4,645 Maktabatu Shamela books in JSON format.
 
+### Website-to-Website Bulk Importer (Automatic GitHub Synchronization):
+Import full collections directly from digital libraries to GitHub in automated 3-file batches:
+```sh
+# Bulk import books from Maktabatu Shamela (with automatic 3-file GitHub commits & pushes)
+npx tsx scripts/bulk-import-to-github.ts --source=shamela --limit=30
+
+# Bulk import from Prophet's Mosque Library
+npx tsx scripts/bulk-import-to-github.ts --source=prophet-mosque --limit=30
+
+# Bulk import from Al-Waqfeya Library
+npx tsx scripts/bulk-import-to-github.ts --source=waqfeya --limit=30
+
+# Or use the Web UI at http://localhost:3000/admin under "استيراد المواقع (Bulk Import)"
+```
+
 ### Maktabatu Shamela Batch Downloader & Full Synchronizer:
 Download and archive Shamela books into `data/books/`:
 ```sh
