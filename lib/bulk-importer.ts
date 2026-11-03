@@ -39,6 +39,47 @@ export function sanitizeTitle(title: string): string {
     .slice(0, 45);
 }
 
+export async function fetchFullBookText(bookId: number, fallbackUrl?: string | null): Promise<string | null> {
+  // If direct Hugging Face TXT URL is available
+  if (fallbackUrl && fallbackUrl.includes('huggingface.co')) {
+    try {
+      const res = await fetch(fallbackUrl, {headers: {'User-Agent': 'Kitab/2.0'}, redirect: 'follow', signal: AbortSignal.timeout(30000)});
+      if (res.ok) {
+        const text = await res.text();
+        if (text.length > 50) return text;
+      }
+    } catch (e) {}
+  }
+
+  // Otherwise expand files from Aljam3 API and concatenate all volumes
+  try {
+    const metaRes = await fetch(`https://aljam3.com/api/v1/books/${bookId}?expand=files`, {
+      headers: {'User-Agent': 'KitabsLibrary/2.0'},
+      signal: AbortSignal.timeout(20000)
+    });
+    if (metaRes.ok) {
+      const data = await metaRes.json();
+      const files: any[] = Array.isArray(data.files) ? data.files : [];
+      const validFiles = files.filter(f => f.pages_count > 1 || files.length === 1);
+      let combined = '';
+      for (const f of validFiles) {
+        if (f.urls?.txt) {
+          try {
+            const r = await fetch(f.urls.txt, {headers: {'User-Agent': 'Kitab/2.0'}, redirect: 'follow', signal: AbortSignal.timeout(30000)});
+            if (r.ok) {
+              const t = await r.text();
+              combined += (combined ? '\n\n=== [ ' + f.name + ' ] ===\n\n' : '') + t;
+            }
+          } catch (e) {}
+        }
+      }
+      if (combined.trim().length > 50) return combined.trim();
+    }
+  } catch (e) {}
+
+  return null;
+}
+
 // Module-level singleton status
 const state: BulkImportStatus = {
   active: false,
@@ -83,7 +124,7 @@ export async function startBulkImport(options: BulkImportOptions = {}): Promise<
     limit = 6,
     offset = 0,
     outDir = BOOKS_DIR,
-    withTxt = false,
+    withTxt = true,
     withPdf = false,
     commitToGit = true,
     gitBatchSize = 3
@@ -161,6 +202,22 @@ export async function startBulkImport(options: BulkImportOptions = {}): Promise<
           const jsonFilename = `${book.id}-${safeTitle}.json`;
           const jsonPath = path.join(outDir, jsonFilename);
 
+          let txtFilename: string | null = null;
+          if (withTxt) {
+            try {
+              const fullText = await fetchFullBookText(book.id, book.txt_url);
+              if (fullText && fullText.length > 50) {
+                txtFilename = `${book.id}-${safeTitle}.txt`;
+                const txtPath = path.join(outDir, txtFilename);
+                fs.writeFileSync(txtPath, fullText, 'utf8');
+                pendingCommitFiles.push({path: txtPath, title: book.title});
+                state.logs.push(`[${new Date().toLocaleTimeString('ar')}] 📝 تم تنزيل النص الكامل #${book.id} (${(fullText.length / 1024).toFixed(1)} KB)`);
+              }
+            } catch (e: any) {
+              state.logs.push(`[${new Date().toLocaleTimeString('ar')}] ⚠️ تعذر تنزيل النص الكامل #${book.id}: ${e.message}`);
+            }
+          }
+
           const bookData = {
             id: book.id,
             kitab_id: `aljam3-${book.id}`,
@@ -177,6 +234,7 @@ export async function startBulkImport(options: BulkImportOptions = {}): Promise<
             pdf_url: book.pdf_url || null,
             txt_url: book.txt_url || null,
             docx_url: book.docx_url || null,
+            local_txt_file: txtFilename,
             download_routes: {
               pdf: `/api/books/aljam3-${book.id}/download?format=pdf`,
               txt: `/api/books/aljam3-${book.id}/download?format=txt`,

@@ -23,6 +23,7 @@ export function BulkImporter() {
   const [status, setStatus] = useState<BulkImportStatus | null>(null);
   const [source, setSource] = useState<'shamela' | 'waqfeya' | 'prophet-mosque' | 'all'>('shamela');
   const [limit, setLimit] = useState<number>(6);
+  const [withTxt, setWithTxt] = useState<boolean>(true);
   const [commitToGit, setCommitToGit] = useState<boolean>(true);
   const [busy, setBusy] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
@@ -49,6 +50,7 @@ export function BulkImporter() {
       const res = await post<{status: BulkImportStatus}>('admin/bulk-import', {
         source,
         limit,
+        withTxt,
         commitToGit,
         gitBatchSize: 3
       });
@@ -126,7 +128,17 @@ export function BulkImporter() {
           </label>
         </div>
 
-        <div className="checkbox-row" style={{margin: '1rem 0'}}>
+        <div className="checkbox-row" style={{margin: '1rem 0', display: 'flex', flexDirection: 'column', gap: '0.5rem'}}>
+          <label className="checkbox-label">
+            <input
+              type="checkbox"
+              checked={withTxt}
+              disabled={status?.active || busy}
+              onChange={e => setWithTxt(e.target.checked)}
+            />
+            <span>تنزيل الكتب كاملة بالنص الكامل Unabridged Full Text (.txt) وحفظها في المستودع</span>
+          </label>
+
           <label className="checkbox-label">
             <input
               type="checkbox"
