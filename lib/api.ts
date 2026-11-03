@@ -34,6 +34,61 @@ export async function api(req:Request,path:string[]):Promise<Response>{try{if(![
      return json({surahs:[]});
    }
  }
+ if(path[0]==='shamela'){
+   const {listShamelaIndex,fetchShamelaInfo,fetchShamelaPage,exportShamelaText,getShamelaLocalBook}=await import('./providers/shamela-direct');
+   const isRead=['GET','HEAD'].includes(method);
+   if(path[1]==='books'&&isRead){
+     return json({books:await listShamelaIndex()});
+   }
+   if(path[1]==='book'&&isRead){
+     const id=Number(url.searchParams.get('id')||path[2]);
+     if(!Number.isSafeInteger(id)||id<1)throw new HttpError(400,'رقم الكتاب غير صالح');
+     const info=await fetchShamelaInfo(id);
+     return json({book:info});
+   }
+   if(path[1]==='page'&&isRead){
+     const id=Number(url.searchParams.get('id'));
+     const page=Number(url.searchParams.get('page')||1);
+     if(!Number.isSafeInteger(id)||id<1||!Number.isSafeInteger(page)||page<1)throw new HttpError(400,'رقم الكتاب أو الصفحة غير صالح');
+     const pageData=await fetchShamelaPage(id,page);
+     return json({page:pageData});
+   }
+   if(path[1]==='download'&&isRead){
+     const id=Number(url.searchParams.get('id'));
+     const format=url.searchParams.get('format')||'json';
+     if(!Number.isSafeInteger(id)||id<1)throw new HttpError(400,'رقم الكتاب غير صالح');
+     if(format==='txt'){
+       const textData=await exportShamelaText(id);
+       return new Response(method==='HEAD'?null:textData,{
+         headers:{
+           'Content-Type':'text/plain; charset=utf-8',
+           'Content-Disposition':`attachment; filename="shamela-${id}.txt"`,
+           'Cache-Control':'public, max-age=86400'
+         }
+       });
+     }
+     const local=await getShamelaLocalBook(id);
+     if(local){
+       return new Response(method==='HEAD'?null:JSON.stringify(local,null,2),{
+         headers:{
+           'Content-Type':'application/json; charset=utf-8',
+           'Content-Disposition':`attachment; filename="shamela-${id}.json"`,
+           'Cache-Control':'public, max-age=86400'
+         }
+       });
+     }
+     const info=await fetchShamelaInfo(id);
+     const page1=await fetchShamelaPage(id,1);
+     const payload={shamela_id:id,title:info.title,author:info.author,category:info.category,page_count:info.pageCount,headings:info.headings,sample_page:page1};
+     return new Response(method==='HEAD'?null:JSON.stringify(payload,null,2),{
+       headers:{
+         'Content-Type':'application/json; charset=utf-8',
+         'Content-Disposition':`attachment; filename="shamela-${id}.json"`,
+         'Cache-Control':'public, max-age=86400'
+       }
+     });
+   }
+ }
  if(key==='search'&&method==='GET')return json(await searchPages((url.searchParams.get('q')||'').slice(0,300),url.searchParams.get('exact')==='1',url.searchParams.get('edition')||undefined));
  if(key==='auth/me'&&method==='GET')return json({user:await currentUser(req)});
  if(key==='auth/register'&&method==='POST'){const b=await body(req);await throttleLogin('registration-global');const user=await createUser(text(b,'name',150),text(b,'email',254),text(b,'password',256));const token=await session(user.id);return json({user},201,{'Set-Cookie':sessionCookie(token)});}
