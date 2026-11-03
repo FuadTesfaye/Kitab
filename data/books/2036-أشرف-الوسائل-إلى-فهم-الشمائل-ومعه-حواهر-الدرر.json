@@ -1,0 +1,28 @@
+{
+  "id": 2036,
+  "kitab_id": "aljam3-2036",
+  "title": "أشرف الوسائل إلى فهم الشمائل ومعه حواهر الدرر في مناقب ابن حجر - الهيتمي",
+  "author": "أحمد بن حجر الهيتمي شهاب الدين",
+  "author_id": 1470,
+  "category": "السيرة النبوية",
+  "category_id": 44,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 632,
+  "volumes": 1,
+  "views_count": 265,
+  "pdf_url": "https://aljam3.com/2036",
+  "txt_url": "https://aljam3.com/api/v1/books/2036",
+  "docx_url": "https://aljam3.com/api/v1/books/2036?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-2036/download?format=pdf",
+    "txt": "/api/books/aljam3-2036/download?format=txt",
+    "json": "/api/books/aljam3-2036/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:31:34.096Z",
+  "local_files": {
+    "json": "2036-أشرف-الوسائل-إلى-فهم-الشمائل-ومعه-حواهر-الدرر.json",
+    "pdf": null,
+    "txt": null
+  }
+}

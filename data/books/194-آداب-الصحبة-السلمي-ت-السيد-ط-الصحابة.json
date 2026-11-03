@@ -1,0 +1,28 @@
+{
+  "id": 194,
+  "kitab_id": "aljam3-194",
+  "title": "آداب الصحبة - السلمي - ت السيد - ط الصحابة",
+  "author": "السلمي ابو عبد الرحمن",
+  "author_id": 6858,
+  "category": "الأجزاء الحديثية",
+  "category_id": 3,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 148,
+  "volumes": 1,
+  "views_count": 1266,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D8%A7%D9%84%D8%A3%D8%AC%D8%B2%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D8%AF%D9%8A%D8%AB%D9%8A%D8%A9/%D8%A2%D8%AF%D8%A7%D8%A8%20%D8%A7%D9%84%D8%B5%D8%AD%D8%A8%D8%A9%20-%20%D8%A7%D9%84%D8%B3%D9%84%D9%85%D9%8A%20-%20%D8%AA%20%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20-%20%D8%B7%20%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D8%A8%D8%A9/95135.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D8%A7%D9%84%D8%A3%D8%AC%D8%B2%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D8%AF%D9%8A%D8%AB%D9%8A%D8%A9/%D8%A2%D8%AF%D8%A7%D8%A8%20%D8%A7%D9%84%D8%B5%D8%AD%D8%A8%D8%A9%20-%20%D8%A7%D9%84%D8%B3%D9%84%D9%85%D9%8A%20-%20%D8%AA%20%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20-%20%D8%B7%20%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D8%A8%D8%A9/95135.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D8%A7%D9%84%D8%A3%D8%AC%D8%B2%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D8%AF%D9%8A%D8%AB%D9%8A%D8%A9/%D8%A2%D8%AF%D8%A7%D8%A8%20%D8%A7%D9%84%D8%B5%D8%AD%D8%A8%D8%A9%20-%20%D8%A7%D9%84%D8%B3%D9%84%D9%85%D9%8A%20-%20%D8%AA%20%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20-%20%D8%B7%20%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D8%A8%D8%A9/95135.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-194/download?format=pdf",
+    "txt": "/api/books/aljam3-194/download?format=txt",
+    "json": "/api/books/aljam3-194/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:31:34.013Z",
+  "local_files": {
+    "json": "194-آداب-الصحبة-السلمي-ت-السيد-ط-الصحابة.json",
+    "pdf": null,
+    "txt": null
+  }
+}
