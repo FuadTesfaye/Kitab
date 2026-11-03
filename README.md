@@ -43,6 +43,17 @@ docker compose up --build -d
 
 Register the first administrator with `npm run admin:create` before accepting student registrations. Make regular `npm run backup` snapshots and separately back up object storage. In production use PostgreSQL's `pg_dump` and follow the database and MinIO backup runbooks in your hosting environment. Do not put production `.env`, scans, or database dumps in the public repository.
 
+## Website-to-Website Bulk Import System
+
+Import thousands of classical works directly from digital libraries to your GitHub repository:
+
+- **Web UI**: Navigate to `http://localhost:3000/admin` and open the **استيراد المواقع (Bulk Import)** tab to trigger bulk imports with real-time progress bars, logs, and automatic 3-file GitHub commits.
+- **CLI Runner**:
+  ```sh
+  npx tsx scripts/bulk-import-to-github.ts --source=shamela --limit=30
+  ```
+- **Universal Downloads**: Every book is accessible and downloadable in **PDF**, **TXT**, and **JSON** via `/api/books/:id/download?format=pdf|txt|json`.
+
 ## What works
 
 - Responsive right-to-left Arabic catalogue, live search across **5,662+ books** at `http://localhost:3000/`, dynamic Arabic category shelf counters, author browsing, detail pages, saved works, and teacher-curated reading lists.
