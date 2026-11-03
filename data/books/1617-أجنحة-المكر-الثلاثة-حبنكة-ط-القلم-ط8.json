@@ -1,0 +1,24 @@
+{
+  "id": 1617,
+  "kitab_id": "aljam3-1617",
+  "title": "أجنحة المكر الثلاثة - حبنكة - ط القلم ط8",
+  "author": "عبد الرحمن بن حسن حبنكة الميداني",
+  "author_id": 17249,
+  "category": "الدعوة وأحوال المسلمين",
+  "category_id": 29,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 776,
+  "volumes": 1,
+  "views_count": 788,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D8%A7%D9%84%D8%AF%D8%B9%D9%88%D8%A9%20%D9%88%D8%A3%D8%AD%D9%88%D8%A7%D9%84%20%D8%A7%D9%84%D9%85%D8%B3%D9%84%D9%85%D9%8A%D9%86/%D8%A3%D8%AC%D9%86%D8%AD%D8%A9%20%D8%A7%D9%84%D9%85%D9%83%D8%B1%20%D8%A7%D9%84%D8%AB%D9%84%D8%A7%D8%AB%D8%A9%20-%20%D8%AD%D8%A8%D9%86%D9%83%D8%A9%20-%20%D8%B7%20%D8%A7%D9%84%D9%82%D9%84%D9%85%20%D8%B78/agmkth.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D8%A7%D9%84%D8%AF%D8%B9%D9%88%D8%A9%20%D9%88%D8%A3%D8%AD%D9%88%D8%A7%D9%84%20%D8%A7%D9%84%D9%85%D8%B3%D9%84%D9%85%D9%8A%D9%86/%D8%A3%D8%AC%D9%86%D8%AD%D8%A9%20%D8%A7%D9%84%D9%85%D9%83%D8%B1%20%D8%A7%D9%84%D8%AB%D9%84%D8%A7%D8%AB%D8%A9%20-%20%D8%AD%D8%A8%D9%86%D9%83%D8%A9%20-%20%D8%B7%20%D8%A7%D9%84%D9%82%D9%84%D9%85%20%D8%B78/agmkth.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D8%A7%D9%84%D8%AF%D8%B9%D9%88%D8%A9%20%D9%88%D8%A3%D8%AD%D9%88%D8%A7%D9%84%20%D8%A7%D9%84%D9%85%D8%B3%D9%84%D9%85%D9%8A%D9%86/%D8%A3%D8%AC%D9%86%D8%AD%D8%A9%20%D8%A7%D9%84%D9%85%D9%83%D8%B1%20%D8%A7%D9%84%D8%AB%D9%84%D8%A7%D8%AB%D8%A9%20-%20%D8%AD%D8%A8%D9%86%D9%83%D8%A9%20-%20%D8%B7%20%D8%A7%D9%84%D9%82%D9%84%D9%85%20%D8%B78/agmkth.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-1617/download?format=pdf",
+    "txt": "/api/books/aljam3-1617/download?format=txt",
+    "json": "/api/books/aljam3-1617/download?format=json"
+  },
+  "imported_at": "2026-11-03T20:13:31.794Z",
+  "source_website": "https://aljam3.com"
+}

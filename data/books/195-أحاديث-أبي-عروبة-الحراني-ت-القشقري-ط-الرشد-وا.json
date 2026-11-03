@@ -1,0 +1,24 @@
+{
+  "id": 195,
+  "kitab_id": "aljam3-195",
+  "title": "أحاديث أبي عروبة الحراني - ت القشقري - ط الرشد والرياض",
+  "author": "أبي عروبة الحراني",
+  "author_id": 1053,
+  "category": "الأجزاء الحديثية",
+  "category_id": 3,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 72,
+  "volumes": 1,
+  "views_count": 930,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D8%A7%D9%84%D8%A3%D8%AC%D8%B2%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D8%AF%D9%8A%D8%AB%D9%8A%D8%A9/%D8%A3%D8%AD%D8%A7%D8%AF%D9%8A%D8%AB%20%D8%A3%D8%A8%D9%8A%20%D8%B9%D8%B1%D9%88%D8%A8%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B1%D8%A7%D9%86%D9%8A%20-%20%D8%AA%20%D8%A7%D9%84%D9%82%D8%B4%D9%82%D8%B1%D9%8A%20-%20%D8%B7%20%D8%A7%D9%84%D8%B1%D8%B4%D8%AF%20%D9%88%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6/36373.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D8%A7%D9%84%D8%A3%D8%AC%D8%B2%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D8%AF%D9%8A%D8%AB%D9%8A%D8%A9/%D8%A3%D8%AD%D8%A7%D8%AF%D9%8A%D8%AB%20%D8%A3%D8%A8%D9%8A%20%D8%B9%D8%B1%D9%88%D8%A8%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B1%D8%A7%D9%86%D9%8A%20-%20%D8%AA%20%D8%A7%D9%84%D9%82%D8%B4%D9%82%D8%B1%D9%8A%20-%20%D8%B7%20%D8%A7%D9%84%D8%B1%D8%B4%D8%AF%20%D9%88%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6/36373.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D8%A7%D9%84%D8%A3%D8%AC%D8%B2%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D8%AF%D9%8A%D8%AB%D9%8A%D8%A9/%D8%A3%D8%AD%D8%A7%D8%AF%D9%8A%D8%AB%20%D8%A3%D8%A8%D9%8A%20%D8%B9%D8%B1%D9%88%D8%A8%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B1%D8%A7%D9%86%D9%8A%20-%20%D8%AA%20%D8%A7%D9%84%D9%82%D8%B4%D9%82%D8%B1%D9%8A%20-%20%D8%B7%20%D8%A7%D9%84%D8%B1%D8%B4%D8%AF%20%D9%88%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6/36373.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-195/download?format=pdf",
+    "txt": "/api/books/aljam3-195/download?format=txt",
+    "json": "/api/books/aljam3-195/download?format=json"
+  },
+  "imported_at": "2026-11-03T20:13:31.795Z",
+  "source_website": "https://aljam3.com"
+}
