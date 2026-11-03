@@ -2,27 +2,27 @@
 
 Begin with **25–50 works** from a corpus whose individual text licenses have been checked. Store imported files under `imports/`, outside Git. Keep database records and extracted pages in PostgreSQL; the original bytes go to MinIO or `data/objects/`. Use the application's administrator to review rights before ingesting or publishing a book.
 
-## Aljam3 & Shamela: 500 Books Digital Catalogue & PDF Downloads
+## Aljam3 & Shamela: 1,500 Books Digital Catalogue & PDF Downloads
 
 The library includes an integrated client for [Aljam3 (الجامع — ieasybooks/aljam3-web-app)](https://github.com/ieasybooks/aljam3-web-app), providing direct access to 63,427 digitized Islamic works across:
-- **المكتبة الشاملة الوقفية** (Shamela Waqfeya)
-- **المكتبة الوقفية** (Al-Waqfeya)
-- **مكتبة المسجد النبوي** (Prophet's Mosque Library)
+- **المكتبة الشاملة الوقفية** (Shamela Waqfeya - 500 books indexed)
+- **المكتبة الوقفية** (Al-Waqfeya - 500 books indexed)
+- **مكتبة المسجد النبوي** (Prophet's Mosque Library - 500 books indexed)
 
-A pre-packaged collection of **500 foundational Islamic works** is indexed in `data/shamela/500-books.json`. Every book features:
+A pre-packaged collection of **1,500 foundational Islamic works** is indexed in `data/shamela/1500-books.json` (with backward compatibility fallback to `data/shamela/500-books.json`). Every book features:
 - Direct 1-click **PDF downloads** streamed or redirected from Hugging Face / CDN without polluting git repository storage limits.
 - Extracted **TXT** and **DOCX** files.
 - In-browser reading and volume navigation via `/shamela/[id]`.
 
 ### PDF Download Endpoints:
-- `/api/aljam3/pdf?id={id}`: Direct PDF download attachment for any book in the 500-book catalogue.
+- `/api/aljam3/pdf?id={id}`: Direct PDF download attachment for any book in the 1,500-book catalogue.
 - `/api/shamela/download?id={id}&format=pdf`: Direct PDF download for Shamela works.
 - `/api/shamela/download?id={id}&format=json`: Structured machine-readable JSON format.
 - `/api/shamela/download?id={id}&format=txt`: Plain-text format.
 
-To re-fetch or expand the 500 books dataset:
+To re-fetch or expand the 1,500 books dataset:
 ```sh
-npx tsx scripts/fetch-500-books.ts
+npx tsx scripts/fetch-1500-books.ts
 ```
 
 ## Recommended first download

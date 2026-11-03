@@ -113,10 +113,10 @@ test('Shamela direct provider and API endpoints for reading and downloadable fil
   assert.equal(dlTxt.headers.get('content-disposition'), 'attachment; filename="shamela-1.txt"');
 });
 
-test('Aljam3 provider and 500 books catalogue with direct PDF downloads', async () => {
-  const {get500Books, getBookPdfUrl} = await import('../lib/providers/aljam3');
-  const books = await get500Books();
-  assert.equal(books.length, 500);
+test('Aljam3 provider and 1500 books catalogue with direct PDF downloads', async () => {
+  const {getBooksDataset, getBookPdfUrl} = await import('../lib/providers/aljam3');
+  const books = await getBooksDataset();
+  assert.equal(books.length, 1500);
   assert.ok(books[0].title.length > 0);
   assert.ok(books[0].author.name.length > 0);
 
@@ -129,7 +129,14 @@ test('Aljam3 provider and 500 books catalogue with direct PDF downloads', async 
   assert.equal(listRes.status, 200);
   const listData = await listRes.json();
   assert.equal(listData.books.length, 10);
-  assert.equal(listData.total, 500);
+  assert.equal(listData.total, 1500);
+
+  // Test library filter for Prophet's Mosque Library (library 1)
+  const libRes = await call('aljam3/books?limit=5&library=1', 'GET', undefined, '', ['aljam3', 'books']);
+  assert.equal(libRes.status, 200);
+  const libData = await libRes.json();
+  assert.equal(libData.books.length, 5);
+  assert.equal(libData.total, 500);
 
   // Test PDF download redirect
   const pdfRes = await call('aljam3/pdf?id=3435', 'GET', undefined, '', ['aljam3', 'pdf']);
