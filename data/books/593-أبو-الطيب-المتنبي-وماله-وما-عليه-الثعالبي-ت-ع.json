@@ -1,0 +1,28 @@
+{
+  "id": 593,
+  "kitab_id": "aljam3-593",
+  "title": "أبو الطيب المتنبي وماله وما عليه - الثعالبي - ت عبد الحميد",
+  "author": "عبد الملك بن محمد بن إسماعيل أبو منصور الثعالبي النيسابوري",
+  "author_id": 19293,
+  "category": "الأدب والبلاغة",
+  "category_id": 5,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 144,
+  "volumes": 1,
+  "views_count": 828,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D8%A7%D9%84%D8%A3%D8%AF%D8%A8%20%D9%88%D8%A7%D9%84%D8%A8%D9%84%D8%A7%D8%BA%D8%A9/%D8%A3%D8%A8%D9%88%20%D8%A7%D9%84%D8%B7%D9%8A%D8%A8%20%D8%A7%D9%84%D9%85%D8%AA%D9%86%D8%A8%D9%8A%20%D9%88%D9%85%D8%A7%D9%84%D9%87%20%D9%88%D9%85%D8%A7%20%D8%B9%D9%84%D9%8A%D9%87%20-%20%D8%A7%D9%84%D8%AB%D8%B9%D8%A7%D9%84%D8%A8%D9%8A%20-%20%D8%AA%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%AD%D9%85%D9%8A%D8%AF/atmma.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D8%A7%D9%84%D8%A3%D8%AF%D8%A8%20%D9%88%D8%A7%D9%84%D8%A8%D9%84%D8%A7%D8%BA%D8%A9/%D8%A3%D8%A8%D9%88%20%D8%A7%D9%84%D8%B7%D9%8A%D8%A8%20%D8%A7%D9%84%D9%85%D8%AA%D9%86%D8%A8%D9%8A%20%D9%88%D9%85%D8%A7%D9%84%D9%87%20%D9%88%D9%85%D8%A7%20%D8%B9%D9%84%D9%8A%D9%87%20-%20%D8%A7%D9%84%D8%AB%D8%B9%D8%A7%D9%84%D8%A8%D9%8A%20-%20%D8%AA%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%AD%D9%85%D9%8A%D8%AF/atmma.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D8%A7%D9%84%D8%A3%D8%AF%D8%A8%20%D9%88%D8%A7%D9%84%D8%A8%D9%84%D8%A7%D8%BA%D8%A9/%D8%A3%D8%A8%D9%88%20%D8%A7%D9%84%D8%B7%D9%8A%D8%A8%20%D8%A7%D9%84%D9%85%D8%AA%D9%86%D8%A8%D9%8A%20%D9%88%D9%85%D8%A7%D9%84%D9%87%20%D9%88%D9%85%D8%A7%20%D8%B9%D9%84%D9%8A%D9%87%20-%20%D8%A7%D9%84%D8%AB%D8%B9%D8%A7%D9%84%D8%A8%D9%8A%20-%20%D8%AA%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%AD%D9%85%D9%8A%D8%AF/atmma.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-593/download?format=pdf",
+    "txt": "/api/books/aljam3-593/download?format=txt",
+    "json": "/api/books/aljam3-593/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T19:07:21.598Z",
+  "local_files": {
+    "json": "593-أبو-الطيب-المتنبي-وماله-وما-عليه-الثعالبي-ت-ع.json",
+    "pdf": null,
+    "txt": null
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": 1979,
+  "kitab_id": "aljam3-1979",
+  "title": "آداب الحسبة-المالقي",
+  "author": "_",
+  "category": "السياسة الشرعية والقضاء",
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 74,
+  "volumes": 1,
+  "download_routes": {
+    "pdf": "/api/books/aljam3-1979/download?format=pdf",
+    "txt": "/api/books/aljam3-1979/download?format=txt",
+    "json": "/api/books/aljam3-1979/download?format=json"
+  },
+  "imported_at": "2026-11-03T18:59:00.616Z",
+  "source_website": "https://aljam3.com"
+}
