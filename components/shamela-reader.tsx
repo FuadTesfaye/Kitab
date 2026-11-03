@@ -58,8 +58,10 @@ export interface ShamelaPageData {
 }
 
 export function ShamelaBrowser({bookId, initialPage = 1}: {bookId?: string; initialPage?: number}) {
-  const [activeTab, setActiveTab] = useState<'500books' | 'shamela'>('500books');
+  const [activeTab, setActiveTab] = useState<'allShamela' | '500books' | 'shamela'>('allShamela');
   const [shamelaBooks, setShamelaBooks] = useState<ShamelaIndexEntry[]>([]);
+  const [fullShamelaBooks, setFullShamelaBooks] = useState<Aljam3BookItem[]>([]);
+  const [fullShamelaPage, setFullShamelaPage] = useState(1);
   const [aljam3Books, setAljam3Books] = useState<Aljam3BookItem[]>([]);
   const [aljam3Total, setAljam3Total] = useState(0);
   const [aljam3Page, setAljam3Page] = useState(1);
@@ -71,6 +73,20 @@ export function ShamelaBrowser({bookId, initialPage = 1}: {bookId?: string; init
 
   // Reader state if bookId is present
   const currentId = bookId ? Number(bookId) : null;
+
+  // Load full 4645 Shamela books
+  useEffect(() => {
+    let active = true;
+    fetch('/api/shamela/books/all')
+      .then(res => res.json())
+      .then(data => {
+        if (active) setFullShamelaBooks(data.books || []);
+      })
+      .catch(() => {});
+    return () => {
+      active = false;
+    };
+  }, []);
 
   // Load Shamela local books
   useEffect(() => {
@@ -122,12 +138,32 @@ export function ShamelaBrowser({bookId, initialPage = 1}: {bookId?: string; init
   }, [aljam3Page, selectedLibrary, searchQuery]);
 
   const categories = useMemo(() => {
+    if (activeTab === 'allShamela') {
+      const set = new Set<string>();
+      fullShamelaBooks.forEach(b => {
+        const c = b.category?.name || (typeof b.category === 'string' ? b.category : null);
+        if (c) set.add(c);
+      });
+      return ['all', ...Array.from(set)];
+    }
     const set = new Set<string>();
     shamelaBooks.forEach(b => {
       if (b.category) set.add(b.category);
     });
     return ['all', ...Array.from(set)];
-  }, [shamelaBooks]);
+  }, [activeTab, fullShamelaBooks, shamelaBooks]);
+
+  const filteredFullShamela = useMemo(() => {
+    const q = normalizeArabic(searchQuery.trim());
+    return fullShamelaBooks.filter(b => {
+      const catName = b.category?.name || (typeof b.category === 'string' ? b.category : '');
+      const matchCat = selectedCategory === 'all' || catName === selectedCategory;
+      if (!matchCat) return false;
+      if (!q) return true;
+      const haystack = normalizeArabic(`${b.title} ${b.author?.name || ''} ${catName}`);
+      return haystack.includes(q);
+    });
+  }, [fullShamelaBooks, searchQuery, selectedCategory]);
 
   const filteredShamela = useMemo(() => {
     const q = normalizeArabic(searchQuery.trim());
@@ -149,14 +185,23 @@ export function ShamelaBrowser({bookId, initialPage = 1}: {bookId?: string; init
   return (
     <div className="shamela-container">
       <section className="shamela-hero">
-        <div className="shamela-badge">المكتبة الرقمية الشاملة · ١٥٠٠+ مصنف إسلامي متاح للتحميل والقراءة</div>
+        <div className="shamela-badge">المكتبة الرقمية الشاملة · ٤,٦٤٥+ مصنف من المكتبة الشاملة متاح للتحميل والقراءة</div>
         <h1>مكتبة أمهات الكتب والمصنفات الإسلامية</h1>
         <p className="lead">
-          مستودع متكامل يضم أكثر من ١٥٠٠ كتاب معتمد في التفسير والحديث والفقه والعقيدة والسيرة، مع إتاحة التحميل المباشر لملفات PDF الأصلية ونصوص TXT و JSON وقراءة الصفحات مجاناً.
+          مستودع متكامل يضم مصنفات المكتبة الشاملة الكاملة (٤,٦٤٥ كتاباً) في التفسير والحديث والفقه والعقيدة والسيرة، مع إتاحة التحميل المباشر لملفات PDF الأصلية ونصوص TXT و JSON وقراءة الصفحات مجاناً.
         </p>
 
         {/* Collection Tabs */}
         <div className="collection-tabs">
+          <button
+            className={`tab-btn ${activeTab === 'allShamela' ? 'active' : ''}`}
+            onClick={() => {
+              setActiveTab('allShamela');
+              setFullShamelaPage(1);
+            }}
+          >
+            🏛 المكتبة الشاملة الكاملة (٤,٦٤٥ مصنفاً)
+          </button>
           <button
             className={`tab-btn ${activeTab === '500books' ? 'active' : ''}`}
             onClick={() => {
@@ -164,13 +209,13 @@ export function ShamelaBrowser({bookId, initialPage = 1}: {bookId?: string; init
               setAljam3Page(1);
             }}
           >
-            📚 مكتبة الـ ١٥٠٠ كتاب الإسلامي المعتمدة (تحميل PDF)
+            📚 مكتبة الـ ١٥٠٠ كتاب المشتركة
           </button>
           <button
             className={`tab-btn ${activeTab === 'shamela' ? 'active' : ''}`}
             onClick={() => setActiveTab('shamela')}
           >
-            🏛 فهرس مصنفات الشاملة المباشر
+            📖 فهرس متون الشاملة المباشر
           </button>
         </div>
 
@@ -179,20 +224,23 @@ export function ShamelaBrowser({bookId, initialPage = 1}: {bookId?: string; init
           <input
             type="search"
             placeholder={
-              activeTab === '500books'
+              activeTab === 'allShamela'
+                ? 'ابحث في ٤,٦٤٥ كتاباً من الشاملة حسب العنوان، اسم العالم، أو الفن...'
+                : activeTab === '500books'
                 ? 'ابحث في الـ ١٥٠٠ كتاب حسب العنوان، اسم العالم، أو الفن...'
                 : 'ابحث في كتب الشاملة...'
             }
             value={searchQuery}
             onChange={e => {
               setSearchQuery(e.target.value);
+              setFullShamelaPage(1);
               setAljam3Page(1);
             }}
             className="standalone-input"
           />
         </div>
 
-        {/* Library Filters for 1500 Books Tab */}
+        {/* Categories or Library Filters */}
         {activeTab === '500books' ? (
           <div className="library-filters">
             <span className="filter-label">المكتبة المصدر:</span>
@@ -236,11 +284,14 @@ export function ShamelaBrowser({bookId, initialPage = 1}: {bookId?: string; init
         ) : (
           categories.length > 1 && (
             <div className="shamela-categories">
-              {categories.map(cat => (
+              {categories.slice(0, 30).map(cat => (
                 <button
                   key={cat}
                   className={`category-pill ${selectedCategory === cat ? 'active' : ''}`}
-                  onClick={() => setSelectedCategory(cat)}
+                  onClick={() => {
+                    setSelectedCategory(cat);
+                    setFullShamelaPage(1);
+                  }}
                 >
                   {cat === 'all' ? 'جميع الفنون' : cat}
                 </button>
@@ -249,6 +300,106 @@ export function ShamelaBrowser({bookId, initialPage = 1}: {bookId?: string; init
           )
         )}
       </section>
+
+      {/* Full 4,645 Shamela Books View */}
+      {activeTab === 'allShamela' && (
+        <>
+          <div className="results-header">
+            <span>
+              عرض مصنفات المكتبة الشاملة الكاملة (إجمالي: {filteredFullShamela.length.toLocaleString('ar')} من ٤,٦٤٥ كتاباً)
+            </span>
+            <div style={{display: 'flex', gap: '8px', alignItems: 'center'}}>
+              <a
+                href="/api/shamela/books/all"
+                download="shamela-all-4645-books.json"
+                className="action-pill pdf-pill"
+                title="تحميل كامل فهرس وبيانات مصنفات الشاملة (4,645 كتاب)"
+              >
+                تحميل قاعدة الشاملة كاملاً (JSON) ⤓
+              </a>
+              <span>الصفحة {fullShamelaPage} من {Math.max(1, Math.ceil(filteredFullShamela.length / 24))}</span>
+            </div>
+          </div>
+
+          <div className="shamela-grid">
+            {filteredFullShamela.slice((fullShamelaPage - 1) * 24, fullShamelaPage * 24).map(b => (
+              <div key={b.id} className="shamela-card">
+                <div className="shamela-card-header">
+                  <span className="shamela-tag">
+                    {b.category?.name || (typeof b.category === 'string' ? b.category : 'علوم شرعية')}
+                  </span>
+                  <span className="lib-badge">المكتبة الشاملة الوقفية</span>
+                </div>
+                <h3>
+                  <Link href={`/shamela/${b.id}`}>{b.title}</Link>
+                </h3>
+                <p className="shamela-author">{b.author?.name || 'من علماء الإسلام'}</p>
+                <div className="shamela-stats">
+                  <span>📄 {b.pages_count?.toLocaleString('ar') || 'متعدد'} صفحة</span>
+                  <span>{(b.volumes || 1) > 1 ? `📚 ${b.volumes} مجلدات` : 'مجلد واحد'}</span>
+                </div>
+                <div className="shamela-actions">
+                  <Link href={`/shamela/${b.id}`} className="primary read-action">
+                    قراءة ←
+                  </Link>
+                  <div className="shamela-downloads">
+                    <a
+                      href={`/api/books/aljam3-${b.id}/download?format=pdf`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      download
+                      className="action-pill pdf-pill"
+                      title="تحميل ملف الـ PDF الأصلي بجودة عالية"
+                    >
+                      PDF 📄
+                    </a>
+                    <a
+                      href={`/api/books/aljam3-${b.id}/download?format=txt`}
+                      download
+                      className="action-pill"
+                      title="تحميل النص TXT"
+                    >
+                      TXT 📝
+                    </a>
+                    <a
+                      href={`/api/books/aljam3-${b.id}/download?format=json`}
+                      download
+                      className="action-pill"
+                      title="تحميل بيانات الكتاب الكاملة JSON"
+                    >
+                      JSON ⚡
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {Math.ceil(filteredFullShamela.length / 24) > 1 && (
+            <div className="shamela-pagination aljam3-pagination">
+              <button
+                disabled={fullShamelaPage <= 1}
+                onClick={() => {
+                  setFullShamelaPage(p => Math.max(1, p - 1));
+                  window.scrollTo({top: 400, behavior: 'smooth'});
+                }}
+              >
+                السابق →
+              </button>
+              <span>{fullShamelaPage} / {Math.ceil(filteredFullShamela.length / 24)}</span>
+              <button
+                disabled={fullShamelaPage >= Math.ceil(filteredFullShamela.length / 24)}
+                onClick={() => {
+                  setFullShamelaPage(p => Math.min(Math.ceil(filteredFullShamela.length / 24), p + 1));
+                  window.scrollTo({top: 400, behavior: 'smooth'});
+                }}
+              >
+                ← التالي
+              </button>
+            </div>
+          )}
+        </>
+      )}
 
       {loading && <div className="loading">جارٍ تحميل قائمة المصنفات والملفات...</div>}
       {error && <div className="error-message">{error}</div>}

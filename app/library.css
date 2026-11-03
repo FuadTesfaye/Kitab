@@ -33,6 +33,7 @@
 .shamela-categories{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .category-pill{background:#e7ecdf;border:1px solid #c8d4bf;padding:6px 14px;border-radius:20px;font-size:11px;color:#40523a;cursor:pointer;transition:all .15s}
 .category-pill:hover,.category-pill.active{background:#2b5443;color:#fff;border-color:#2b5443}
+.shamela-categories{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0 16px;max-height:140px;overflow-y:auto;padding:4px}
 .shamela-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
 .shamela-card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;transition:box-shadow .2s}
 .shamela-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.06);border-color:#bdcbb0}
