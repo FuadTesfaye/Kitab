@@ -1,0 +1,24 @@
+{
+  "id": 9627,
+  "kitab_id": "aljam3-9627",
+  "title": "آداب الخطبة والزفاف من الكتاب وصحيح السنة ومعه بحث مهم في جواز تحلي النساء بالذهب المحلق وغيره",
+  "author": "عمرو عبد المنعم سليم",
+  "author_id": 23547,
+  "category": "الفقه العام",
+  "category_id": 58,
+  "library": "المكتبة الوقفية",
+  "library_id": 2,
+  "pages_count": 293,
+  "volumes": 1,
+  "views_count": 777,
+  "pdf_url": "https://aljam3.com/9627",
+  "txt_url": "https://aljam3.com/api/v1/books/9627",
+  "docx_url": "https://aljam3.com/api/v1/books/9627?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-9627/download?format=pdf",
+    "txt": "/api/books/aljam3-9627/download?format=txt",
+    "json": "/api/books/aljam3-9627/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:54:07.158Z",
+  "source_website": "https://aljam3.com"
+}

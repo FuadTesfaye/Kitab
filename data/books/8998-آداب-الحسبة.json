@@ -1,0 +1,24 @@
+{
+  "id": 8998,
+  "kitab_id": "aljam3-8998",
+  "title": "آداب الحسبة",
+  "author": "محمد بن أبي محمد السقطي المالقي الأندلسي أبو عبد الله",
+  "author_id": 26536,
+  "category": "السياسة الشرعية والقضاء",
+  "category_id": 43,
+  "library": "المكتبة الوقفية",
+  "library_id": 2,
+  "pages_count": 74,
+  "volumes": 1,
+  "views_count": 786,
+  "pdf_url": "https://aljam3.com/8998",
+  "txt_url": "https://aljam3.com/api/v1/books/8998",
+  "docx_url": "https://aljam3.com/api/v1/books/8998?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-8998/download?format=pdf",
+    "txt": "/api/books/aljam3-8998/download?format=txt",
+    "json": "/api/books/aljam3-8998/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:54:07.157Z",
+  "source_website": "https://aljam3.com"
+}

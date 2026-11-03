@@ -1,0 +1,24 @@
+{
+  "id": 12540,
+  "kitab_id": "aljam3-12540",
+  "title": "آداب الحسن البصري وزهده ومواعظه رحمه الله تعالى",
+  "author": "عبد الرحمن بن علي بن محمد بن علي بن الجوزي أبو الفرج",
+  "author_id": 17356,
+  "category": "التراجم والأعلام والطبقات",
+  "category_id": 18,
+  "library": "المكتبة الوقفية",
+  "library_id": 2,
+  "pages_count": 138,
+  "volumes": 1,
+  "views_count": 1045,
+  "pdf_url": "https://aljam3.com/12540",
+  "txt_url": "https://aljam3.com/api/v1/books/12540",
+  "docx_url": "https://aljam3.com/api/v1/books/12540?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-12540/download?format=pdf",
+    "txt": "/api/books/aljam3-12540/download?format=txt",
+    "json": "/api/books/aljam3-12540/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:54:07.157Z",
+  "source_website": "https://aljam3.com"
+}
