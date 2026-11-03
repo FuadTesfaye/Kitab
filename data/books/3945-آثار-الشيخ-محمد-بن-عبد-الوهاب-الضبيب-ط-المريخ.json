@@ -1,0 +1,28 @@
+{
+  "id": 3945,
+  "kitab_id": "aljam3-3945",
+  "title": "آثار الشيخ محمد بن عبد الوهاب - الضبيب - ط المريخ",
+  "author": "أحمد محمد الضبيب",
+  "author_id": 2608,
+  "category": "فهارس الكتب والأدلة",
+  "category_id": 92,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 242,
+  "volumes": 1,
+  "views_count": 815,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D9%81%D9%87%D8%A7%D8%B1%D8%B3%20%D8%A7%D9%84%D9%83%D8%AA%D8%A8%20%D9%88%D8%A7%D9%84%D8%A3%D8%AF%D9%84%D8%A9/%D8%A2%D8%AB%D8%A7%D8%B1%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%A8%D9%86%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D9%88%D9%87%D8%A7%D8%A8%20-%20%D8%A7%D9%84%D8%B6%D8%A8%D9%8A%D8%A8%20-%20%D8%B7%20%D8%A7%D9%84%D9%85%D8%B1%D9%8A%D8%AE/asmiaw.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D9%81%D9%87%D8%A7%D8%B1%D8%B3%20%D8%A7%D9%84%D9%83%D8%AA%D8%A8%20%D9%88%D8%A7%D9%84%D8%A3%D8%AF%D9%84%D8%A9/%D8%A2%D8%AB%D8%A7%D8%B1%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%A8%D9%86%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D9%88%D9%87%D8%A7%D8%A8%20-%20%D8%A7%D9%84%D8%B6%D8%A8%D9%8A%D8%A8%20-%20%D8%B7%20%D8%A7%D9%84%D9%85%D8%B1%D9%8A%D8%AE/asmiaw.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D9%81%D9%87%D8%A7%D8%B1%D8%B3%20%D8%A7%D9%84%D9%83%D8%AA%D8%A8%20%D9%88%D8%A7%D9%84%D8%A3%D8%AF%D9%84%D8%A9/%D8%A2%D8%AB%D8%A7%D8%B1%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%A8%D9%86%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D9%88%D9%87%D8%A7%D8%A8%20-%20%D8%A7%D9%84%D8%B6%D8%A8%D9%8A%D8%A8%20-%20%D8%B7%20%D8%A7%D9%84%D9%85%D8%B1%D9%8A%D8%AE/asmiaw.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-3945/download?format=pdf",
+    "txt": "/api/books/aljam3-3945/download?format=txt",
+    "json": "/api/books/aljam3-3945/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T14:30:53.071Z",
+  "local_files": {
+    "json": "3945-آثار-الشيخ-محمد-بن-عبد-الوهاب-الضبيب-ط-المريخ.json",
+    "pdf": null,
+    "txt": null
+  }
+}

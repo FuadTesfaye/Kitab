@@ -1,0 +1,28 @@
+{
+  "id": 1578,
+  "kitab_id": "aljam3-1578",
+  "title": "آثار الإمام محمد البشير الإبراهيمي - ط الغرب الإسلامي 1-5",
+  "author": "أحمد طالب الإبراهيمي",
+  "author_id": 2391,
+  "category": "الجوامع والمجلات ونحوها",
+  "category_id": 27,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 2353,
+  "volumes": 5,
+  "views_count": 3409,
+  "pdf_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/pdf/%D8%A7%D9%84%D8%AC%D9%88%D8%A7%D9%85%D8%B9%20%D9%88%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%A7%D8%AA%20%D9%88%D9%86%D8%AD%D9%88%D9%87%D8%A7/%D8%A2%D8%AB%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D9%85%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%A7%D9%84%D8%A8%D8%B4%D9%8A%D8%B1%20%D8%A7%D9%84%D8%A5%D8%A8%D8%B1%D8%A7%D9%87%D9%8A%D9%85%D9%8A%20-%20%D8%B7%20%D8%A7%D9%84%D8%BA%D8%B1%D8%A8%20%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85%D9%8A%201-5/aembi0.pdf",
+  "txt_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/txt/%D8%A7%D9%84%D8%AC%D9%88%D8%A7%D9%85%D8%B9%20%D9%88%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%A7%D8%AA%20%D9%88%D9%86%D8%AD%D9%88%D9%87%D8%A7/%D8%A2%D8%AB%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D9%85%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%A7%D9%84%D8%A8%D8%B4%D9%8A%D8%B1%20%D8%A7%D9%84%D8%A5%D8%A8%D8%B1%D8%A7%D9%87%D9%8A%D9%85%D9%8A%20-%20%D8%B7%20%D8%A7%D9%84%D8%BA%D8%B1%D8%A8%20%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85%D9%8A%201-5/aembi0.txt",
+  "docx_url": "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/docx/%D8%A7%D9%84%D8%AC%D9%88%D8%A7%D9%85%D8%B9%20%D9%88%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%A7%D8%AA%20%D9%88%D9%86%D8%AD%D9%88%D9%87%D8%A7/%D8%A2%D8%AB%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D9%85%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%A7%D9%84%D8%A8%D8%B4%D9%8A%D8%B1%20%D8%A7%D9%84%D8%A5%D8%A8%D8%B1%D8%A7%D9%87%D9%8A%D9%85%D9%8A%20-%20%D8%B7%20%D8%A7%D9%84%D8%BA%D8%B1%D8%A8%20%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85%D9%8A%201-5/aembi0.docx",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-1578/download?format=pdf",
+    "txt": "/api/books/aljam3-1578/download?format=txt",
+    "json": "/api/books/aljam3-1578/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T14:30:53.054Z",
+  "local_files": {
+    "json": "1578-آثار-الإمام-محمد-البشير-الإبراهيمي-ط-الغرب-ال.json",
+    "pdf": null,
+    "txt": null
+  }
+}
