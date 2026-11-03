@@ -11,8 +11,9 @@ export function parseTanzil(input:string):BookContent{
   if(!line.trim()||line.startsWith('#'))continue;
   const match=line.match(/^(\d{1,3})\|(\d{1,3})\|(.+)$/u);if(!match)throw new Error('Unexpected line in Tanzil export');
   const surah=Number(match[1]),ayah=Number(match[2]),body=match[3];
-  if(surah<1||surah>114||ayah!==expectedAyah||surah<previousSurah)throw new Error('Tanzil verse sequence is incomplete or out of order');
+  if(surah<1||surah>114||surah<previousSurah)throw new Error('Tanzil verse sequence is incomplete or out of order');
   if(surah!==previousSurah){if(surah!==previousSurah+1||ayah!==1)throw new Error('Tanzil surah sequence is incomplete');sections.push({title:`سورة ${surah}`,seq:pages.length+1});previousSurah=surah;expectedAyah=1;}
+  if(ayah!==expectedAyah)throw new Error('Tanzil verse sequence is incomplete or out of order');
   pages.push({seq:pages.length+1,part:String(surah),pageNo:String(ayah),body});expectedAyah++;
  }
  if(pages.length!==6236||previousSurah!==114||pages.at(-1)?.pageNo!=='6')throw new Error(`Tanzil export validation failed: expected 6,236 verses, got ${pages.length}`);

@@ -1,4 +1,4 @@
-export type SourceId='internet-archive'|'openiti'|'turath'|'shamela'|'waqfeya'|'prophet-mosque'|'local';
+export type SourceId='internet-archive'|'openiti'|'turath'|'shamela'|'waqfeya'|'prophet-mosque'|'hadith'|'tafsir'|'aco'|'local';
 export type RightsStatus='pending-review'|'public-domain-verified'|'open-license'|'permission-granted'|'link-only'|'personal-use-only'|'restricted';
 export interface RemoteFile {name:string;format:'pdf'|'txt'|'json'|'markdown'|'docx'|'epub';url:string;checksum?:string}
 export interface RemoteBook {externalId:string;title:string;authors:string[];categories:string[];description?:string;sourceUrl:string;revision:string;publisher?:string;editor?:string;year?:number;licenseUrl?:string;rightsHint?:string;files:RemoteFile[];raw?:unknown}

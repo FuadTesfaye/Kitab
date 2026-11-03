@@ -16,6 +16,24 @@ export async function api(req:Request,path:string[]):Promise<Response>{try{if(![
  if(key==='books'&&method==='GET')return json({books:await works()});
  if(path[0]==='books'&&path.length===2&&method==='GET'){const book=await getWork(path[1]);if(!book)throw new HttpError(404,'الكتاب غير موجود');return json({book});}
  if(key==='authors'&&method==='GET')return json({authors:await db.query('SELECT id,name_ar,death_hijri,biography FROM authors ORDER BY name_ar')});
+ if(key==='tafsir'&&method==='GET'){
+   const surah=Number(url.searchParams.get('surah')||1);
+   const ayah=Number(url.searchParams.get('ayah')||1);
+   const author=url.searchParams.get('author')||'ar-tafsir-ibn-kathir';
+   const {fetchTafsirAyah}=await import('./providers/tafsir');
+   const text=await fetchTafsirAyah(author,surah,ayah);
+   return json({surah,ayah,author,text});
+ }
+ if(key==='surahs'&&method==='GET'){
+   const {readFile}=await import('node:fs/promises');
+   const {resolve}=await import('node:path');
+   try{
+     const data=JSON.parse(await readFile(resolve('data/seeds/surahs.json'),'utf8'));
+     return json({surahs:data});
+   }catch{
+     return json({surahs:[]});
+   }
+ }
  if(key==='search'&&method==='GET')return json(await searchPages((url.searchParams.get('q')||'').slice(0,300),url.searchParams.get('exact')==='1',url.searchParams.get('edition')||undefined));
  if(key==='auth/me'&&method==='GET')return json({user:await currentUser(req)});
  if(key==='auth/register'&&method==='POST'){const b=await body(req);await throttleLogin('registration-global');const user=await createUser(text(b,'name',150),text(b,'email',254),text(b,'password',256));const token=await session(user.id);return json({user},201,{'Set-Cookie':sessionCookie(token)});}

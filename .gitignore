@@ -6,7 +6,9 @@ node_modules/
 .env
 .env.*
 !.env.example
-data/
+data/*.db*
+data/objects/
+!data/seeds/
 imports/
 backups/
 *.tsbuildinfo

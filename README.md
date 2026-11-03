@@ -11,7 +11,8 @@ cp .env.example .env
 npm ci
 npm run db:migrate
 npm run db:seed
-npm run admin:create     # prompts for an admin password without echoing it
+npm run db:seed-editions   # Seeds & publishes foundational texts: Quran, 40 Nawawi, Ajurrumiyyah, Waraqat, Tahawiyyah, Riyadh al-Salihin
+npm run admin:create        # prompts for an admin password without echoing it
 npm run dev
 ```
 
@@ -21,7 +22,7 @@ Open <http://localhost:3000>. Start the separate ingestion worker in another ter
 npm run worker
 ```
 
-The landing page and sample entries work without downloading a corpus. The 12 starter entries are bibliographic examples, not proof that a particular edition is licensed. They include no third-party full text.
+The landing page and foundational entries are immediately ready to read upon running `db:seed-editions`. Students can browse, read, adjust typography, toggle diacritics, view ayahs and tafsirs, and study without needing external API keys.
 
 ## PostgreSQL deployment
 
@@ -47,7 +48,8 @@ Register the first administrator with `npm run admin:create` before accepting st
 - Responsive right-to-left Arabic catalogue, search, category and author browsing, detail pages, saved works, and teacher-curated reading lists.
 - Password-protected student, teacher, and administrator accounts, reading progress, bookmarks, and passage notes.
 - Separate work, author, edition, source, page, file, and edition-specific rights records.
-- Provider adapters for Internet Archive, OpenITI, Turath, the Shamela v4 client, and selected Waqfeya / Prophet's Mosque Hugging Face repositories.
+- Provider adapters for Internet Archive, OpenITI, Turath, the Shamela v4 client, Hadith API (fawazahmed0/hadith-api CDN), Tafsir API (spa5k/tafsir_api CDN), NYU Arabic Collections Online (ACO), and selected Waqfeya / Prophet's Mosque Hugging Face repositories.
+- Interactive Arabic reader: diacritics toggle (إظهار / إخفاء التشكيل), Arabic font family switcher (Amiri, Scheherazade, Traditional), Surah and Ayah navigation for Quran, instant Tafsir drawer (Ibn Kathir, Al-Sa'di, Al-Muyassar, Al-Tabari, Al-Qurtubi), verse audio recitation, Hadith grading indicators, and copy with citation reference.
 - Arabic-normalized full-text search, original-text exact search, PostgreSQL/SQLite fallback, and optional OpenSearch.
 - Durable background jobs, revision-aware metadata discovery, per-book ingestion, checksums, S3/MinIO object storage, an administrator review queue, publication and withdrawal controls, and audit log.
 - Native browser PDF reader with byte-range requests; text reader with printed page references, sections, font and night modes.

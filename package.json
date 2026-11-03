@@ -5,6 +5,7 @@
     "dev": "next dev --webpack", "build": "next build --webpack", "start": "next start",
     "check": "tsc --noEmit", "test": "node --import tsx --test --experimental-test-isolation=none tests/*.test.ts",
     "db:migrate": "node --import tsx scripts/manage.ts migrate", "db:seed": "node --import tsx scripts/manage.ts seed",
+    "db:seed-editions": "node --import tsx scripts/seed-editions.ts",
     "admin:create": "node --import tsx scripts/manage.ts admin", "worker": "node --import tsx scripts/worker.ts",
     "import": "node --import tsx scripts/manage.ts import", "sync": "node --import tsx scripts/manage.ts sync",
     "reindex": "node --import tsx scripts/manage.ts reindex", "backup": "node --import tsx scripts/manage.ts backup"

@@ -1,7 +1,7 @@
 import {lookup} from 'node:dns/promises';
 import {isIP} from 'node:net';
 import {setTimeout as pause} from 'node:timers/promises';
-export const allowedHosts=['archive.org','www.archive.org','api.turath.io','files.turath.io','huggingface.co','cdn-lfs.huggingface.co','cdn-lfs-us-1.huggingface.co','cas-bridge.xethub.hf.co','raw.githubusercontent.com','api.github.com','github.com','zenodo.org','shamela.ws','www.shamela.ws'];
+export const allowedHosts=['archive.org','www.archive.org','api.turath.io','files.turath.io','huggingface.co','cdn-lfs.huggingface.co','cdn-lfs-us-1.huggingface.co','cas-bridge.xethub.hf.co','raw.githubusercontent.com','api.github.com','github.com','zenodo.org','shamela.ws','www.shamela.ws','cdn.jsdelivr.net','sites.dlib.nyu.edu'];
 const last=new Map<string,number>();const tails=new Map<string,Promise<unknown>>();
 export function allowedUrl(input:string){const url=new URL(input);if(url.protocol!=='https:'||url.username||url.password||url.port&&url.port!=='443'||!allowedHosts.includes(url.hostname))throw new Error('Only configured HTTPS source hosts are allowed');return url;}
 function publicIp(ip:string){if(isIP(ip)===4){const p=ip.split('.').map(Number);return !(p[0]===0||p[0]===10||p[0]===127||p[0]===169&&p[1]===254||p[0]===172&&p[1]>=16&&p[1]<=31||p[0]===192&&p[1]===168||p[0]>=224||p[0]===100&&p[1]>=64&&p[1]<=127);}return !(/^(::|fc|fd|fe80)/i.test(ip)||ip.includes('::ffff:'));}

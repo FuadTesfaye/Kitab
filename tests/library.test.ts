@@ -37,3 +37,34 @@ test('Source cursor commits only after a successful discovery and staging pass',
 test('Content-addressed storage is immutable and rejects path traversal',async()=>{const a=await putObject(Buffer.from('original'));const b=await putObject(Buffer.from('original'));assert.equal(a.key,b.key);assert.equal((await getObject(a.key)).toString(),'original');await assert.rejects(getObject('../../.env'));});
 test('Queue deduplication and lease ownership prevent stale completion',async()=>{const id=await enqueue('test',{},'same');assert.equal(await enqueue('test',{},'same'),id);const first=await claim();assert.equal(first?.id,id);const db=await database();await db.query('UPDATE jobs SET lease_until=$1 WHERE id=$2',['2000-01-01T00:00:00.000Z',id]);const second=await claim();assert.ok(second);assert.notEqual(first?.lease_token,second.lease_token);await finish(first!);assert.equal((await db.query<{status:string}>('SELECT status FROM jobs WHERE id=$1',[id]))[0].status,'running');await finish(second);assert.equal((await db.query<{status:string}>('SELECT status FROM jobs WHERE id=$1',[id]))[0].status,'completed');});
 test('Revoking permission immediately removes reader, file, and search access',async()=>{await reviewRights(editionId,{status:'restricted',allowHosting:false,allowDownload:false,evidence:'Permission withdrawn by the rights holder.'},adminId);assert.equal(await accessibleEdition(editionId),null);assert.equal((await searchPages('القران')).hits.length,0);assert.equal((await call('editions/'+editionId)).status,404);assert.equal((await getWork(workId))?.editions?.length,0);});
+
+test('Arabic diacritics stripping and Tanzil multi-surah parsing', async () => {
+  const {stripDiacritics} = await import('../lib/arabic');
+  assert.equal(stripDiacritics('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ'), 'بسم الله الرحمن الرحيم');
+
+  const {parseTanzil} = await import('../lib/providers/parsers');
+  const dummyTanzil = [
+    '1|1|بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ',
+    '1|2|الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
+    '1|3|الرَّحْمَٰنِ الرَّحِيمِ',
+    '1|4|مَالِكِ يَوْمِ الدِّينِ',
+    '1|5|إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ',
+    '1|6|اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ',
+    '1|7|صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ',
+    '2|1|الم'
+  ].join('\n');
+  assert.throws(() => parseTanzil(dummyTanzil), /validation failed/); // Throws because not all 6236 are present, but passes surah transition!
+});
+
+test('Hadith and Tafsir open providers discovery', async () => {
+  const {hadith} = await import('../lib/providers/hadith');
+  const {tafsir} = await import('../lib/providers/tafsir');
+  const hadithDisc = await hadith.discover();
+  assert.ok(hadithDisc.books.length >= 8);
+  assert.ok(hadithDisc.books.some(b => b.externalId === 'ara-nawawi'));
+
+  const tafsirDisc = await tafsir.discover();
+  assert.ok(tafsirDisc.books.length >= 6);
+  assert.ok(tafsirDisc.books.some(b => b.externalId === 'ar-tafsir-ibn-kathir'));
+});
+
