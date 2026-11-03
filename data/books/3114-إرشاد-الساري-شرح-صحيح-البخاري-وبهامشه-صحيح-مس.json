@@ -1,0 +1,28 @@
+{
+  "id": 3114,
+  "kitab_id": "aljam3-3114",
+  "title": "إرشاد الساري شرح صحيح البخاري وبهامشه صحيح مسلم بشرح النووي 1-10",
+  "author": "شهاب الدين أحمد بن محمد الخطيب القسطلاني - محي الدين يحي بن شرف النووي",
+  "author_id": 15607,
+  "category": "شروح الحديث",
+  "category_id": 81,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 4865,
+  "volumes": 10,
+  "views_count": 5888,
+  "pdf_url": "https://aljam3.com/3114",
+  "txt_url": "https://aljam3.com/api/v1/books/3114",
+  "docx_url": "https://aljam3.com/api/v1/books/3114?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-3114/download?format=pdf",
+    "txt": "/api/books/aljam3-3114/download?format=txt",
+    "json": "/api/books/aljam3-3114/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T14:33:22.054Z",
+  "local_files": {
+    "json": "3114-إرشاد-الساري-شرح-صحيح-البخاري-وبهامشه-صحيح-مس.json",
+    "pdf": null,
+    "txt": null
+  }
+}

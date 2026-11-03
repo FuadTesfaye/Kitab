@@ -1,0 +1,28 @@
+{
+  "id": 3737,
+  "kitab_id": "aljam3-3737",
+  "title": "الأصل - الشيباني - ت بوينوكالن - ط أوقاف قطر 01-12",
+  "author": "محمد بوينوكالن",
+  "author_id": 28636,
+  "category": "الفقه الحنفي",
+  "category_id": 56,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 7461,
+  "volumes": 12,
+  "views_count": 2197,
+  "pdf_url": "https://aljam3.com/3737",
+  "txt_url": "https://aljam3.com/api/v1/books/3737",
+  "docx_url": "https://aljam3.com/api/v1/books/3737?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-3737/download?format=pdf",
+    "txt": "/api/books/aljam3-3737/download?format=txt",
+    "json": "/api/books/aljam3-3737/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T14:33:22.064Z",
+  "local_files": {
+    "json": "3737-الأصل-الشيباني-ت-بوينوكالن-ط-أوقاف-قطر-01-12.json",
+    "pdf": null,
+    "txt": null
+  }
+}

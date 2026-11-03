@@ -1,0 +1,28 @@
+{
+  "id": 3116,
+  "kitab_id": "aljam3-3116",
+  "title": "إكمال المعلم بفوائد مسلم - اليحصبي - ت إسماعيل - ط الوفاء 1-9",
+  "author": "عياض بن موسى بن عياض اليحصبي أبو الفضل",
+  "author_id": 23623,
+  "category": "شروح الحديث",
+  "category_id": 81,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 5586,
+  "volumes": 9,
+  "views_count": 4988,
+  "pdf_url": "https://aljam3.com/3116",
+  "txt_url": "https://aljam3.com/api/v1/books/3116",
+  "docx_url": "https://aljam3.com/api/v1/books/3116?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-3116/download?format=pdf",
+    "txt": "/api/books/aljam3-3116/download?format=txt",
+    "json": "/api/books/aljam3-3116/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T14:33:22.059Z",
+  "local_files": {
+    "json": "3116-إكمال-المعلم-بفوائد-مسلم-اليحصبي-ت-إسماعيل-ط-.json",
+    "pdf": null,
+    "txt": null
+  }
+}
