@@ -1,0 +1,24 @@
+{
+  "id": 56575,
+  "kitab_id": "aljam3-56575",
+  "title": "html المرجع الاساسي لمستخدمي",
+  "author": "مجدي محمد ابو العطا",
+  "author_id": 25302,
+  "category": "علوم الحاسب الآلي",
+  "category_id": 86,
+  "library": "مكتبة المسجد النبوي",
+  "library_id": 1,
+  "pages_count": 618,
+  "volumes": -1,
+  "views_count": 1974,
+  "pdf_url": "https://aljam3.com/56575",
+  "txt_url": "https://aljam3.com/api/v1/books/56575",
+  "docx_url": "https://aljam3.com/api/v1/books/56575?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-56575/download?format=pdf",
+    "txt": "/api/books/aljam3-56575/download?format=txt",
+    "json": "/api/books/aljam3-56575/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:54:58.609Z",
+  "source_website": "https://aljam3.com"
+}

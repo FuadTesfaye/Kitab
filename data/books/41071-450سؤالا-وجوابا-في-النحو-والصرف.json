@@ -1,0 +1,24 @@
+{
+  "id": 41071,
+  "kitab_id": "aljam3-41071",
+  "title": "450سؤالا وجوابا في النحو والصرف",
+  "author": "محمد علي أبو العباس",
+  "author_id": 29913,
+  "category": "النحو والصرف",
+  "category_id": 73,
+  "library": "مكتبة المسجد النبوي",
+  "library_id": 1,
+  "pages_count": 384,
+  "volumes": -1,
+  "views_count": 2618,
+  "pdf_url": "https://aljam3.com/41071",
+  "txt_url": "https://aljam3.com/api/v1/books/41071",
+  "docx_url": "https://aljam3.com/api/v1/books/41071?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-41071/download?format=pdf",
+    "txt": "/api/books/aljam3-41071/download?format=txt",
+    "json": "/api/books/aljam3-41071/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:54:58.608Z",
+  "source_website": "https://aljam3.com"
+}
