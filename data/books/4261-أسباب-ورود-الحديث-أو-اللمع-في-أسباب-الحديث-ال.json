@@ -1,0 +1,28 @@
+{
+  "id": 4261,
+  "kitab_id": "aljam3-4261",
+  "title": "أسباب ورود الحديث أو اللمع في أسباب الحديث - السيوطي - ت أحمد - ط العلمية",
+  "author": "جلال الدين السيوطي",
+  "author_id": 9119,
+  "category": "كتب التخريج والزوائد",
+  "category_id": 100,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 263,
+  "volumes": 1,
+  "views_count": 826,
+  "pdf_url": "https://aljam3.com/4261",
+  "txt_url": "https://aljam3.com/api/v1/books/4261",
+  "docx_url": "https://aljam3.com/api/v1/books/4261?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-4261/download?format=pdf",
+    "txt": "/api/books/aljam3-4261/download?format=txt",
+    "json": "/api/books/aljam3-4261/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:24:06.902Z",
+  "local_files": {
+    "json": "4261-أسباب-ورود-الحديث-أو-اللمع-في-أسباب-الحديث-ال.json",
+    "pdf": null,
+    "txt": null
+  }
+}

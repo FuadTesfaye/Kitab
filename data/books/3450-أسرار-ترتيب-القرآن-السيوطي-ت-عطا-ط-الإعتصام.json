@@ -1,0 +1,28 @@
+{
+  "id": 3450,
+  "kitab_id": "aljam3-3450",
+  "title": "أسرار ترتيب القرآن - السيوطي - ت عطا - ط الإعتصام",
+  "author": "جلال الدين السيوطي",
+  "author_id": 9119,
+  "category": "علوم القرآن",
+  "category_id": 88,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 175,
+  "volumes": 1,
+  "views_count": 701,
+  "pdf_url": "https://aljam3.com/3450",
+  "txt_url": "https://aljam3.com/api/v1/books/3450",
+  "docx_url": "https://aljam3.com/api/v1/books/3450?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-3450/download?format=pdf",
+    "txt": "/api/books/aljam3-3450/download?format=txt",
+    "json": "/api/books/aljam3-3450/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T15:24:06.938Z",
+  "local_files": {
+    "json": "3450-أسرار-ترتيب-القرآن-السيوطي-ت-عطا-ط-الإعتصام.json",
+    "pdf": null,
+    "txt": null
+  }
+}
