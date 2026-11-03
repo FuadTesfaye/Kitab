@@ -68,10 +68,44 @@ export async function api(req:Request,path:string[]):Promise<Response>{try{if(![
          return Response.redirect(pdfUrl,302);
        }
        if(format==='txt'){
+         const fs=await import('node:fs');
+         const pathMod=await import('node:path');
+         const booksDir=pathMod.resolve(process.cwd(),'data/books');
+         if(fs.existsSync(booksDir)){
+           const match=fs.readdirSync(booksDir).find(f=>f.startsWith(`${numId}-`)&&f.endsWith('.txt'));
+           if(match){
+             const buffer=fs.readFileSync(pathMod.join(booksDir,match));
+             return new Response(method==='HEAD'?null:buffer,{
+               status:200,
+               headers:{
+                 'Content-Type':'text/plain; charset=utf-8',
+                 'Content-Disposition':`attachment; filename="${encodeURIComponent(book.title)}.txt"; filename*=UTF-8''${encodeURIComponent(book.title)}.txt`,
+                 'Content-Length':String(buffer.length),
+                 'Cache-Control':'public, max-age=86400'
+               }
+             });
+           }
+         }
          const {getBooksDataset}=await import('./providers/aljam3');
          const all=await getBooksDataset();
          const b=all.find(x=>x.id===numId);
-         if(b?.txt_url)return Response.redirect(b.txt_url,302);
+         if(b?.txt_url){
+           try{
+             const upstream=await fetch(b.txt_url,{headers:{'User-Agent':'Kitab/2.0'},redirect:'follow'});
+             if(upstream.ok&&upstream.body){
+               return new Response(method==='HEAD'?null:upstream.body,{
+                 status:200,
+                 headers:{
+                   'Content-Type':'text/plain; charset=utf-8',
+                   'Content-Disposition':`attachment; filename="${encodeURIComponent(book.title)}.txt"; filename*=UTF-8''${encodeURIComponent(book.title)}.txt`,
+                   'Content-Length':upstream.headers.get('content-length')||'',
+                   'Cache-Control':'public, max-age=86400'
+                 }
+               });
+             }
+           }catch(e){}
+           return Response.redirect(b.txt_url,302);
+         }
          const {exportShamelaText}=await import('./providers/shamela-direct');
          const text=await exportShamelaText(numId).catch(()=>'');
          return new Response(method==='HEAD'?null:(text||`${b?.title||book.title}\n${b?.author||book.author}`),{
@@ -81,6 +115,26 @@ export async function api(req:Request,path:string[]):Promise<Response>{try{if(![
              'Cache-Control':'public, max-age=86400'
            }
          });
+       }
+       if(format==='json'){
+         const fs=await import('node:fs');
+         const pathMod=await import('node:path');
+         const booksDir=pathMod.resolve(process.cwd(),'data/books');
+         if(fs.existsSync(booksDir)){
+           const match=fs.readdirSync(booksDir).find(f=>f.startsWith(`${numId}-`)&&f.endsWith('.json'));
+           if(match){
+             const buffer=fs.readFileSync(pathMod.join(booksDir,match));
+             return new Response(method==='HEAD'?null:buffer,{
+               status:200,
+               headers:{
+                 'Content-Type':'application/json; charset=utf-8',
+                 'Content-Disposition':`attachment; filename="${id}.json"; filename*=UTF-8''${encodeURIComponent(book.title)}.json`,
+                 'Content-Length':String(buffer.length),
+                 'Cache-Control':'public, max-age=86400'
+               }
+             });
+           }
+         }
        }
        return new Response(method==='HEAD'?null:JSON.stringify(book,null,2),{
          headers:{
@@ -133,6 +187,15 @@ export async function api(req:Request,path:string[]):Promise<Response>{try{if(![
    const {listShamelaIndex,fetchShamelaInfo,fetchShamelaPage,exportShamelaText,getShamelaLocalBook}=await import('./providers/shamela-direct');
    const isRead=['GET','HEAD'].includes(method);
    if(path[1]==='books'&&isRead){
+     if(url.searchParams.get('all')==='true'||path[2]==='all'){
+       const fs=await import('node:fs');
+       const pathMod=await import('node:path');
+       const shamelaAllPath=pathMod.resolve(process.cwd(),'data/shamela/shamela-all-books.json');
+       if(fs.existsSync(shamelaAllPath)){
+         const allData=JSON.parse(fs.readFileSync(shamelaAllPath,'utf8'));
+         return json({books:allData,total:allData.length});
+       }
+     }
      return json({books:await listShamelaIndex()});
    }
    if(path[1]==='book'&&isRead){
