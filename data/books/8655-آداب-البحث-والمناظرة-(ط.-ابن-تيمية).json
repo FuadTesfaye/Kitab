@@ -1,0 +1,24 @@
+{
+  "id": 8655,
+  "kitab_id": "aljam3-8655",
+  "title": "آداب البحث والمناظرة (ط. ابن تيمية)",
+  "author": "محمد الأمين الشنقيطي",
+  "author_id": 25896,
+  "category": "أصول الفقه والقواعد الفقهية",
+  "category_id": 2,
+  "library": "المكتبة الوقفية",
+  "library_id": 2,
+  "pages_count": 266,
+  "volumes": 1,
+  "views_count": 1280,
+  "pdf_url": "https://aljam3.com/8655",
+  "txt_url": "https://aljam3.com/api/v1/books/8655",
+  "docx_url": "https://aljam3.com/api/v1/books/8655?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-8655/download?format=pdf",
+    "txt": "/api/books/aljam3-8655/download?format=txt",
+    "json": "/api/books/aljam3-8655/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:54:04.143Z",
+  "source_website": "https://aljam3.com"
+}

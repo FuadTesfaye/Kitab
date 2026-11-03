@@ -1,0 +1,24 @@
+{
+  "id": 8722,
+  "kitab_id": "aljam3-8722",
+  "title": "آداب البحث والمناظرة (ط. مجمع الفقه)",
+  "author": "محمد الأمين بن محمد المختار الجكني الشنقيطي",
+  "author_id": 25905,
+  "category": "أصول الفقه والقواعد الفقهية",
+  "category_id": 2,
+  "library": "المكتبة الوقفية",
+  "library_id": 2,
+  "pages_count": 425,
+  "volumes": 1,
+  "views_count": 1513,
+  "pdf_url": "https://aljam3.com/8722",
+  "txt_url": "https://aljam3.com/api/v1/books/8722",
+  "docx_url": "https://aljam3.com/api/v1/books/8722?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-8722/download?format=pdf",
+    "txt": "/api/books/aljam3-8722/download?format=txt",
+    "json": "/api/books/aljam3-8722/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:54:04.143Z",
+  "source_website": "https://aljam3.com"
+}

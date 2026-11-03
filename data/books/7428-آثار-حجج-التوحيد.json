@@ -1,0 +1,24 @@
+{
+  "id": 7428,
+  "kitab_id": "aljam3-7428",
+  "title": "آثار حجج التوحيد",
+  "author": "مدحت حسن الفراج",
+  "author_id": 31265,
+  "category": "التوحيد والعقيدة",
+  "category_id": 24,
+  "library": "المكتبة الوقفية",
+  "library_id": 2,
+  "pages_count": 230,
+  "volumes": 1,
+  "views_count": 985,
+  "pdf_url": "https://aljam3.com/7428",
+  "txt_url": "https://aljam3.com/api/v1/books/7428",
+  "docx_url": "https://aljam3.com/api/v1/books/7428?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-7428/download?format=pdf",
+    "txt": "/api/books/aljam3-7428/download?format=txt",
+    "json": "/api/books/aljam3-7428/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:54:04.143Z",
+  "source_website": "https://aljam3.com"
+}
