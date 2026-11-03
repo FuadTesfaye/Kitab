@@ -258,7 +258,17 @@ export function ShamelaBrowser({bookId, initialPage = 1}: {bookId?: string; init
         <>
           <div className="results-header">
             <span>عرض المصنفات (إجمالي: {aljam3Total.toLocaleString('ar')} كتاباً)</span>
-            <span>الصفحة {aljam3Page} من {totalPagesAljam3}</span>
+            <div style={{display: 'flex', gap: '8px', alignItems: 'center'}}>
+              <a
+                href="/api/shamela/books/all"
+                download="shamela-500-books.json"
+                className="action-pill pdf-pill"
+                title="تحميل كامل فهرس وبيانات مصنفات الشاملة (500 كتاب)"
+              >
+                تحميل بيانات الشاملة كاملة (JSON) ⤓
+              </a>
+              <span>الصفحة {aljam3Page} من {totalPagesAljam3}</span>
+            </div>
           </div>
 
           <div className="shamela-grid">
@@ -282,7 +292,7 @@ export function ShamelaBrowser({bookId, initialPage = 1}: {bookId?: string; init
                   </Link>
                   <div className="shamela-downloads">
                     <a
-                      href={`/api/aljam3/pdf?id=${b.id}`}
+                      href={`/api/books/aljam3-${b.id}/download?format=pdf`}
                       target="_blank"
                       rel="noopener noreferrer"
                       download
@@ -291,17 +301,22 @@ export function ShamelaBrowser({bookId, initialPage = 1}: {bookId?: string; init
                     >
                       PDF 📄
                     </a>
-                    {b.txt_url && (
-                      <a
-                        href={b.txt_url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="action-pill"
-                        title="تحميل النص TXT"
-                      >
-                        TXT 📝
-                      </a>
-                    )}
+                    <a
+                      href={`/api/books/aljam3-${b.id}/download?format=txt`}
+                      download
+                      className="action-pill"
+                      title="تحميل النص TXT"
+                    >
+                      TXT 📝
+                    </a>
+                    <a
+                      href={`/api/books/aljam3-${b.id}/download?format=json`}
+                      download
+                      className="action-pill"
+                      title="تحميل بيانات الكتاب الكاملة JSON"
+                    >
+                      JSON ⚡
+                    </a>
                   </div>
                 </div>
               </div>
