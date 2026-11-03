@@ -1,0 +1,28 @@
+{
+  "id": 1065,
+  "kitab_id": "aljam3-1065",
+  "title": "أسد الغابة في معرفة الصحابة - ابن الأثير - ط العلمية غير ملون 1-8",
+  "author": "عز الدين ابن الاثير ابي الحسن علي بن محمد الجزري",
+  "author_id": 21883,
+  "category": "التراجم والأعلام والطبقات",
+  "category_id": 18,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 4624,
+  "volumes": 8,
+  "views_count": 1442,
+  "pdf_url": "https://aljam3.com/1065",
+  "txt_url": "https://aljam3.com/api/v1/books/1065",
+  "docx_url": "https://aljam3.com/api/v1/books/1065?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-1065/download?format=pdf",
+    "txt": "/api/books/aljam3-1065/download?format=txt",
+    "json": "/api/books/aljam3-1065/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T14:32:38.239Z",
+  "local_files": {
+    "json": "1065-أسد-الغابة-في-معرفة-الصحابة-ابن-الأثير-ط-العل.json",
+    "pdf": null,
+    "txt": null
+  }
+}

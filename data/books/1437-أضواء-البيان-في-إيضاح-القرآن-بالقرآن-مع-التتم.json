@@ -1,0 +1,28 @@
+{
+  "id": 1437,
+  "kitab_id": "aljam3-1437",
+  "title": "أضواء البيان في إيضاح القرآن بالقرآن مع التتمة - الشنقيطي وسالم - ط عالم الفوائد والمجمع 1-9",
+  "author": "محمد الأمين بن محمد المختار الجكني الشنقيطي",
+  "author_id": 25905,
+  "category": "التفاسير",
+  "category_id": 20,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 7119,
+  "volumes": 9,
+  "views_count": 6727,
+  "pdf_url": "https://aljam3.com/1437",
+  "txt_url": "https://aljam3.com/api/v1/books/1437",
+  "docx_url": "https://aljam3.com/api/v1/books/1437?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-1437/download?format=pdf",
+    "txt": "/api/books/aljam3-1437/download?format=txt",
+    "json": "/api/books/aljam3-1437/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T14:32:38.234Z",
+  "local_files": {
+    "json": "1437-أضواء-البيان-في-إيضاح-القرآن-بالقرآن-مع-التتم.json",
+    "pdf": null,
+    "txt": null
+  }
+}
