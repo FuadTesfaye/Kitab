@@ -12,12 +12,80 @@ import type {SourceId,RightsStatus,RemoteBook,Work} from './types';
 const json=(data:unknown,status=200,headers:Record<string,string>={})=>Response.json(data,{status,headers:{'Cache-Control':'no-store',...headers}});
 const text=(b:Record<string,unknown>,key:string,max=1000)=>{const v=b[key];if(typeof v!=='string'||v.length>max)throw new HttpError(400,`Invalid ${key}`);return v;};
 async function body(req:Request){const reader=req.body?.getReader();if(!reader)throw new HttpError(400,'Missing body');const chunks:Uint8Array[]=[];let n=0;while(true){const {done,value}=await reader.read();if(done)break;n+=value.length;if(n>5*1024*1024){await reader.cancel();throw new HttpError(413,'Payload is too large');}chunks.push(value);}try{const b=JSON.parse(Buffer.concat(chunks).toString('utf8'));if(!b||Array.isArray(b)||typeof b!=='object')throw Error();return b as Record<string,unknown>;}catch{throw new HttpError(400,'Invalid JSON body');}}
-export async function api(req:Request,path:string[]):Promise<Response>{try{if(!['GET','HEAD'].includes(req.method))checkOrigin(req);const key=path.join('/');const method=req.method;const url=new URL(req.url);
+export async function api(req:Request,path:string[]):Promise<Response>{try{if(!['GET','HEAD'].includes(req.method))checkOrigin(req);const key=path.join('/');const method=req.method;const isRead=['GET','HEAD'].includes(method);const url=new URL(req.url);
  if(key==='health'&&method==='GET'){try{await ensureSeed();const db=await database();await db.query('SELECT 1 as ok');return json({ok:true,database:db.dialect,search:process.env.OPENSEARCH_URL?'opensearch':'database',storage:process.env.S3_ENDPOINT?'s3':'local'});}catch(err){return json({ok:false,error:err instanceof Error?err.message:String(err),database:process.env.DATABASE_URL?'postgres':'sqlite'},500);}}
  if(key==='surahs'&&method==='GET'){return json({surahs:surahsData});}
  await ensureSeed();const db=await database();
  if(key==='books'&&method==='GET')return json({books:await works()});
- if(path[0]==='books'&&path.length===2&&method==='GET'){const book=await getWork(path[1]);if(!book)throw new HttpError(404,'الكتاب غير موجود');return json({book});}
+ if(path[0]==='books'&&path.length>=2&&isRead){
+   const id=path[1];
+   const book=await getWork(id);
+   if(!book)throw new HttpError(404,'الكتاب غير موجود');
+   if(path.length===2)return json({book});
+   if(path[2]==='download'){
+     const format=(url.searchParams.get('format')||'pdf').toLowerCase();
+     const isAljam3=id.startsWith('aljam3-');
+     const numId=isAljam3?Number(id.replace('aljam3-','')):null;
+     if(isAljam3&&numId){
+       if(format==='pdf'){
+         const {getBookPdfUrl}=await import('./providers/aljam3');
+         const pdfUrl=await getBookPdfUrl(numId);
+         if(pdfUrl)return Response.redirect(pdfUrl,302);
+         throw new HttpError(404,'ملف الـ PDF غير متوفر');
+       }
+       if(format==='txt'){
+         const {getBooksDataset}=await import('./providers/aljam3');
+         const all=await getBooksDataset();
+         const b=all.find(x=>x.id===numId);
+         if(b?.txt_url)return Response.redirect(b.txt_url,302);
+         const {exportShamelaText}=await import('./providers/shamela-direct');
+         const text=await exportShamelaText(numId).catch(()=>'');
+         return new Response(method==='HEAD'?null:(text||`${b?.title||book.title}\n${b?.author||book.author}`),{
+           headers:{
+             'Content-Type':'text/plain; charset=utf-8',
+             'Content-Disposition':`attachment; filename="${encodeURIComponent(book.title)}.txt"`,
+             'Cache-Control':'public, max-age=86400'
+           }
+         });
+       }
+       return new Response(method==='HEAD'?null:JSON.stringify(book,null,2),{
+         headers:{
+           'Content-Type':'application/json; charset=utf-8',
+           'Content-Disposition':`attachment; filename="${id}.json"`,
+           'Cache-Control':'public, max-age=86400'
+         }
+       });
+     }
+     const edition=book.editions?.[0];
+     if(format==='json'){
+       let pages:{seq:number;body:string;page_no?:string}[]=[];
+       if(edition){
+         pages=await db.query('SELECT seq,body,page_no FROM book_pages WHERE edition_id=$1 ORDER BY seq',[edition.id]);
+       }
+       return new Response(method==='HEAD'?null:JSON.stringify({...book,pages},null,2),{
+         headers:{
+           'Content-Type':'application/json; charset=utf-8',
+           'Content-Disposition':`attachment; filename="${id}.json"`,
+           'Cache-Control':'public, max-age=86400'
+         }
+       });
+     }
+     let content=`« ${book.title} »\nالمؤلف: ${book.author}\n${book.description?book.description+'\n':''}\n${'='.repeat(40)}\n\n`;
+     if(edition){
+       const pages=await db.query<{seq:number;body:string;page_no?:string}>('SELECT seq,body,page_no FROM book_pages WHERE edition_id=$1 ORDER BY seq',[edition.id]);
+       for(const p of pages){
+         content+=`\n--- [ صفحة ${p.page_no||p.seq} ] ---\n${p.body}\n`;
+       }
+     }
+     return new Response(method==='HEAD'?null:content,{
+       headers:{
+         'Content-Type':'text/plain; charset=utf-8',
+         'Content-Disposition':`attachment; filename="${encodeURIComponent(book.title)}.txt"`,
+         'Cache-Control':'public, max-age=86400'
+       }
+     });
+   }
+ }
  if(key==='authors'&&method==='GET')return json({authors:await db.query('SELECT id,name_ar,death_hijri,biography FROM authors ORDER BY name_ar')});
  if(key==='tafsir'&&method==='GET'){
    const surah=Number(url.searchParams.get('surah')||1);

@@ -113,6 +113,7 @@
 .pdf-direct-link{background:#8c322b;color:#fff!important;padding:2px 7px;border-radius:3px;font-size:10px;font-weight:bold;text-decoration:none;display:inline-flex;align-items:center;line-height:1.6}
 .pdf-direct-link:hover{background:#a63c34;color:#fff!important}
 .detail-action-bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:15px 0}
+.download-group{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .pdf-download-btn{background:#8c322b!important;color:#fff!important;border-color:#8c322b!important}
 .pdf-download-btn:hover{background:#a63c34!important}
 
