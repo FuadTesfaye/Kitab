@@ -1,0 +1,24 @@
+{
+  "id": 17444,
+  "kitab_id": "aljam3-17444",
+  "title": "1000سؤال وسؤال عن القرآن الكريم موسوعة قرآنية شاملة - خير الدين غير ملون",
+  "author": "محمد عبدالله خيرالدين",
+  "author_id": 29773,
+  "category": "مباحث قرآنية عامة",
+  "category_id": 101,
+  "library": "مكتبة المسجد النبوي",
+  "library_id": 1,
+  "pages_count": 399,
+  "volumes": -1,
+  "views_count": 2753,
+  "pdf_url": "https://aljam3.com/17444",
+  "txt_url": "https://aljam3.com/api/v1/books/17444",
+  "docx_url": "https://aljam3.com/api/v1/books/17444?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-17444/download?format=pdf",
+    "txt": "/api/books/aljam3-17444/download?format=txt",
+    "json": "/api/books/aljam3-17444/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:54:52.726Z",
+  "source_website": "https://aljam3.com"
+}

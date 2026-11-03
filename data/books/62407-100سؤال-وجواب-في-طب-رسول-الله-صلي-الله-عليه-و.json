@@ -1,0 +1,24 @@
+{
+  "id": 62407,
+  "kitab_id": "aljam3-62407",
+  "title": "100سؤال وجواب في طب رسول الله صلي الله عليه وسلم - عيتاني",
+  "author": "مهى عيتاني",
+  "author_id": 32238,
+  "category": "الطب",
+  "category_id": 45,
+  "library": "مكتبة المسجد النبوي",
+  "library_id": 1,
+  "pages_count": 42,
+  "volumes": -1,
+  "views_count": 4624,
+  "pdf_url": "https://aljam3.com/62407",
+  "txt_url": "https://aljam3.com/api/v1/books/62407",
+  "docx_url": "https://aljam3.com/api/v1/books/62407?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-62407/download?format=pdf",
+    "txt": "/api/books/aljam3-62407/download?format=txt",
+    "json": "/api/books/aljam3-62407/download?format=json"
+  },
+  "imported_at": "2026-11-03T19:54:52.726Z",
+  "source_website": "https://aljam3.com"
+}
