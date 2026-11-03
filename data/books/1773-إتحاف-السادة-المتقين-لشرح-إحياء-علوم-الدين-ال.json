@@ -1,0 +1,28 @@
+{
+  "id": 1773,
+  "kitab_id": "aljam3-1773",
+  "title": "إتحاف السادة المتقين لشرح إحياء علوم الدين - الزبيدي - ط الميمنية 1-10",
+  "author": "_",
+  "author_id": 9,
+  "category": "الرقاق والآداب والأذكار",
+  "category_id": 41,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 5548,
+  "volumes": 10,
+  "views_count": 6137,
+  "pdf_url": "https://aljam3.com/1773",
+  "txt_url": "https://aljam3.com/api/v1/books/1773",
+  "docx_url": "https://aljam3.com/api/v1/books/1773?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-1773/download?format=pdf",
+    "txt": "/api/books/aljam3-1773/download?format=txt",
+    "json": "/api/books/aljam3-1773/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T14:57:44.601Z",
+  "local_files": {
+    "json": "1773-إتحاف-السادة-المتقين-لشرح-إحياء-علوم-الدين-ال.json",
+    "pdf": null,
+    "txt": null
+  }
+}

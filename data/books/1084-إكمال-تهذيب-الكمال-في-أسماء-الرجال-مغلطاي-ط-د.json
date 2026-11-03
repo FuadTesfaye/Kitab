@@ -1,0 +1,28 @@
+{
+  "id": 1084,
+  "kitab_id": "aljam3-1084",
+  "title": "إكمال تهذيب الكمال في أسماء الرجال - مغلطاي - ط دار الفاروق 1-12",
+  "author": "علاء الدين مغلطاي",
+  "author_id": 22161,
+  "category": "التراجم والأعلام والطبقات",
+  "category_id": 18,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 4885,
+  "volumes": 12,
+  "views_count": 1768,
+  "pdf_url": "https://aljam3.com/1084",
+  "txt_url": "https://aljam3.com/api/v1/books/1084",
+  "docx_url": "https://aljam3.com/api/v1/books/1084?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-1084/download?format=pdf",
+    "txt": "/api/books/aljam3-1084/download?format=txt",
+    "json": "/api/books/aljam3-1084/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T14:57:44.566Z",
+  "local_files": {
+    "json": "1084-إكمال-تهذيب-الكمال-في-أسماء-الرجال-مغلطاي-ط-د.json",
+    "pdf": null,
+    "txt": null
+  }
+}

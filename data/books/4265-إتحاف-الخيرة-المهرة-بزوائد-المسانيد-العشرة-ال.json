@@ -1,0 +1,28 @@
+{
+  "id": 4265,
+  "kitab_id": "aljam3-4265",
+  "title": "إتحاف الخيرة المهرة بزوائد المسانيد العشرة - البوصيري - دار الوطن 1-9",
+  "author": "أحمد بن أبي بكر بن إسماعيل البوصيري",
+  "author_id": 1292,
+  "category": "كتب التخريج والزوائد",
+  "category_id": 100,
+  "library": "المكتبة الشاملة الوقفية",
+  "library_id": 3,
+  "pages_count": 4693,
+  "volumes": 9,
+  "views_count": 5077,
+  "pdf_url": "https://aljam3.com/4265",
+  "txt_url": "https://aljam3.com/api/v1/books/4265",
+  "docx_url": "https://aljam3.com/api/v1/books/4265?expand=files",
+  "download_routes": {
+    "pdf": "/api/books/aljam3-4265/download?format=pdf",
+    "txt": "/api/books/aljam3-4265/download?format=txt",
+    "json": "/api/books/aljam3-4265/download?format=json"
+  },
+  "downloaded_at": "2026-11-03T14:57:44.640Z",
+  "local_files": {
+    "json": "4265-إتحاف-الخيرة-المهرة-بزوائد-المسانيد-العشرة-ال.json",
+    "pdf": null,
+    "txt": null
+  }
+}
